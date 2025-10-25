@@ -1,0 +1,218 @@
+# ============================================
+# ONEUI 8 SPECIFIC PACKAGES
+# ============================================
+# New apps and features introduced in OneUI 8 (Android 16)
+# Released with Galaxy S25 series in 2025
+#
+# IMPORTANT: Review carefully before removing!
+# Many of these are new Galaxy AI features.
+# ============================================
+
+# ============================================
+# GALAXY AI FEATURES (OneUI 8)
+# ============================================
+
+# Samsung AI Core
+# WARNING: This is the foundation for Galaxy AI features
+# Removing this will break: Photo Assist, Note Assist, Writing Assist
+# RECOMMENDATION: Keep this installed
+# NOTE: This may need to be installed from Galaxy Store
+# adb shell pm uninstall --user 0 com.samsung.android.aicore
+
+# Gemini Integration (Google Bard)
+# New in OneUI 8 - deeply integrated with Samsung apps
+# Appears in Gallery, Notes, and other apps
+# RECOMMENDATION: Keep if you want AI features
+adb shell pm uninstall --user 0 com.google.android.apps.bard
+
+# Google Scribe (Live Transcribe & Scribe)
+# New accessibility feature for real-time transcription
+adb shell pm uninstall --user 0 com.google.audio.hearing.visualization.accessibility.scribe
+
+# ============================================
+# SAMSUNG EDGE PANELS & PRODUCTIVITY
+# ============================================
+
+# Edge Panel - Clipboard Edge
+# Quick access to clipboard history
+adb shell pm uninstall --user 0 com.samsung.android.app.clipboardedge
+
+# Edge Panel - Task Edge
+# Quick app switching and multitasking
+adb shell pm uninstall --user 0 com.samsung.android.app.taskedge
+
+# Samsung Quick Tool
+# Quick access toolbar
+adb shell pm uninstall --user 0 com.sec.android.app.quicktool
+
+# ============================================
+# SAMSUNG ADVANCED FEATURES
+# ============================================
+
+# Samsung Interpreter
+# Real-time translation in conversations
+# Part of Galaxy AI suite
+adb shell pm uninstall --user 0 com.samsung.android.app.interpreter
+
+# Samsung Sketch / Sketchbook
+# Drawing and note-taking with S Pen
+adb shell pm uninstall --user 0 com.samsung.android.app.sketchbook
+
+# Samsung Vision Intelligence
+# Powers Circle to Search and Bixby Vision
+# NEW: Enhanced in OneUI 8 with better AI
+# RECOMMENDATION: Keep for Circle to Search
+adb shell pm uninstall --user 0 com.samsung.android.visionintelligence
+
+# Samsung Maps Agent
+# Location services integration
+adb shell pm uninstall --user 0 com.samsung.android.mapsagent
+
+# ============================================
+# SAMSUNG CAR & CONNECTIVITY
+# ============================================
+
+# Samsung Car Key
+# Digital car key feature (select vehicles)
+adb shell pm uninstall --user 0 com.samsung.android.carkey
+
+# ============================================
+# ONEUI 8 UPDATED APPS
+# ============================================
+# These apps exist in older OneUI but got major updates in 8
+
+# Samsung Pass (updated with passkey support)
+# Digital identity and password manager
+adb shell pm uninstall --user 0 com.samsung.android.samsungpass
+adb shell pm uninstall --user 0 com.samsung.android.samsungpassautofill
+
+# Samsung AR Zone (updated AR features)
+adb shell pm uninstall --user 0 com.samsung.android.arzone
+
+# Samsung Camera Stickers (updated with AI)
+adb shell pm uninstall --user 0 com.samsung.android.app.camera.sticker.facearavatar.preload
+
+# ============================================
+# GOOGLE APPS UPDATED FOR ONEUI 8
+# ============================================
+
+# Google Health Connect (new integration)
+# Health data platform
+adb shell pm uninstall --user 0 com.google.android.healthconnect.controller
+adb shell pm uninstall --user 0 com.google.android.health.connect.backuprestore
+
+# ============================================
+# PACKAGES TO DEFINITELY KEEP (DO NOT REMOVE)
+# ============================================
+#
+# These are critical for OneUI 8 functionality:
+#
+# DO NOT REMOVE:
+# ✓ com.samsung.android.aicore (Galaxy AI foundation)
+# ✓ com.samsung.android.intelligence.voice (Live Translate)
+# ✓ com.samsung.android.honeyboard (Samsung Keyboard - DEX compatible)
+# ✓ com.sec.android.app.launcher (OneUI Launcher)
+# ✓ com.android.systemui (System UI)
+# ✓ Any package with "knox" in the name
+# ✓ com.samsung.android.visionintelligence (Circle to Search)
+#
+# ============================================
+
+# ============================================
+# ONEUI 8 SAFE TO REMOVE
+# ============================================
+# These OneUI 8 features are safe to remove if you don't use them
+
+# Samsung DeX related (if not using)
+# adb shell pm uninstall --user 0 com.samsung.android.mdx
+
+# Samsung AR features (if not using AR)
+adb shell pm uninstall --user 0 com.samsung.android.arzone
+adb shell pm uninstall --user 0 com.samsung.android.ardrawing
+
+# Samsung Kids (if no kids)
+adb shell pm uninstall --user 0 com.sec.android.app.kidshome
+adb shell pm uninstall --user 0 com.samsung.android.kidsinstaller
+
+# Samsung TV Plus (streaming service)
+adb shell pm uninstall --user 0 com.samsung.android.tvplus
+
+# ============================================
+# ONEUI 8 FEATURES THAT REQUIRE SPECIFIC PACKAGES
+# ============================================
+
+# CIRCLE TO SEARCH:
+# Requires ONE of these:
+# - com.samsung.android.visionintelligence (Samsung version)
+# - com.google.android.googlequicksearchbox (Google version)
+# Keep at least one for Circle to Search to work
+
+# LIVE TRANSLATION:
+# Requires:
+# - com.samsung.android.app.interpreter
+# - com.samsung.android.intelligence.voice (DO NOT REMOVE)
+# - Language packs for your languages
+# - Samsung Account (for some features)
+
+# PHOTO ASSIST (AI photo editing):
+# Requires:
+# - com.google.android.apps.bard (Gemini)
+# - com.samsung.android.aicore
+# - Samsung Gallery app
+
+# NOTE ASSIST (AI writing):
+# Requires:
+# - com.google.android.apps.bard (Gemini)
+# - com.samsung.android.aicore
+# - Samsung Notes app
+# - Samsung Keyboard
+
+# CHAT ASSIST (AI messaging):
+# Requires:
+# - com.google.android.apps.bard (Gemini)
+# - Samsung Keyboard
+# - Integrated in messaging apps
+
+# ============================================
+# RECOMMENDATIONS FOR S25 EDGE USERS
+# ============================================
+
+# KEEP for best OneUI 8 experience:
+# 1. Galaxy AI Core (com.samsung.android.aicore)
+# 2. Gemini (com.google.android.apps.bard)
+# 3. Vision Intelligence (com.samsung.android.visionintelligence)
+# 4. Samsung Keyboard (com.samsung.android.honeyboard)
+# 5. Interpreter (com.samsung.android.app.interpreter)
+
+# SAFE TO REMOVE if you don't use:
+# 1. AR Zone (com.samsung.android.arzone)
+# 2. Kids Mode (com.sec.android.app.kidshome)
+# 3. TV Plus (com.samsung.android.tvplus)
+# 4. Car Key (com.samsung.android.carkey) - unless you have compatible car
+# 5. Edge Panels (if you don't use them)
+
+# ============================================
+# KNOWN ISSUES IN ONEUI 8
+# ============================================
+
+# Issue: Gemini search bar in Gallery/Secure Folder
+# Even after removing Gemini, the colored search bar remains
+# This is tied to Samsung Keyboard or system integration
+# Cannot be removed without root access
+# Workaround: Disable Gemini but bar remains visible
+
+# Issue: Samsung Keyboard and DEX
+# Removing Samsung Keyboard while using DEX can cause bootloop
+# SOLUTION: Keep Samsung Keyboard or ensure 3rd party keyboard
+# is installed BEFORE removing Samsung Keyboard
+
+# Issue: Live Translation requires Samsung Account
+# Some Live Translation features need Samsung Account login
+# Cannot work offline without account
+# No workaround except keeping Samsung Account
+
+# ============================================
+# TOTAL NEW/UPDATED PACKAGES IN ONEUI 8: ~15
+# SAFETY LEVEL: VARIES (see individual notes)
+# RECOMMENDED FOR: Review before removing
+# ============================================

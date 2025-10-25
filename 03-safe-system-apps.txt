@@ -1,0 +1,191 @@
+# ============================================
+# SAFE SYSTEM APPS - LEVEL 2 (MODERATE RISK)
+# ============================================
+# These are system-level apps that are generally safe to disable.
+# Some Samsung features may be affected, but core functionality remains.
+# Recommended to review each package before removal.
+# ============================================
+
+# SAMSUNG ACCOUNT & SYNC SERVICES
+# ============================================
+# WARNING: Removing these will disable Samsung Cloud sync features
+
+adb shell pm uninstall --user 0 com.samsung.android.samsungpass
+adb shell pm uninstall --user 0 com.samsung.android.samsungpassautofill
+
+# Samsung Easy Mover / Smart Switch
+adb shell pm uninstall --user 0 com.sec.android.easyMover
+adb shell pm uninstall --user 0 com.sec.android.easyMover.Agent
+adb shell pm uninstall --user 0 com.samsung.android.smartswitchassistant
+
+# Samsung Billing (in-app purchases)
+adb shell pm uninstall --user 0 com.sec.android.app.billing
+
+# SAMSUNG PAY FRAMEWORK
+# ============================================
+# WARNING: Keep if you use Samsung Pay or Samsung Wallet
+
+adb shell pm uninstall --user 0 com.samsung.android.spay
+adb shell pm uninstall --user 0 com.samsung.android.spayfw
+
+# Samsung Car Key
+adb shell pm uninstall --user 0 com.samsung.android.carkey
+
+# SAMSUNG DEX (Desktop Experience)
+# ============================================
+# WARNING: Only remove if you DON'T use Samsung DEX
+# Keep com.samsung.android.honeyboard (Samsung Keyboard) if using DEX!
+
+# adb shell pm uninstall --user 0 com.samsung.android.mdx
+
+# SAMSUNG CUSTOMIZATION & THEMING
+# ============================================
+
+# Samsung Themes (if using default theme only)
+adb shell pm uninstall --user 0 com.samsung.android.themestore
+adb shell pm uninstall --user 0 com.samsung.android.themecenter
+
+# Good Lock suite (if not installed)
+adb shell pm uninstall --user 0 com.samsung.android.rubin.app
+
+# Edge Panels
+adb shell pm uninstall --user 0 com.samsung.android.app.clipboardedge
+adb shell pm uninstall --user 0 com.samsung.android.app.taskedge
+
+# SAMSUNG SECURITY & PRIVACY
+# ============================================
+
+# Find My Mobile (if not using)
+# WARNING: Keep if you use Samsung's device tracking
+adb shell pm uninstall --user 0 com.samsung.android.fmm
+
+# Parental Care / Kids Mode Setup
+adb shell pm uninstall --user 0 com.samsung.android.app.parentalcare
+
+# App Separation
+adb shell pm uninstall --user 0 com.samsung.android.appseparation
+
+# SAMSUNG AR & CAMERA FEATURES
+# ============================================
+
+# AR Emoji & Avatar Stickers
+adb shell pm uninstall --user 0 com.samsung.android.app.camera.sticker.facearavatar.preload
+adb shell pm uninstall --user 0 com.sec.android.mimage.avatarstickers
+
+# SAMSUNG ASSISTANT SERVICES
+# ============================================
+# NOTE: See file 05-ai-assistant-options.txt for Bixby removal
+# Only remove Bixby Framework if you're sure you don't want it
+
+adb shell pm uninstall --user 0 com.samsung.android.bixby.wakeup
+adb shell pm uninstall --user 0 com.samsung.android.bixbyvision.framework
+
+# Bixby On-Device Language Packs
+adb shell pm uninstall --user 0 com.samsung.android.bixby.ondevice.enus
+adb shell pm uninstall --user 0 com.samsung.android.bixby.ondevice.frfr
+
+# SAMSUNG MISC SERVICES
+# ============================================
+
+# OMC Agent (carrier customization)
+adb shell pm uninstall --user 0 com.samsung.android.app.omcagent
+
+# Samsung Device Key Management
+adb shell pm uninstall --user 0 com.samsung.android.dkey
+
+# MDE Service (Samsung Knox related)
+adb shell pm uninstall --user 0 com.samsung.android.mdecservice
+
+# IP Geofence Service
+adb shell pm uninstall --user 0 com.samsung.android.ipsgeofence
+
+# Aura OOBE (Out of Box Experience)
+adb shell pm uninstall --user 0 com.aura.oobe.samsung
+
+# Samsung Maps Agent
+adb shell pm uninstall --user 0 com.samsung.android.mapsagent
+
+# Samsung Free (Daily Board content)
+adb shell pm uninstall --user 0 com.samsung.sree
+
+# GOOGLE SYSTEM APPS
+# ============================================
+# WARNING: Some of these may affect Google services functionality
+
+# Google Chrome (if using Samsung Browser or other)
+adb shell pm uninstall --user 0 com.android.chrome
+adb shell pm uninstall --user 0 com.sec.android.app.chromecustomizations
+
+# Google Assistant (if not using)
+# WARNING: Keep if you use Google Assistant or Gemini
+# adb shell pm uninstall --user 0 com.google.android.apps.googleassistant
+
+# Google Search / Quick Search Box
+# WARNING: Required for Gemini, Circle to Search, and many Google features
+# adb shell pm uninstall --user 0 com.google.android.googlequicksearchbox
+
+# Gmail (if using other email app)
+adb shell pm uninstall --user 0 com.google.android.gm
+
+# Google Location History
+adb shell pm uninstall --user 0 com.google.android.gms.location.history
+
+# Google Android Auto / Car projection
+adb shell pm uninstall --user 0 com.google.android.projection.gearhead
+
+# Google AR Core (augmented reality)
+adb shell pm uninstall --user 0 com.google.ar.core
+
+# Google One Time Initializer
+adb shell pm uninstall --user 0 com.google.android.onetimeinitializer
+
+# Google Setup Wizard (only after initial setup)
+adb shell pm uninstall --user 0 com.google.android.setupwizard
+
+# Google Calendar Sync Adapter
+adb shell pm uninstall --user 0 com.google.android.syncadapters.calendar
+
+# Google Health Connect
+adb shell pm uninstall --user 0 com.google.android.healthconnect.controller
+adb shell pm uninstall --user 0 com.google.android.health.connect.backuprestore
+
+# ANDROID SYSTEM APPS (GENERALLY SAFE)
+# ============================================
+
+# Android Dreams (Screen savers)
+adb shell pm uninstall --user 0 com.android.dreams.basic
+adb shell pm uninstall --user 0 com.android.dreams.phototable
+
+# Partner Bookmarks
+adb shell pm uninstall --user 0 com.android.providers.partnerbookmarks
+adb shell pm uninstall --user 0 com.android.bookmarkprovider
+
+# NFC Tag support (if you don't use NFC tags)
+adb shell pm uninstall --user 0 com.android.apps.tag
+
+# Google Hotword Enrollment (OK/Hey Google detection)
+# WARNING: Keep if you use voice activation
+adb shell pm uninstall --user 0 com.android.hotwordenrollment.okgoogle
+adb shell pm uninstall --user 0 com.android.hotwordenrollment.xgoogle
+
+# SAMSUNG DAEMON & BACKGROUND SERVICES
+# ============================================
+
+# Samsung Daemon App
+adb shell pm uninstall --user 0 com.sec.android.daemonapp
+
+# ============================================
+# TOTAL PACKAGES IN THIS CATEGORY: ~60
+# SAFETY LEVEL: MODERATE
+# RECOMMENDED FOR: Intermediate users who know what they're removing
+# POTENTIAL ISSUES: May disable some Samsung/Google integrations
+# ============================================
+
+# TESTING CHECKLIST AFTER REMOVAL:
+# - [ ] Camera works
+# - [ ] Phone calls work
+# - [ ] Text messages work
+# - [ ] Samsung Pay (if you kept it)
+# - [ ] Samsung DEX (if you kept it)
+# - [ ] Google services (if you use them)
+# ============================================

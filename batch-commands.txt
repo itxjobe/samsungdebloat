@@ -1,0 +1,157 @@
+# ============================================
+# BATCH DEBLOAT COMMANDS
+# ============================================
+# Pre-made batch commands for quick debloating
+# Copy and paste entire command blocks
+# WARNING: Review what each batch does before running!
+# ============================================
+
+# ============================================
+# BATCH 1: CONSERVATIVE (Recommended for Everyone)
+# ============================================
+# Removes: Facebook, carrier apps, obvious bloatware
+# Keeps: All Samsung features, Bixby, Gemini, DEX
+# Risk Level: VERY LOW
+
+adb shell pm uninstall --user 0 com.facebook.katana && adb shell pm uninstall --user 0 com.facebook.system && adb shell pm uninstall --user 0 com.facebook.appmanager && adb shell pm uninstall --user 0 com.facebook.services && adb shell pm uninstall --user 0 com.microsoft.office.outlook && adb shell pm uninstall --user 0 com.microsoft.office.officehubrow && adb shell pm uninstall --user 0 com.microsoft.skydrive && adb shell pm uninstall --user 0 com.amazon.mShop.android.shopping && adb shell pm uninstall --user 0 com.booking && adb shell pm uninstall --user 0 com.netflix.mediaclient && adb shell pm uninstall --user 0 com.linkedin.android && adb shell pm uninstall --user 0 com.samsung.android.game.gamehome && adb shell pm uninstall --user 0 com.samsung.android.game.gametools && adb shell pm uninstall --user 0 com.samsung.android.game.gos && adb shell pm uninstall --user 0 com.samsung.android.tvplus && adb shell pm uninstall --user 0 com.samsung.android.app.tips
+
+# ============================================
+# BATCH 2: MODERATE (For Regular Users)
+# ============================================
+# Batch 1 + Samsung duplicates + some Google apps
+# Removes: Samsung apps with Google alternatives
+# Risk Level: LOW
+
+adb shell pm uninstall --user 0 com.facebook.katana && adb shell pm uninstall --user 0 com.facebook.system && adb shell pm uninstall --user 0 com.facebook.appmanager && adb shell pm uninstall --user 0 com.facebook.services && adb shell pm uninstall --user 0 com.samsung.android.app.notes && adb shell pm uninstall --user 0 com.samsung.android.calendar && adb shell pm uninstall --user 0 com.sec.android.app.sbrowser && adb shell pm uninstall --user 0 com.samsung.android.messaging && adb shell pm uninstall --user 0 com.samsung.android.game.gamehome && adb shell pm uninstall --user 0 com.samsung.android.tvplus && adb shell pm uninstall --user 0 com.samsung.android.arzone && adb shell pm uninstall --user 0 com.samsung.android.aremoji && adb shell pm uninstall --user 0 com.samsung.android.aremojieditor && adb shell pm uninstall --user 0 com.google.android.apps.youtube.music && adb shell pm uninstall --user 0 com.google.android.videos && adb shell pm uninstall --user 0 com.google.android.apps.tachyon && adb shell pm uninstall --user 0 com.samsung.android.app.spage && adb shell pm uninstall --user 0 com.samsung.storyservice
+
+# ============================================
+# BATCH 3: AGGRESSIVE (For Advanced Users)
+# ============================================
+# Batch 2 + system apps + more integrations
+# WARNING: May affect Samsung features
+# Risk Level: MODERATE
+
+adb shell pm uninstall --user 0 com.facebook.katana && adb shell pm uninstall --user 0 com.facebook.system && adb shell pm uninstall --user 0 com.facebook.services && adb shell pm uninstall --user 0 com.samsung.android.app.notes && adb shell pm uninstall --user 0 com.samsung.android.calendar && adb shell pm uninstall --user 0 com.sec.android.app.sbrowser && adb shell pm uninstall --user 0 com.samsung.android.messaging && adb shell pm uninstall --user 0 com.samsung.android.game.gamehome && adb shell pm uninstall --user 0 com.samsung.android.tvplus && adb shell pm uninstall --user 0 com.samsung.android.arzone && adb shell pm uninstall --user 0 com.samsung.android.samsungpass && adb shell pm uninstall --user 0 com.samsung.android.spay && adb shell pm uninstall --user 0 com.samsung.android.spayfw && adb shell pm uninstall --user 0 com.sec.android.easyMover && adb shell pm uninstall --user 0 com.google.android.apps.youtube.music && adb shell pm uninstall --user 0 com.google.android.videos && adb shell pm uninstall --user 0 com.google.android.apps.tachyon && adb shell pm uninstall --user 0 com.android.chrome && adb shell pm uninstall --user 0 com.google.android.gm && adb shell pm uninstall --user 0 com.samsung.android.bixby.wakeup && adb shell pm uninstall --user 0 com.samsung.android.bixbyvision.framework
+
+# ============================================
+# BATCH 4: CARRIER BLOATWARE (All Carriers)
+# ============================================
+# Removes all known carrier apps
+# Safe to run - non-existent packages will just error
+# Risk Level: VERY LOW
+
+adb shell pm uninstall --user 0 com.vzw.apnservice && adb shell pm uninstall --user 0 com.vzw.ecid && adb shell pm uninstall --user 0 com.vcast.mediamanager && adb shell pm uninstall --user 0 com.att.android.attsmartwifi && adb shell pm uninstall --user 0 com.att.myWireless && adb shell pm uninstall --user 0 com.tmobile.pr.adapt && adb shell pm uninstall --user 0 com.tmobile.pr.mytmobile && adb shell pm uninstall --user 0 com.sprint.zone && adb shell pm uninstall --user 0 com.orange.appshop && adb shell pm uninstall --user 0 com.orange.mail.fr && adb shell pm uninstall --user 0 com.orange.orangeetmoi && adb shell pm uninstall --user 0 com.vodafone.mcare.client
+
+# ============================================
+# BATCH 5: SAMSUNG AR & GAMING (If not using)
+# ============================================
+# Removes all AR features and gaming services
+# Risk Level: LOW
+
+adb shell pm uninstall --user 0 com.samsung.android.arzone && adb shell pm uninstall --user 0 com.samsung.android.aremoji && adb shell pm uninstall --user 0 com.samsung.android.aremojieditor && adb shell pm uninstall --user 0 com.samsung.android.ardrawing && adb shell pm uninstall --user 0 com.samsung.android.app.camera.sticker.facearavatar.preload && adb shell pm uninstall --user 0 com.sec.android.mimage.avatarstickers && adb shell pm uninstall --user 0 com.samsung.android.game.gamehome && adb shell pm uninstall --user 0 com.samsung.android.game.gametools && adb shell pm uninstall --user 0 com.samsung.android.game.gos && adb shell pm uninstall --user 0 com.google.ar.core
+
+# ============================================
+# BATCH 6: REMOVE BIXBY, KEEP GEMINI
+# ============================================
+# For users who prefer Google Gemini over Bixby
+# Risk Level: LOW (if you use Gemini instead)
+
+adb shell pm uninstall --user 0 com.samsung.android.bixby.agent && adb shell pm uninstall --user 0 com.samsung.android.bixby.service && adb shell pm uninstall --user 0 com.samsung.android.bixby.wakeup && adb shell pm uninstall --user 0 com.samsung.android.bixby.voiceinput && adb shell pm uninstall --user 0 com.samsung.android.bixbyvision.framework && adb shell pm uninstall --user 0 com.samsung.android.bixby.ondevice.enus
+
+# ============================================
+# BATCH 7: GOOGLE APPS (If not using Google ecosystem)
+# ============================================
+# WARNING: Removes many Google services
+# Keep Google Play Services and Play Store!
+# Risk Level: MODERATE
+
+adb shell pm uninstall --user 0 com.google.android.apps.youtube.music && adb shell pm uninstall --user 0 com.google.android.videos && adb shell pm uninstall --user 0 com.google.android.apps.docs && adb shell pm uninstall --user 0 com.google.android.apps.photos && adb shell pm uninstall --user 0 com.google.android.apps.tachyon && adb shell pm uninstall --user 0 com.android.chrome && adb shell pm uninstall --user 0 com.google.android.gm && adb shell pm uninstall --user 0 com.google.android.youtube && adb shell pm uninstall --user 0 com.google.android.apps.maps && adb shell pm uninstall --user 0 com.google.android.projection.gearhead
+
+# ============================================
+# BATCH 8: SAMSUNG KIDS & PARENTAL
+# ============================================
+# Remove all kids and parental control features
+# Risk Level: VERY LOW
+
+adb shell pm uninstall --user 0 com.sec.android.app.kidshome && adb shell pm uninstall --user 0 com.samsung.android.kidsinstaller && adb shell pm uninstall --user 0 com.samsung.android.app.parentalcare
+
+# ============================================
+# BATCH 9: SAMSUNG PAY & WALLET
+# ============================================
+# Only run if you don't use Samsung Pay/Wallet
+# Risk Level: LOW (if you don't use these features)
+
+adb shell pm uninstall --user 0 com.samsung.android.spay && adb shell pm uninstall --user 0 com.samsung.android.spayfw && adb shell pm uninstall --user 0 com.samsung.android.samsungpass && adb shell pm uninstall --user 0 com.samsung.android.samsungpassautofill && adb shell pm uninstall --user 0 com.samsung.android.carkey
+
+# ============================================
+# BATCH 10: MAXIMUM DEBLOAT (EXTREME - NOT RECOMMENDED)
+# ============================================
+# WARNING: This will break many features!
+# Only for users who want absolute minimal Samsung/Google
+# You WILL lose functionality. Use at your own risk!
+# Risk Level: HIGH
+
+# I'm not including this batch command to prevent accidental damage.
+# If you really want maximum debloat, manually review and combine
+# commands from individual category files.
+
+# ============================================
+# SAFE COMBINATION RECOMMENDATIONS
+# ============================================
+
+# FOR MOST USERS:
+# Run Batch 1 (Conservative) + Batch 4 (Carrier Bloatware)
+
+# FOR USERS WHO WANT GOOGLE ECOSYSTEM:
+# Run Batch 2 (Moderate) + Batch 4 (Carrier) + Batch 6 (Remove Bixby)
+
+# FOR USERS WHO WANT SAMSUNG ECOSYSTEM:
+# Run Batch 1 (Conservative) + Batch 4 (Carrier) + Remove Gemini manually
+
+# FOR MINIMAL SAMSUNG:
+# Run Batch 3 (Aggressive) + Batch 4 (Carrier) + Batch 5 (AR/Gaming)
+
+# ============================================
+# IMPORTANT NOTES
+# ============================================
+
+# 1. These batches use && to chain commands
+#    If one fails, the rest will still run
+#
+# 2. Error messages for non-existent packages are normal
+#    Example: Carrier apps you don't have
+#
+# 3. You can combine multiple batches by running them sequentially
+#
+# 4. Some commands may take a few seconds each
+#    Be patient and let the batch complete
+#
+# 5. After running batches, reboot your phone:
+#    adb reboot
+#
+# 6. To see what was removed:
+#    adb shell pm list packages -u
+#    (Shows all packages including uninstalled)
+#
+# ============================================
+# PERFORMANCE NOTES
+# ============================================
+
+# After debloating, you should see:
+# ✓ Faster boot times
+# ✓ Less RAM usage
+# ✓ Better battery life (reduced background services)
+# ✓ More storage space (app data removed)
+# ✓ Cleaner app drawer
+# ✓ Fewer notifications from bloatware
+
+# You may NOT see improvement if:
+# ✗ You only removed apps you never used anyway
+# ✗ Background services are still running (some can't be disabled via ADB)
+# ✗ You have other battery draining apps installed
+# ✗ Hardware limitations
+
+# Debloating is not a magic fix for performance!
+# It helps but won't transform a slow phone into a fast one.
+#
+# ============================================

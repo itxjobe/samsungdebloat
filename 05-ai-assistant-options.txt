@@ -1,0 +1,213 @@
+# ============================================
+# AI ASSISTANT OPTIONS - Bixby & Gemini
+# ============================================
+# This file helps you choose which AI assistant to keep/remove.
+# You requested Bixby and Gemini to still work.
+#
+# CHOOSE YOUR AI ASSISTANT SETUP:
+# Option 1: Keep Both Bixby & Gemini (DEFAULT - Skip this file)
+# Option 2: Remove Bixby, Keep Gemini
+# Option 3: Remove Gemini, Keep Bixby
+# Option 4: Remove Both (NOT RECOMMENDED)
+# ============================================
+
+# ============================================
+# OPTION 1: KEEP BOTH ASSISTANTS (DEFAULT)
+# ============================================
+# Don't run any commands from this file!
+# Both Bixby and Gemini will continue working.
+#
+# Required packages for Bixby:
+# - com.samsung.android.bixby.agent
+# - com.samsung.android.bixby.wakeup
+# - com.samsung.android.visionintelligence (for Bixby Vision)
+#
+# Required packages for Gemini:
+# - com.google.android.apps.bard
+# - com.google.android.googlequicksearchbox
+# ============================================
+
+
+# ============================================
+# OPTION 2: REMOVE BIXBY, KEEP GEMINI
+# ============================================
+# Run these commands if you want to use Gemini instead of Bixby
+# Gemini will handle voice assistant and AI features
+
+# Bixby Core Services
+adb shell pm uninstall --user 0 com.samsung.android.bixby.agent
+adb shell pm uninstall --user 0 com.samsung.android.bixby.service
+adb shell pm uninstall --user 0 com.samsung.android.bixby.wakeup
+
+# Bixby Voice
+adb shell pm uninstall --user 0 com.samsung.android.bixby.voiceinput
+
+# Bixby Vision (Circle to Search alternative)
+# WARNING: Removing this also removes Samsung's Circle to Search
+adb shell pm uninstall --user 0 com.samsung.android.bixbyvision.framework
+adb shell pm uninstall --user 0 com.samsung.android.visionintelligence
+
+# Bixby Routines
+adb shell pm uninstall --user 0 com.samsung.android.app.routines
+
+# Bixby Language Packs
+adb shell pm uninstall --user 0 com.samsung.android.bixby.ondevice.enus
+adb shell pm uninstall --user 0 com.samsung.android.bixby.ondevice.frfr
+
+# KEEP THESE FOR GEMINI TO WORK:
+# ✓ com.google.android.apps.bard (Gemini app)
+# ✓ com.google.android.googlequicksearchbox (Google Search - required)
+# ✓ com.google.android.gms (Google Play Services - required)
+
+# ============================================
+# OPTION 3: REMOVE GEMINI, KEEP BIXBY
+# ============================================
+# Run these commands if you prefer Samsung's Bixby
+
+# Google Gemini (Bard)
+adb shell pm uninstall --user 0 com.google.android.apps.bard
+
+# Google Assistant (optional - different from Gemini)
+adb shell pm uninstall --user 0 com.google.android.apps.googleassistant
+
+# Google Search (WARNING: This may affect other Google features)
+# Only remove if you're sure - some Samsung features use Google Search
+# adb shell pm uninstall --user 0 com.google.android.googlequicksearchbox
+
+# KEEP THESE FOR BIXBY TO WORK:
+# ✓ com.samsung.android.bixby.agent
+# ✓ com.samsung.android.bixby.wakeup
+# ✓ com.samsung.android.visionintelligence (for Bixby Vision)
+
+# ============================================
+# OPTION 4: REMOVE BOTH (NOT RECOMMENDED)
+# ============================================
+# Only use if you want NO voice assistant at all
+# Many modern features depend on AI assistants
+
+# Remove all Bixby components (from Option 2)
+adb shell pm uninstall --user 0 com.samsung.android.bixby.agent
+adb shell pm uninstall --user 0 com.samsung.android.bixby.service
+adb shell pm uninstall --user 0 com.samsung.android.bixby.wakeup
+adb shell pm uninstall --user 0 com.samsung.android.bixby.voiceinput
+adb shell pm uninstall --user 0 com.samsung.android.bixbyvision.framework
+adb shell pm uninstall --user 0 com.samsung.android.visionintelligence
+adb shell pm uninstall --user 0 com.samsung.android.app.routines
+
+# Remove all Gemini/Google Assistant (from Option 3)
+adb shell pm uninstall --user 0 com.google.android.apps.bard
+adb shell pm uninstall --user 0 com.google.android.apps.googleassistant
+
+# WARNING: This will disable:
+# - Voice commands
+# - Bixby Routines (automation)
+# - Circle to Search
+# - Bixby Vision
+# - Gemini AI features
+# - Many Galaxy AI features
+
+# ============================================
+# DETAILED PACKAGE INFORMATION
+# ============================================
+
+# BIXBY PACKAGES EXPLAINED:
+#
+# com.samsung.android.bixby.agent
+#   - Main Bixby service
+#   - Handles voice commands and Bixby interactions
+#   - Required for Bixby to function
+#
+# com.samsung.android.bixby.wakeup
+#   - "Hi Bixby" wake word detection
+#   - Always-listening feature
+#   - Can remove if you only use button activation
+#
+# com.samsung.android.visionintelligence
+#   - Bixby Vision service
+#   - Enables Circle to Search (Samsung version)
+#   - Image recognition and visual search
+#   - Used by Camera app for scene detection
+#
+# com.samsung.android.app.routines
+#   - Bixby Routines (automation)
+#   - "Modes and Routines" in Settings
+#   - Automates tasks based on triggers
+#   - Very useful feature - consider keeping
+#
+# com.samsung.android.bixby.service
+#   - Background Bixby service
+#   - Supports Bixby agent
+#
+# com.samsung.android.bixbyvision.framework
+#   - Framework for Bixby Vision features
+#   - Supports AR and image analysis
+
+# GEMINI PACKAGES EXPLAINED:
+#
+# com.google.android.apps.bard
+#   - Google Gemini AI assistant
+#   - Replaces Google Assistant
+#   - Advanced AI conversation and tasks
+#   - Integrated into Samsung apps in OneUI 8
+#
+# com.google.android.googlequicksearchbox
+#   - Google Search app
+#   - Required for Gemini to function
+#   - Also powers Google Now, Circle to Search
+#   - Removing this breaks many Google features
+#
+# com.google.android.apps.googleassistant
+#   - Older Google Assistant
+#   - Being replaced by Gemini
+#   - Can remove if using Gemini instead
+
+# ============================================
+# RECOMMENDED CONFIGURATION
+# ============================================
+#
+# For S25 Edge users, we recommend:
+#
+# KEEP:
+# ✓ Gemini (com.google.android.apps.bard)
+# ✓ Google Search (com.google.android.googlequicksearchbox)
+# ✓ Bixby Routines (com.samsung.android.app.routines)
+# ✓ Vision Intelligence (com.samsung.android.visionintelligence)
+#
+# OPTIONAL REMOVE:
+# ✗ Bixby Agent (if you use Gemini for voice)
+# ✗ Bixby Wakeup (if you don't use "Hi Bixby")
+#
+# This gives you:
+# - Best AI assistant (Gemini)
+# - Samsung automation (Bixby Routines)
+# - Circle to Search (Vision Intelligence)
+# - All Galaxy AI features working
+#
+# ============================================
+
+# GALAXY AI FEATURES & DEPENDENCIES
+# ============================================
+# OneUI 8 integrates Galaxy AI deeply. Here's what you need:
+#
+# For Live Translate:
+# - Samsung Intelligence Voice Services
+# - Samsung Interpreter
+# - Language packs
+#
+# For Circle to Search:
+# - com.samsung.android.visionintelligence OR
+# - com.google.android.googlequicksearchbox
+# - Both provide this feature
+#
+# For Photo/Note Assist:
+# - com.google.android.apps.bard (Gemini)
+# - Samsung AI Core (from Galaxy Store)
+#
+# For Writing Assist:
+# - Samsung Keyboard
+# - Gemini integration
+#
+# IMPORTANT: Do NOT remove packages with "intelligence" or "ai"
+# in the name if you want Galaxy AI features to work!
+#
+# ============================================

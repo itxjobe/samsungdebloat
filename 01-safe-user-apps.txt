@@ -1,0 +1,127 @@
+# ============================================
+# SAFE USER APPS - LEVEL 1 (SAFEST REMOVALS)
+# ============================================
+# These apps are user-level applications that can be safely removed
+# without affecting core system functionality.
+# Perfect for beginners - minimal risk of breaking anything.
+# ============================================
+
+# SAMSUNG BLOATWARE APPS
+# ============================================
+
+# Samsung Apps (Duplicates of Google/Better alternatives exist)
+adb shell pm uninstall --user 0 com.samsung.android.app.notes
+adb shell pm uninstall --user 0 com.samsung.android.calendar
+adb shell pm uninstall --user 0 com.sec.android.app.clockpackage
+adb shell pm uninstall --user 0 com.samsung.android.messaging
+adb shell pm uninstall --user 0 com.sec.android.app.sbrowser
+
+# Samsung Health (if not using)
+adb shell pm uninstall --user 0 com.sec.android.app.shealth
+
+# Samsung Voice Recorder (if not using)
+adb shell pm uninstall --user 0 com.sec.android.app.voicenote
+
+# Samsung Calculator (can use Google Calculator instead)
+adb shell pm uninstall --user 0 com.sec.android.app.popupcalculator
+
+# Samsung Tips & Help
+adb shell pm uninstall --user 0 com.samsung.android.app.tips
+adb shell pm uninstall --user 0 com.samsung.android.voc
+
+# Samsung Kids
+adb shell pm uninstall --user 0 com.sec.android.app.kidshome
+adb shell pm uninstall --user 0 com.samsung.android.kidsinstaller
+
+# Samsung AR Zone (AR Emoji and AR features)
+adb shell pm uninstall --user 0 com.samsung.android.arzone
+adb shell pm uninstall --user 0 com.samsung.android.aremoji
+adb shell pm uninstall --user 0 com.samsung.android.aremojieditor
+adb shell pm uninstall --user 0 com.samsung.android.ardrawing
+
+# Samsung Game Launcher & Game Optimizing Service
+adb shell pm uninstall --user 0 com.samsung.android.game.gamehome
+adb shell pm uninstall --user 0 com.samsung.android.game.gametools
+adb shell pm uninstall --user 0 com.samsung.android.game.gos
+
+# Samsung TV Plus (streaming service)
+adb shell pm uninstall --user 0 com.samsung.android.tvplus
+
+# Samsung Free / Daily Board / Spage
+adb shell pm uninstall --user 0 com.samsung.android.app.spage
+adb shell pm uninstall --user 0 com.samsung.storyservice
+
+# Samsung Reminder (use Google Tasks/Keep instead)
+adb shell pm uninstall --user 0 com.samsung.android.app.reminder
+
+# Samsung SmartThings Find
+adb shell pm uninstall --user 0 com.samsung.android.app.find
+
+# Samsung Watch Manager (if no Samsung watch)
+adb shell pm uninstall --user 0 com.samsung.android.app.watchmanager
+
+# Samsung One Connect (smart TV remote)
+adb shell pm uninstall --user 0 com.samsung.android.oneconnect
+
+# GOOGLE BLOATWARE APPS
+# ============================================
+
+# Google Apps (if you don't use them)
+adb shell pm uninstall --user 0 com.google.android.apps.youtube.music
+adb shell pm uninstall --user 0 com.google.android.videos
+adb shell pm uninstall --user 0 com.google.android.apps.docs
+adb shell pm uninstall --user 0 com.google.android.apps.photos
+
+# Google Duo (now Google Meet - if not using)
+adb shell pm uninstall --user 0 com.google.android.apps.tachyon
+
+# THIRD-PARTY BLOATWARE
+# ============================================
+
+# Facebook (pre-installed bloatware)
+adb shell pm uninstall --user 0 com.facebook.katana
+adb shell pm uninstall --user 0 com.facebook.system
+adb shell pm uninstall --user 0 com.facebook.appmanager
+adb shell pm uninstall --user 0 com.facebook.services
+
+# Microsoft Office Apps (if not using)
+adb shell pm uninstall --user 0 com.microsoft.office.outlook
+adb shell pm uninstall --user 0 com.microsoft.office.officehubrow
+adb shell pm uninstall --user 0 com.microsoft.skydrive
+adb shell pm uninstall --user 0 com.microsoft.appmanager
+
+# Amazon Apps (if not using)
+adb shell pm uninstall --user 0 com.amazon.mShop.android.shopping
+adb shell pm uninstall --user 0 com.amazon.appmanager
+
+# Booking.com (pre-installed bloatware)
+adb shell pm uninstall --user 0 com.booking
+adb shell pm uninstall --user 0 com.booking.aidprovider
+
+# Netflix (can reinstall from Play Store if needed)
+adb shell pm uninstall --user 0 com.netflix.mediaclient
+
+# LinkedIn (pre-installed bloatware)
+adb shell pm uninstall --user 0 com.linkedin.android
+
+# Spotify (pre-installed - can reinstall from Play Store)
+adb shell pm uninstall --user 0 com.spotify.music
+
+# SAMSUNG LANGUAGE PACKS (if not needed)
+# ============================================
+# Only remove languages you don't use
+
+# French Language Packs
+adb shell pm uninstall --user 0 com.samsung.SMT.lang_fr_fr_l01
+
+# English US Language Packs (keep if you use English)
+# adb shell pm uninstall --user 0 com.samsung.SMT.lang_en_us_l03
+
+# Translation Language Packs (if not using Samsung Live Translate)
+adb shell pm uninstall --user 0 com.samsung.android.nmt.apps.t2t.languagepack.enfr
+
+# ============================================
+# TOTAL PACKAGES IN THIS CATEGORY: ~45
+# SAFETY LEVEL: VERY HIGH
+# RECOMMENDED FOR: All users
+# ============================================

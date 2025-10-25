@@ -1,0 +1,132 @@
+# ============================================
+# CARRIER BLOATWARE - LEVEL 1 (SAFE REMOVALS)
+# ============================================
+# Remove carrier-specific apps that are pre-installed.
+# These vary by carrier and region.
+# Very safe to remove - they're just carrier marketing apps.
+# ============================================
+
+# VERIZON APPS
+# ============================================
+
+adb shell pm uninstall --user 0 com.vzw.apnservice
+adb shell pm uninstall --user 0 com.vzw.ecid
+adb shell pm uninstall --user 0 com.vcast.mediamanager
+adb shell pm uninstall --user 0 com.asurion.android.verizon.vms
+adb shell pm uninstall --user 0 com.verizon.llkagent
+adb shell pm uninstall --user 0 com.verizon.services
+adb shell pm uninstall --user 0 com.verizon.mips.services
+adb shell pm uninstall --user 0 com.verizon.obdm
+adb shell pm uninstall --user 0 com.motricity.verizon.ssodownloadable
+
+# AT&T APPS
+# ============================================
+
+adb shell pm uninstall --user 0 com.att.android.attsmartwifi
+adb shell pm uninstall --user 0 com.att.personalcloud
+adb shell pm uninstall --user 0 com.att.myWireless
+adb shell pm uninstall --user 0 com.att.tv
+adb shell pm uninstall --user 0 com.att.iqi
+adb shell pm uninstall --user 0 com.att.dh
+
+# T-MOBILE APPS
+# ============================================
+
+adb shell pm uninstall --user 0 com.tmobile.pr.adapt
+adb shell pm uninstall --user 0 com.tmobile.services.nameid
+adb shell pm uninstall --user 0 com.tmobile.echolocate
+adb shell pm uninstall --user 0 com.tmobile.pr.mytmobile
+adb shell pm uninstall --user 0 com.tmobile.tmoplus
+
+# SPRINT APPS
+# ============================================
+
+adb shell pm uninstall --user 0 com.sprint.ce.updater
+adb shell pm uninstall --user 0 com.sprint.w.installer
+adb shell pm uninstall --user 0 com.sprint.zone
+
+# ORANGE (FRANCE/EUROPE) APPS
+# ============================================
+
+adb shell pm uninstall --user 0 com.orange.appshop
+adb shell pm uninstall --user 0 com.orange.mail.fr
+adb shell pm uninstall --user 0 com.orange.orangeetmoi
+adb shell pm uninstall --user 0 com.orange.owtv
+adb shell pm uninstall --user 0 com.orange.phone
+adb shell pm uninstall --user 0 com.orange.securite
+adb shell pm uninstall --user 0 com.orange.update
+
+# VODAFONE APPS
+# ============================================
+
+adb shell pm uninstall --user 0 com.vodafone.mcare.client
+adb shell pm uninstall --user 0 com.vodafone.myvodafone
+
+# EE (UK) APPS
+# ============================================
+
+adb shell pm uninstall --user 0 ee.android.client.retail
+adb shell pm uninstall --user 0 com.ee.myaccount
+
+# THREE (UK) APPS
+# ============================================
+
+adb shell pm uninstall --user 0 com.three.mydashboard
+
+# O2 (UK/EUROPE) APPS
+# ============================================
+
+adb shell pm uninstall --user 0 de.o2.android.mein.o2
+adb shell pm uninstall --user 0 com.telefonica.o2updates
+
+# TELSTRA (AUSTRALIA) APPS
+# ============================================
+
+adb shell pm uninstall --user 0 com.telstra.telephony.exttelephony
+adb shell pm uninstall --user 0 com.telstra.nrl
+
+# ROGERS (CANADA) APPS
+# ============================================
+
+adb shell pm uninstall --user 0 com.rogers.drs.client
+adb shell pm uninstall --user 0 com.rogers.networkselector
+
+# BELL (CANADA) APPS
+# ============================================
+
+adb shell pm uninstall --user 0 ca.bell.app.cmp
+
+# SK TELECOM (SOUTH KOREA) APPS
+# ============================================
+
+adb shell pm uninstall --user 0 com.skt.prod.dialer
+adb shell pm uninstall --user 0 com.skt.skaf.A000Z00040
+adb shell pm uninstall --user 0 com.skt.skaf.OA00018282
+
+# KT (SOUTH KOREA) APPS
+# ============================================
+
+adb shell pm uninstall --user 0 com.kt.olleh.storefront
+adb shell pm uninstall --user 0 com.kt.phone.customizingmenu
+
+# LG U+ (SOUTH KOREA) APPS
+# ============================================
+
+adb shell pm uninstall --user 0 com.lguplus.appstore
+
+# DOCOMO (JAPAN) APPS
+# ============================================
+
+adb shell pm uninstall --user 0 com.nttdocomo.android.dhome
+adb shell pm uninstall --user 0 com.nttdocomo.android.store
+
+# ============================================
+# NOTE: Your phone may not have all these packages.
+# If a package doesn't exist, you'll get an error - that's normal.
+# Only the carrier apps for YOUR carrier will be present.
+# ============================================
+
+# SAFETY LEVEL: VERY HIGH
+# RECOMMENDED FOR: All users
+# POTENTIAL ISSUES: None - these are purely carrier marketing
+# ============================================

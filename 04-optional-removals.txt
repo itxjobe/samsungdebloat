@@ -1,0 +1,197 @@
+# ============================================
+# OPTIONAL REMOVALS - LEVEL 3 (HIGHER RISK)
+# ============================================
+# These apps are more integrated with system features.
+# Only remove if you understand the consequences.
+# Some features WILL break if you remove these.
+# ============================================
+
+# SAMSUNG SKETCH & CREATIVE TOOLS
+# ============================================
+# Used for S Pen sketching and drawing features
+
+adb shell pm uninstall --user 0 com.samsung.android.app.sketchbook
+
+# Samsung Penup (S Pen community)
+adb shell pm uninstall --user 0 com.samsung.android.penup
+
+# SAMSUNG TRANSLATOR & INTERPRETER
+# ============================================
+# Real-time translation features
+
+adb shell pm uninstall --user 0 com.samsung.android.app.interpreter
+
+# SAMSUNG QUICK TOOLS
+# ============================================
+# Quick access tools (may affect multitasking features)
+
+adb shell pm uninstall --user 0 com.sec.android.app.quicktool
+
+# SAMSUNG VISION INTELLIGENCE (Bixby Vision / Circle to Search)
+# ============================================
+# WARNING: This enables Circle to Search and Bixby Vision
+# Removing this will disable these AI vision features
+
+adb shell pm uninstall --user 0 com.samsung.android.visionintelligence
+
+# GOOGLE APPS (MORE INTEGRATED)
+# ============================================
+
+# Google YouTube (can reinstall from Play Store)
+adb shell pm uninstall --user 0 com.google.android.youtube
+
+# Google Drive (if not using Google cloud storage)
+adb shell pm uninstall --user 0 com.google.android.apps.docs.editors.docs
+adb shell pm uninstall --user 0 com.google.android.apps.docs.editors.sheets
+adb shell pm uninstall --user 0 com.google.android.apps.docs.editors.slides
+
+# Google Maps (if using other navigation)
+adb shell pm uninstall --user 0 com.google.android.apps.maps
+
+# SAMSUNG PRINT SERVICES
+# ============================================
+# Only remove if you never print from your phone
+
+adb shell pm uninstall --user 0 com.samsung.android.printservice.plugin.canon
+adb shell pm uninstall --user 0 com.samsung.android.printservice.plugin.hp
+adb shell pm uninstall --user 0 com.samsung.android.printservice.plugin.brother
+
+# Print Spooler (core Android printing)
+adb shell pm uninstall --user 0 com.android.printspooler
+
+# SAMSUNG SHARING & CONNECTIVITY
+# ============================================
+
+# Quick Share (Samsung's file sharing - similar to AirDrop)
+# WARNING: Keep if you share files with other Samsung devices
+adb shell pm uninstall --user 0 com.samsung.android.app.sharelive
+
+# Link to Windows
+adb shell pm uninstall --user 0 com.samsung.android.mdx.kit
+
+# Samsung Nearby Service
+adb shell pm uninstall --user 0 com.samsung.android.easysetup
+
+# SAMSUNG WALLPAPER & CUSTOMIZATION
+# ============================================
+
+# Live Wallpapers
+adb shell pm uninstall --user 0 com.samsung.android.livewallpaper.res
+
+# Dynamic Wallpapers
+adb shell pm uninstall --user 0 com.samsung.android.dynamiclock
+
+# SAMSUNG EMAIL & EXCHANGE
+# ============================================
+# Only remove if you don't use Samsung Email app
+
+adb shell pm uninstall --user 0 com.samsung.android.email.provider
+adb shell pm uninstall --user 0 com.wsomacp
+
+# SAMSUNG WEATHER
+# ============================================
+
+adb shell pm uninstall --user 0 com.sec.android.daemonapp.weather
+
+# SAMSUNG GALLERY FEATURES
+# ============================================
+# May affect Samsung Gallery app features
+
+# Gallery Stories
+adb shell pm uninstall --user 0 com.samsung.android.service.storyservice
+
+# Image Utility
+adb shell pm uninstall --user 0 com.sec.android.gallery3d
+
+# SAMSUNG KEYBOARD FEATURES
+# ============================================
+# WARNING: DO NOT remove com.samsung.android.honeyboard (main keyboard)
+# These are just optional keyboard features
+
+# Emoji Editor
+adb shell pm uninstall --user 0 com.sec.android.mimage.avatarstickers
+
+# SAMSUNG CAPTURE & SCREENSHOT
+# ============================================
+# May affect advanced screenshot features
+
+# Smart Capture
+# WARNING: May affect screenshot features
+# adb shell pm uninstall --user 0 com.samsung.android.app.smartcapture
+
+# SAMSUNG WIRELESS FEATURES
+# ============================================
+
+# Samsung Wireless Emergency Alerts (if your region doesn't require it)
+# adb shell pm uninstall --user 0 com.sec.android.emergencymode.service
+
+# ANT+ (wireless protocol - if you don't use fitness devices)
+adb shell pm uninstall --user 0 com.dsi.ant.service.socket
+adb shell pm uninstall --user 0 com.dsi.ant.plugins.antplus
+adb shell pm uninstall --user 0 com.dsi.ant.sample.acquirechannels
+
+# SAMSUNG DIAGNOSTICS & TESTING
+# ============================================
+
+# Samsung Device Care (battery/storage optimization)
+# WARNING: May affect battery optimization features
+# adb shell pm uninstall --user 0 com.samsung.android.lool
+
+# Samsung Members (support and community)
+adb shell pm uninstall --user 0 com.samsung.android.voc
+
+# ACCESSIBILITY FEATURES
+# ============================================
+# Only remove if you don't need accessibility
+
+# Google Live Transcribe & Scribe
+adb shell pm uninstall --user 0 com.google.audio.hearing.visualization.accessibility.scribe
+
+# Samsung Accessibility (TalkBack integration)
+# WARNING: Keep if you need accessibility features
+# adb shell pm uninstall --user 0 com.samsung.accessibility
+
+# SAMSUNG Knox & SECURITY (ADVANCED)
+# ============================================
+# WARNING: EXTREME RISK - May cause system instability or lock device
+# NOT RECOMMENDED unless you know exactly what you're doing
+
+# Knox related (CAREFUL - can cause issues)
+# adb shell pm uninstall --user 0 com.samsung.android.knox.analytics.uploader
+# adb shell pm uninstall --user 0 com.samsung.android.knox.attestation
+
+# Secure Folder (if not using)
+# adb shell pm uninstall --user 0 com.samsung.knox.securefolder
+
+# ============================================
+# SAMSUNG MAINTENANCE & UPDATES
+# ============================================
+
+# Software Update Service (if you manually update)
+# WARNING: You won't get automatic update notifications
+# adb shell pm uninstall --user 0 com.sec.android.soagent
+# adb shell pm uninstall --user 0 com.wssyncmldm
+
+# ============================================
+# TOTAL PACKAGES IN THIS CATEGORY: ~40
+# SAFETY LEVEL: LOW-MODERATE
+# RECOMMENDED FOR: Advanced users only
+# POTENTIAL ISSUES:
+#   - S Pen features may not work
+#   - Circle to Search disabled
+#   - File sharing features broken
+#   - Screenshot features limited
+#   - No automatic updates
+# ============================================
+
+# TESTING CHECKLIST AFTER REMOVAL:
+# - [ ] S Pen features (if you have S Pen)
+# - [ ] Screenshots and screen recording
+# - [ ] File sharing (Quick Share)
+# - [ ] Link to Windows (if you use it)
+# - [ ] Printing (if you use it)
+# - [ ] Circle to Search
+# - [ ] Live Translation
+# - [ ] Keyboard features
+# - [ ] Gallery app
+# ============================================
