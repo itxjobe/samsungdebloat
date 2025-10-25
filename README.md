@@ -217,6 +217,22 @@ This script was compiled from:
 - Official Samsung package documentation
 - Personal testing on S25 Edge with OneUI 8
 
+## Credits & Acknowledgments
+
+This project utilizes and references several excellent open-source tools:
+
+### Third-Party Tools
+- **[Canta](https://github.com/samolego/Canta)** by [samolego](https://github.com/samolego) - Android app uninstaller without root
+- **[Shizuku](https://shizuku.rikka.app/)** by [RikkaApps](https://github.com/RikkaApps) - Provides ADB-like permissions on-device
+- **[App Manager](https://github.com/MuntashirAkon/AppManager)** by [Muntashir Akon](https://github.com/MuntashirAkon) - Advanced app management tool
+- **[Universal Android Debloater](https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation)** by [Universal Debloater Alliance](https://github.com/Universal-Debloater-Alliance) - Package debloat lists and recommendations
+- **[Termux](https://termux.dev/)** - Terminal emulator for Android
+
+### Inspiration
+- **[Tom4tot's Galaxy S24 Debloat Script](https://github.com/Tom4tot/Galaxy-S24-Debloat-Script)** - Original reference for S24 debloating
+
+Special thanks to the XDA Forums community, r/GalaxyS25, and r/Android communities for testing and feedback.
+
 ## Disclaimer
 
 **USE AT YOUR OWN RISK**
