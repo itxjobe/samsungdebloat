@@ -1,12 +1,10 @@
 {
   "name": "Remove Gemini - OneUI 8",
-  "description": "Removes Google Gemini assistant. Use this if you prefer Bixby or Google Assistant only",
+  "description": "Removes Google Gemini assistant. Use this if you prefer Bixby or Google Assistant only. WARNING: This will remove Gemini functionality. Make sure you have an alternative assistant configured",
+  "createdDate": 1730000000000,
   "version": "1.0",
-  "device": "Samsung Galaxy S25 series",
-  "oneui_version": "OneUI 8",
-  "warning": "This will remove Gemini functionality. Make sure you have an alternative assistant configured",
-  "packages": [
-    "com.google.android.apps.bard",
-    "com.google.android.apps.gemini"
+  "apps": [
+    {"packageName": "com.google.android.apps.bard"},
+    {"packageName": "com.google.android.apps.gemini"}
   ]
 }
