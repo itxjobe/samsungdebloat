@@ -1,0 +1,41 @@
+# Battery-Focused Configuration
+# Tested by: Community
+# Device: Galaxy S25 Edge
+# OneUI: 8.0
+# Date: 2025-10-25
+#
+# Focus: Maximum battery life
+# Testing period: 2 weeks
+# Battery improvement: ~15-20%
+#
+# Preserved features:
+# - Phone calls, SMS
+# - Camera
+# - Samsung Pay
+# - Core Samsung features
+#
+# Removed:
+# - Google apps (heavy battery users)
+# - Samsung AR/Gaming
+# - Background services
+# - Social media
+
+com.facebook.katana
+com.facebook.system
+com.facebook.services
+com.google.android.apps.youtube.music
+com.google.android.videos
+com.google.android.apps.docs
+com.google.android.apps.photos
+com.google.android.apps.tachyon
+com.samsung.android.game.gamehome
+com.samsung.android.game.gametools
+com.samsung.android.game.gos
+com.samsung.android.arzone
+com.samsung.android.aremoji
+com.samsung.android.tvplus
+com.samsung.android.voc
+com.microsoft.office.outlook
+com.amazon.mShop.android.shopping
+com.netflix.mediaclient
+com.linkedin.android

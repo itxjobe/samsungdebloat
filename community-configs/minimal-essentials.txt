@@ -1,0 +1,38 @@
+# Minimal Essentials Configuration
+# Tested by: Community
+# Device: Galaxy S25 Edge
+# OneUI: 8.0
+# Date: 2025-10-25
+#
+# Focus: Bare minimum - stock Android feel
+# Testing period: 1 week
+# Trade-offs: Many Samsung features disabled
+#
+# Keeps only:
+# - Phone, Messages, Camera
+# - Settings, Files
+# - Play Store
+# - Samsung Keyboard
+#
+# Removes almost everything else
+
+com.facebook.katana
+com.facebook.system
+com.samsung.android.app.notes
+com.samsung.android.calendar
+com.samsung.android.messaging
+com.sec.android.app.sbrowser
+com.sec.android.app.shealth
+com.samsung.android.game.gamehome
+com.samsung.android.arzone
+com.samsung.android.tvplus
+com.samsung.android.spay
+com.samsung.android.app.spage
+com.google.android.apps.youtube.music
+com.google.android.videos
+com.google.android.apps.docs
+com.google.android.gm
+com.samsung.android.bixby.agent
+com.samsung.android.visionintelligence
+com.microsoft.office.outlook
+com.amazon.mShop.android.shopping

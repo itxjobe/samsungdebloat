@@ -1,0 +1,32 @@
+# Privacy-Focused Configuration
+# Tested by: Community
+# Device: Galaxy S25 Edge
+# OneUI: 8.0
+# Date: 2025-10-25
+#
+# Focus: Minimal tracking and telemetry
+# Testing period: 2 weeks
+# Privacy improvement: Significant reduction in data collection
+#
+# Preserved:
+# - Samsung ecosystem
+# - Core functions
+# - Samsung Pay
+#
+# Removed:
+# - Facebook services
+# - Google telemetry
+# - Samsung analytics
+# - Third-party trackers
+
+com.facebook.katana
+com.facebook.system
+com.facebook.appmanager
+com.facebook.services
+com.google.android.gms.location.history
+com.samsung.android.voc
+com.samsung.android.app.omcagent
+com.sec.android.daemonapp
+com.microsoft.appmanager
+com.android.providers.partnerbookmarks
+com.samsung.storyservice
