@@ -11,9 +11,25 @@ Comprehensive ADB debloat script for Samsung Galaxy S25 Edge running OneUI 8 (An
 - **No Root Required**: Uses ADB commands only
 - **Reversible**: Apps can be restored via factory reset or individual reinstall
 
-## Prerequisites
+## Debloat Methods
 
-Before starting, you need:
+Choose the method that works best for you:
+
+### On-Device (No Computer Needed)
+- **Shizuku + Canta** - Easy GUI app (one-time computer setup)
+- **Shizuku + App Manager** - More advanced on-device option
+- **Termux** - Run scripts directly on your phone
+- See `ON-DEVICE-DEBLOAT.md` for complete guide
+
+### From Computer (Traditional ADB)
+- Individual commands
+- Batch commands
+- ADB AppControl GUI tool
+- See instructions below
+
+## Prerequisites (For ADB Method)
+
+If using the traditional ADB method from computer:
 
 1. **USB Debugging Enabled** on your S25 Edge
    - Settings > About phone > Tap "Build number" 7 times
@@ -52,7 +68,24 @@ Before starting, you need:
 
 ## Usage
 
-### Method 1: Individual Commands (Recommended for Beginners)
+### On-Device Methods (Recommended for Most Users)
+
+**See `ON-DEVICE-DEBLOAT.md` for complete instructions**
+
+#### Quick Start - Shizuku + Canta:
+1. Setup Shizuku (one-time with computer)
+2. Install Canta app
+3. Import package lists from `canta-lists/` folder
+4. Select and remove bloatware with GUI
+5. Reboot
+
+**Advantages:** Visual interface, no constant computer connection, easier to use
+
+---
+
+### Computer-Based Methods
+
+#### Method 1: Individual Commands (Recommended for Beginners)
 
 1. Connect your S25 Edge via USB
 2. Open terminal/command prompt
@@ -65,7 +98,7 @@ Example:
 adb shell pm uninstall --user 0 com.facebook.katana
 ```
 
-### Method 2: Batch Commands (Advanced)
+#### Method 2: Batch Commands (Advanced)
 
 1. Connect your device
 2. Copy the entire batch command from the script
@@ -73,7 +106,7 @@ adb shell pm uninstall --user 0 com.facebook.katana
 
 **Warning**: Review batch commands carefully before executing!
 
-### Method 3: Using ADB AppControl (GUI Tool)
+#### Method 3: Using ADB AppControl (GUI Tool)
 
 1. Download ADB AppControl from: https://adbappcontrol.com/
 2. Connect your device
@@ -81,10 +114,9 @@ adb shell pm uninstall --user 0 com.facebook.katana
 4. Select packages to remove/disable
 5. Apply changes
 
-## Script Categories
+## Repository Structure
 
-The debloat commands are organized into these files:
-
+### Debloat Scripts (ADB Commands)
 - `01-safe-user-apps.txt` - Safest removals (Samsung/Google user apps)
 - `02-bloatware-carriers.txt` - Carrier bloatware
 - `03-safe-system-apps.txt` - Safe system app disables
@@ -92,6 +124,18 @@ The debloat commands are organized into these files:
 - `05-ai-assistant-options.txt` - Bixby/Gemini removal (if desired)
 - `06-oneui8-specific.txt` - OneUI 8 new apps and features
 - `batch-commands.txt` - Pre-made batch removal commands
+
+### On-Device Files
+- `canta-lists/` - Package lists for Canta app import
+- `termux-scripts/` - Shell scripts for Termux
+- `ON-DEVICE-DEBLOAT.md` - Complete on-device guide
+
+### Documentation
+- `README.md` - This file
+- `QUICKSTART.md` - Quick start guide for ADB method
+- `RESTORE-GUIDE.md` - How to restore removed apps
+- `SUGGESTIONS.md` - Tips, optimizations, and recommendations
+- `package-reference.md` - Detailed package information
 
 ## Recommended Debloat Levels
 
