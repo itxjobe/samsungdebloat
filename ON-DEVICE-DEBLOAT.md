@@ -69,20 +69,24 @@ adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.s
 2. Grant Shizuku permission when prompted
 3. You'll see a list of all installed apps
 
-#### Using Our Package Lists
+#### Using Our Package Presets
 
-**Option A - Manual Selection:**
+**Option A - Import JSON Preset (Recommended):**
+1. Download the JSON preset from `canta-lists/` folder
+   - `conservative.json` - Safest, recommended for beginners
+   - `moderate.json` - Balanced approach
+   - `remove-bixby.json` or `remove-gemini.json` - Optional AI assistant removal
+2. Canta > Menu (⋮) > Import Preset
+3. Select the downloaded JSON file
+4. Review the packages that will be removed
+5. Deselect any you want to keep
+6. Tap "Uninstall Selected"
+
+**Option B - Manual Selection:**
 1. Open this repository's files on your phone
 2. Read through `01-safe-user-apps.txt`
 3. Search for each package in Canta
 4. Tap to select, then "Uninstall"
-
-**Option B - Import Package List:**
-1. Download the `canta-lists/` folder from this repo
-2. Canta > Menu > Import
-3. Select the list file (conservative, moderate, etc.)
-4. Review selections
-5. Tap "Uninstall Selected"
 
 ### Step 5: Reboot
 
@@ -228,11 +232,12 @@ Use Tasker to auto-start Shizuku on boot (requires wireless ADB to persist).
 
 ### For Shizuku + Canta Users
 **Recommended workflow:**
-1. Start with `canta-lists/conservative.txt`
-2. Import and review in Canta
-3. Uninstall batch
-4. Reboot and test
-5. If satisfied, import `canta-lists/moderate.txt` later
+1. Start with `canta-lists/conservative.json`
+2. Import preset and review in Canta
+3. Deselect any packages you want to keep
+4. Uninstall batch
+5. Reboot and test
+6. If satisfied, import `canta-lists/moderate.json` later
 
 ### For App Manager Users
 **Recommended workflow:**

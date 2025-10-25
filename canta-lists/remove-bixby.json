@@ -1,0 +1,17 @@
+{
+  "name": "Remove Bixby - OneUI 8",
+  "description": "Completely removes Bixby assistant. Use this if you prefer Gemini or Google Assistant only",
+  "version": "1.0",
+  "device": "Samsung Galaxy S25 series",
+  "oneui_version": "OneUI 8",
+  "warning": "This will remove all Bixby functionality. Make sure you have an alternative assistant configured",
+  "packages": [
+    "com.samsung.android.bixby.agent",
+    "com.samsung.android.bixby.service",
+    "com.samsung.android.bixby.wakeup",
+    "com.samsung.android.bixby.voiceinput",
+    "com.samsung.android.bixbyvision.framework",
+    "com.samsung.android.bixby.ondevice.enus",
+    "com.samsung.android.bixby.ondevice.frfr"
+  ]
+}

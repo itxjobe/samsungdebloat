@@ -1,7 +1,0 @@
-com.samsung.android.bixby.agent
-com.samsung.android.bixby.service
-com.samsung.android.bixby.wakeup
-com.samsung.android.bixby.voiceinput
-com.samsung.android.bixbyvision.framework
-com.samsung.android.bixby.ondevice.enus
-com.samsung.android.bixby.ondevice.frfr

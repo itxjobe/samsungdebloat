@@ -1,18 +1,20 @@
-# Canta Import Lists
+# Canta Import Presets
 
-Package lists formatted for import into Canta app.
+Package presets in JSON format for import into Canta app.
 
 ## How to Use
 
-1. Download the `.txt` file you want to your phone
+1. Download the `.json` preset file you want to your phone
 2. Open Canta app
-3. Menu > Import (if available) OR manually search for each package
-4. Review the packages that will be removed
-5. Confirm removal
+3. Tap the menu (⋮) > Import Preset
+4. Select the downloaded JSON file
+5. Review the packages that will be imported
+6. Select/deselect packages as needed
+7. Confirm removal
 
-## Available Lists
+## Available Presets
 
-### conservative.txt
+### conservative.json
 **Safest option** - Removes obvious bloatware only
 
 Includes:
@@ -26,10 +28,10 @@ Includes:
 
 ---
 
-### moderate.txt
+### moderate.json
 **Balanced option** - Conservative + Samsung duplicates
 
-Includes everything from conservative.txt, plus:
+Includes everything from conservative.json, plus:
 - Samsung apps (Calendar, Notes, Browser, Messages)
 - Samsung AR features (AR Zone, AR Emoji)
 - Google apps (YouTube Music, Play Movies, Google Docs/Photos)
@@ -44,7 +46,7 @@ Includes everything from conservative.txt, plus:
 
 ---
 
-### remove-bixby.txt
+### remove-bixby.json
 **Optional** - Remove Bixby assistant
 
 Removes:
@@ -59,11 +61,24 @@ Removes:
 
 ---
 
+### remove-gemini.json
+**Optional** - Remove Gemini assistant
+
+Removes:
+- Google Gemini app
+- Google Bard integration
+
+**Use if:** You prefer Bixby or Google Assistant
+
+**Note:** Removes only Gemini AI assistant, keeps other Google services
+
+---
+
 ## Important Notes
 
 ### Before Importing
 
-1. **Review the package list** - Open the `.txt` file and check what will be removed
+1. **Review the preset** - Open the `.json` file to see what packages will be removed
 2. **Reference package-reference.md** - Understand what each package does
 3. **Start with conservative** - You can always remove more later
 4. **Backup important data** - Just in case
@@ -88,19 +103,25 @@ Or factory reset to restore everything.
 
 ---
 
-## Creating Custom Lists
+## Creating Custom Presets
 
-You can create your own list:
+You can create your own JSON preset:
 
-1. Create a new `.txt` file
-2. Add one package name per line
-3. Example:
+1. Create a new `.json` file
+2. Use this template:
+```json
+{
+  "name": "My Custom Preset",
+  "description": "Description of what this removes",
+  "version": "1.0",
+  "packages": [
+    "com.facebook.katana",
+    "com.samsung.android.tvplus",
+    "com.google.android.apps.youtube.music"
+  ]
+}
 ```
-com.facebook.katana
-com.samsung.android.tvplus
-com.google.android.apps.youtube.music
-```
-4. Save and import to Canta
+3. Save and import to Canta
 
 Reference the main debloat scripts (`01-safe-user-apps.txt`, etc.) for package names.
 
@@ -111,11 +132,13 @@ Reference the main debloat scripts (`01-safe-user-apps.txt`, etc.) for package n
 ### "Package not found" errors
 Normal - means the package doesn't exist on your device (e.g., wrong carrier)
 
-### Canta won't import
-Try manual selection - search for each package and remove one by one
+### Can't find Import Preset option
+Make sure you have Canta v3.0.0 or later (preset import was added in v3.0.0). Update from Play Store or F-Droid if needed.
 
-### Can't find Import option
-Some Canta versions don't have import - you'll need to manually select packages
+### Preset won't import
+- Check the JSON file format is valid
+- Try opening the preset file in a text editor to verify it's not corrupted
+- Make sure file has .json extension
 
 ---
 
