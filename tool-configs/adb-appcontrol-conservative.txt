@@ -1,0 +1,19 @@
+# ADB AppControl Import List - Conservative
+# Import this into ADB AppControl for safe removals
+
+com.facebook.katana
+com.facebook.system
+com.facebook.appmanager
+com.facebook.services
+com.microsoft.office.outlook
+com.microsoft.office.officehubrow
+com.amazon.mShop.android.shopping
+com.booking
+com.netflix.mediaclient
+com.samsung.android.game.gamehome
+com.samsung.android.tvplus
+com.samsung.android.app.tips
+com.vzw.apnservice
+com.att.myWireless
+com.tmobile.pr.mytmobile
+com.orange.appshop
