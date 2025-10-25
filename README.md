@@ -1,6 +1,32 @@
 # Samsung Galaxy S25 Edge OneUI 8 Debloat Script
 
+![GitHub stars](https://img.shields.io/github/stars/itxjobe/samsungdebloat?style=social)
+![GitHub forks](https://img.shields.io/github/forks/itxjobe/samsungdebloat?style=social)
+![License](https://img.shields.io/github/license/itxjobe/samsungdebloat)
+![Last commit](https://img.shields.io/github/last-commit/itxjobe/samsungdebloat)
+
 Comprehensive ADB debloat script for Samsung Galaxy S25 Edge running OneUI 8 (Android 16). This script allows you to remove bloatware and unnecessary apps to improve performance, battery life, and privacy.
+
+> **TL;DR**: Remove bloatware from Samsung S25 Edge (OneUI 8) without root. Download [Canta presets](canta-lists/) → Import in app → Done in 5 minutes. See [Quick Start](#quick-start-easiest-method).
+
+⭐ **Found this helpful? [Star this repo](https://github.com/itxjobe/samsungdebloat) to help others find it!**
+
+## Table of Contents
+- [Features](#features)
+- [Quick Start (Easiest Method)](#quick-start-easiest-method)
+- [Debloat Methods](#debloat-methods)
+- [Prerequisites (For ADB Method)](#prerequisites-for-adb-method)
+- [Important Warnings](#important-warnings)
+- [Usage](#usage)
+- [Package Categories](#package-categories)
+- [Repository Structure](#repository-structure)
+- [Testing After Debloat](#testing-after-debloat)
+- [Tips for Best Results](#tips-for-best-results)
+- [Sources & Research](#sources--research)
+- [Credits & Acknowledgments](#credits--acknowledgments)
+- [Community & Support](#community--support)
+- [Disclaimer](#disclaimer)
+- [License](#license)
 
 ## Features
 
@@ -10,6 +36,32 @@ Comprehensive ADB debloat script for Samsung Galaxy S25 Edge running OneUI 8 (An
 - **Categorized Removal**: Organized by safety level and app category
 - **No Root Required**: Uses ADB commands only
 - **Reversible**: Apps can be restored via factory reset or individual reinstall
+
+## Quick Start (Easiest Method)
+
+**The fastest way to debloat your S25 Edge - no computer needed after initial setup!**
+
+1. **One-time setup** (5 minutes):
+   - Enable USB Debugging on phone (Settings > About phone > tap Build number 7x)
+   - Enable Wireless Debugging (Settings > Developer options)
+   - Connect phone to computer and run: `adb pair` (see [ON-DEVICE-DEBLOAT.md](ON-DEVICE-DEBLOAT.md))
+
+2. **Install apps on phone**:
+   - [Shizuku](https://shizuku.rikka.app/) - Provides ADB permissions
+   - [Canta](https://github.com/samolego/Canta) - Debloat GUI app
+
+3. **Download preset**:
+   - Download [`conservative.json`](canta-lists/conservative.json) to your phone
+   - Or browse all [Canta presets](canta-lists/)
+
+4. **Import and debloat**:
+   - Open Canta app
+   - Menu (⋮) > Import Preset
+   - Select `conservative.json`
+   - Review packages > Uninstall
+   - Reboot phone
+
+**Done!** Your phone is debloated. See [ON-DEVICE-DEBLOAT.md](ON-DEVICE-DEBLOAT.md) for detailed instructions.
 
 ## Debloat Methods
 
@@ -232,6 +284,34 @@ This project utilizes and references several excellent open-source tools:
 - **[Tom4tot's Galaxy S24 Debloat Script](https://github.com/Tom4tot/Galaxy-S24-Debloat-Script)** - Original reference for S24 debloating
 
 Special thanks to the XDA Forums community, r/GalaxyS25, and r/Android communities for testing and feedback.
+
+## Community & Support
+
+### Getting Help
+
+- **Documentation**: Check [DOCUMENTATION-INDEX.md](DOCUMENTATION-INDEX.md) for all guides
+- **FAQ**: See [FAQ.md](FAQ.md) for common questions
+- **Issues**: Found a bug? [Report it here](https://github.com/itxjobe/samsungdebloat/issues)
+
+### Contributing
+
+We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on:
+- Reporting issues
+- Suggesting package additions
+- Sharing your debloat configuration
+- Improving documentation
+
+### Community Discussions
+
+- **GitHub Discussions**: Enable in repository settings for Q&A and community chat
+- **XDA Forums**: Share your experience and help others
+- **Reddit**: r/GalaxyS25 and r/Android communities
+
+### Stay Updated
+
+- **Watch this repo** for updates to OneUI 8 debloat lists
+- **Star this repo** to bookmark and help others discover it
+- **Fork this repo** to customize for your needs
 
 ## Disclaimer
 
