@@ -166,8 +166,16 @@ adb shell pm uninstall --user 0 com.google.android.verifier
 adb shell pm uninstall --user 0 com.sec.android.app.SecSetupWizard
 adb shell pm uninstall --user 0 com.sec.android.app.setupwizardlegalprovider
 
-# Undocumented Samsung background services (removed cleanly on the
-# reference S26 Ultra; function not publicly documented)
-adb shell pm uninstall --user 0 com.samsung.android.mocca
-adb shell pm uninstall --user 0 com.samsung.android.moaiapc
+# Mobile Hotspot helper service (MhsAiService). Holds only WiFi-state
+# permissions. Remove if you do not use smart/auto hotspot features.
 adb shell pm uninstall --user 0 com.samsung.android.mhs.ai
+
+# Samsung Apps / Galaxy Store ecosystem helper (MoccaMobile). Low
+# permissions (storage + phone state), versioned with OneUI. It was already
+# inactive on the US SM-S948U1 and the device ran normally without it.
+adb shell pm uninstall --user 0 com.samsung.android.mocca
+
+# System-level component (MoaiApc) that runs as the system user with
+# privileged phone-state and storage access; provisioning/policy related.
+# Also inactive on the US SM-S948U1. Remove only if you accept the trade-off.
+adb shell pm uninstall --user 0 com.samsung.android.moaiapc
