@@ -184,6 +184,16 @@ adb shell pm uninstall --user 0 com.google.audio.hearing.visualization.accessibi
 #   - No automatic updates
 # ============================================
 
+# ============================================
+# S PEN EXTRAS (Ultra models)
+# ============================================
+
+# PENUP (Samsung's S Pen art community app, verified preload on S26 Ultra)
+# Safe to remove if you do not use the PENUP drawing community
+adb shell pm uninstall --user 0 com.sec.penup
+
+# ============================================
+
 # TESTING CHECKLIST AFTER REMOVAL:
 # - [ ] S Pen features (if you have S Pen)
 # - [ ] Screenshots and screen recording

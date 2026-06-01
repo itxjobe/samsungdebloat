@@ -91,8 +91,12 @@ adb shell pm uninstall --user 0 com.swiftkey.swiftkeyconfigurator
 # Voice pack names vary by region/variant. The list below is from the
 # international SM-S948B. To see the packs on your own device, run:
 #   adb shell pm list packages | grep SMT
-# (A US SM-S948U1, for example, ships en_us, es_us, es_mx, and pt_br packs
-# with different name suffixes.)
+# The US SM-S948U1, for example, ships these instead (keep en_us if you
+# use English Text-to-Speech):
+#   com.samsung.SMT.lang_en_us_l03
+#   com.samsung.SMT.lang_es_us_l01
+#   com.samsung.SMT.lang_es_mx_f00
+#   com.samsung.SMT.lang_pt_br_l01
 
 adb shell pm uninstall --user 0 com.samsung.SMT.lang_ar_ae_m00
 adb shell pm uninstall --user 0 com.samsung.SMT.lang_de_de_f00

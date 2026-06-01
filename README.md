@@ -39,7 +39,7 @@ Comprehensive ADB debloat toolkit for the Samsung Galaxy S25 series (OneUI 8) an
 
 ## Quick Start (Easiest Method)
 
-**The fastest way to debloat your S25 Edge - no computer needed after initial setup!**
+**The fastest way to debloat your Galaxy S25 or S26 - no computer needed after initial setup!**
 
 1. **One-time setup** (5 minutes):
    - Enable USB Debugging on phone (Settings > About phone > tap Build number 7x)
@@ -83,7 +83,7 @@ Choose the method that works best for you:
 
 If using the traditional ADB method from computer:
 
-1. **USB Debugging Enabled** on your S25 Edge
+1. **USB Debugging Enabled** on your Galaxy device
    - Settings > About phone > Tap "Build number" 7 times
    - Settings > Developer options > Enable "USB debugging"
 
@@ -140,7 +140,7 @@ If using the traditional ADB method from computer:
 
 #### Method 1: Individual Commands (Recommended for Beginners)
 
-1. Connect your S25 Edge via USB
+1. Connect your Galaxy device via USB
 2. Open terminal/command prompt
 3. Verify connection: `adb devices`
 4. Copy individual commands from the script files
@@ -233,10 +233,10 @@ See `06-oneui8-specific.txt` for details.
 
 ## Compatibility
 
-- **Tested On**: Samsung Galaxy S25 Edge
+- **Tested On**: Samsung Galaxy S25 Edge and Galaxy S26 Ultra
 - **OneUI Version**: 8.0 / 8.5
 - **Android Version**: 16
-- **Should work on**: S25, S25+, S25 Ultra with OneUI 8
+- **Should work on**: S25, S25+, S25 Ultra (OneUI 8) and S26 Ultra (OneUI 8.5)
 
 ## Post-Debloat Checklist
 
@@ -269,7 +269,7 @@ This script was compiled from:
 - Tom4tot's Galaxy S24 Debloat Script
 - Community feedback on Reddit (r/GalaxyS25, r/Android)
 - Official Samsung package documentation
-- Personal testing on S25 Edge with OneUI 8
+- Personal testing on S25 Edge (OneUI 8) and S26 Ultra (OneUI 8.5)
 
 ## Credits & Acknowledgments
 
@@ -338,6 +338,6 @@ MIT License - Free to use and modify
 
 ---
 
-**Last Updated**: October 2025
-**OneUI Version**: 8.0
-**Device**: Samsung Galaxy S25 Edge
+**Last Updated**: June 2026
+**OneUI Version**: 8.0 / 8.5
+**Device**: Samsung Galaxy S25 Edge and S26 Ultra

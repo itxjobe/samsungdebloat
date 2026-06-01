@@ -119,6 +119,14 @@ adb shell pm uninstall --user 0 com.samsung.SMT.lang_fr_fr_l01
 
 # Translation Language Packs (if not using Samsung Live Translate)
 adb shell pm uninstall --user 0 com.samsung.android.nmt.apps.t2t.languagepack.enfr
+adb shell pm uninstall --user 0 com.samsung.android.nmt.apps.t2t.languagepack.enesus
+
+# Samsung Shop (storefront app, verified preload on S26 Ultra)
+adb shell pm uninstall --user 0 com.samsung.ecomm
+
+# Google Play Books and News/Magazines (preloaded readers)
+adb shell pm uninstall --user 0 com.google.android.apps.books
+adb shell pm uninstall --user 0 com.google.android.apps.magazines
 
 # ============================================
 # TOTAL PACKAGES IN THIS CATEGORY: ~45

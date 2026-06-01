@@ -25,3 +25,4 @@ adb shell pm uninstall --user 0 com.samsung.android.bixbyvision.framework
 # Bixby on-device language packs
 adb shell pm uninstall --user 0 com.samsung.android.bixby.ondevice.enus
 adb shell pm uninstall --user 0 com.samsung.android.bixby.ondevice.frfr
+adb shell pm uninstall --user 0 com.samsung.android.bixby.ondevice.esus

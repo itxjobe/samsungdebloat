@@ -16,6 +16,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.2.2] - 2026-06-01
+
+### Added
+- Packages verified on-device and added to the lists: Samsung Shop (`com.samsung.ecomm`), PENUP (`com.sec.penup`), Google Play Books and News/Magazines, the English-Spanish translation pack, and the Bixby Spanish on-device pack (`...ondevice.esus`)
+- `07-s26-ultra.txt` now lists the actual US SM-S948U1 Text-to-Speech pack names
+
+### Changed
+- README is now device-neutral in the body (no longer refers only to the S25 Edge)
+
+---
+
 ## [1.2.1] - 2026-06-01
 
 ### Added

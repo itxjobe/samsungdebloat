@@ -53,6 +53,7 @@ adb shell pm uninstall --user 0 com.samsung.android.app.routines
 # Bixby Language Packs
 adb shell pm uninstall --user 0 com.samsung.android.bixby.ondevice.enus
 adb shell pm uninstall --user 0 com.samsung.android.bixby.ondevice.frfr
+adb shell pm uninstall --user 0 com.samsung.android.bixby.ondevice.esus
 
 # KEEP THESE FOR GEMINI TO WORK:
 # ✓ com.google.android.apps.bard (Gemini app)
