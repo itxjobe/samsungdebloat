@@ -8,6 +8,12 @@
 # also exist on the S25 series, so S25 owners can use this list too.
 # The 01-06 lists still apply to the S26 Ultra without changes.
 #
+# VARIANT NOTE: this list was captured on an international SM-S948B and
+# spot-checked on a US SM-S948U1. Package sets vary by region/carrier, so
+# some entries will not exist on every unit (for example SwiftKey and the
+# voice packs below were not present on the US SM-S948U1). Missing packages
+# just report "not installed" and are safe to ignore.
+#
 # Sections are ordered by risk. Read the CAUTION section before running it.
 # Every removal is reversible (see RESTORE-GUIDE.md or a factory reset).
 # ============================================
@@ -82,6 +88,11 @@ adb shell pm uninstall --user 0 com.swiftkey.swiftkeyconfigurator
 # ============================================
 # Samsung TTS voices. Remove the languages you do not use to save storage.
 # Keep the pack for any language you rely on for Bixby/TTS readouts.
+# Voice pack names vary by region/variant. The list below is from the
+# international SM-S948B. To see the packs on your own device, run:
+#   adb shell pm list packages | grep SMT
+# (A US SM-S948U1, for example, ships en_us, es_us, es_mx, and pt_br packs
+# with different name suffixes.)
 
 adb shell pm uninstall --user 0 com.samsung.SMT.lang_ar_ae_m00
 adb shell pm uninstall --user 0 com.samsung.SMT.lang_de_de_f00

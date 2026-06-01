@@ -16,6 +16,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.2.1] - 2026-06-01
+
+### Added
+- Verified OneUI 8.5 Galaxy AI package names (Samsung AI Core, Google AICore, Call Assistant, Smart Call, Bixby Vision, Interpreter, Photo editor, Gallery) documented as keep notes in `06-oneui8-specific.txt` and DEVICE-COMPARISON.md
+
+### Changed
+- Validated the S26 Ultra packages on-device against a Galaxy S26 Ultra (SM-S948U1, OneUI 8.5)
+- `07-s26-ultra.txt` now notes region/variant differences (some packages, including SwiftKey and several Text-to-Speech voice packs, are not present on every unit)
+
+---
+
 ## [1.2.0] - 2026-06-01
 
 ### Added

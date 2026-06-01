@@ -112,7 +112,8 @@ If using the traditional ADB method from computer:
 ### Keep for Gemini/Google AI:
 - `com.google.android.apps.bard` (Gemini)
 - `com.google.android.googlequicksearchbox` (Google Search - required for Gemini)
-- Samsung AI Core (installed separately from Galaxy Store)
+- `com.samsung.android.aicore` (Samsung AI Core - pre-installed on S26 / OneUI 8.5, from Galaxy Store on S25)
+- `com.google.android.aicore` (Google AICore - on-device Gemini Nano models)
 
 ### Keep for DEX:
 - `com.samsung.android.mdx` (Samsung DEX)

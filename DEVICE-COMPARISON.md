@@ -29,7 +29,20 @@ The Galaxy S26 Ultra (model SM-S948) launched in March 2026 on Snapdragon 8 Elit
 
 ### OneUI 8.5 Galaxy AI features
 
-OneUI 8.5 introduces new on-device AI features, including Call Screening, Creative Studio, real-time Audio Eraser, an improved Photo Assist, and Now Brief refinements. These rely on the Galaxy AI components already covered in `06-oneui8-specific.txt`. If you use any of them, keep the related AI packages. Exact package names for the brand-new 8.5 AI apps are still being confirmed on-device and will be added as they are verified.
+OneUI 8.5 introduces new on-device AI features, including Call Screening, real-time Audio Eraser, an improved Photo Assist, Bixby Vision, and Interpreter. If you use any of them, keep the related packages. Verified on a Galaxy S26 Ultra (SM-S948U1, OneUI 8.5):
+
+```
+com.samsung.android.aicore             Samsung AI Core (Galaxy AI engine)
+com.google.android.aicore              Google AICore (Gemini Nano models)
+com.samsung.android.callassistant      Call Assistant / Call Screening (new in 8.5)
+com.samsung.android.smartcallprovider  Smart Call (caller ID / spam)
+com.samsung.android.visionintelligence Bixby Vision / visual intelligence
+com.samsung.android.app.interpreter    Interpreter (live translation)
+com.sec.android.mimage.photoretouching Photo editor (Photo Assist / object eraser)
+com.sec.android.gallery3d              Gallery (Generative edit / Audio Eraser)
+```
+
+These are documented as keep notes in `06-oneui8-specific.txt`.
 
 ---
 

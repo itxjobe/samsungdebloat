@@ -16,8 +16,25 @@
 # WARNING: This is the foundation for Galaxy AI features
 # Removing this will break: Photo Assist, Note Assist, Writing Assist
 # RECOMMENDATION: Keep this installed
-# NOTE: This may need to be installed from Galaxy Store
+# NOTE: Pre-installed on the S26 series (OneUI 8.5); on the S25 series it
+#       may need to be installed from the Galaxy Store
 # adb shell pm uninstall --user 0 com.samsung.android.aicore
+
+# --------------------------------------------
+# ONEUI 8.5 GALAXY AI (Galaxy S26) - KEEP THESE
+# Verified on a Galaxy S26 Ultra (SM-S948U1, OneUI 8.5).
+# These power the new 8.5 AI features. Leave them installed if you
+# use Call Screening, Photo Assist, Audio Eraser, Bixby Vision, or
+# Interpreter. They are listed here as KEEP notes, not removals.
+# --------------------------------------------
+# com.samsung.android.aicore            - Samsung AI Core (Galaxy AI engine)
+# com.google.android.aicore             - Google AICore (Gemini Nano models)
+# com.samsung.android.callassistant     - Call Assistant / Call Screening (new in 8.5)
+# com.samsung.android.smartcallprovider - Smart Call (caller ID / spam)
+# com.samsung.android.visionintelligence- Bixby Vision / visual intelligence
+# com.samsung.android.app.interpreter   - Interpreter (live translation)
+# com.sec.android.mimage.photoretouching- Photo editor (hosts Photo Assist / object eraser)
+# com.sec.android.gallery3d             - Gallery (hosts Generative edit / Audio Eraser)
 
 # Gemini Integration (Google Bard)
 # New in OneUI 8 - deeply integrated with Samsung apps
