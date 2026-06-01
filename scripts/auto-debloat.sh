@@ -2,7 +2,9 @@
 # Automated Debloat Script for Samsung Galaxy S25 Edge
 # Automates the entire debloating process with user selection
 
-set -e
+# Note: we intentionally do NOT use `set -e`. Removing a package that is
+# already gone returns a non-zero status, and that is an expected outcome we
+# want to count and continue past, not abort the whole run.
 
 # Colors for output
 RED='\033[0;31m'
@@ -29,8 +31,7 @@ fi
 
 # Check ADB connection
 echo -e "${YELLOW}Checking ADB connection...${NC}"
-adb devices | grep -q "device$"
-if [ $? -ne 0 ]; then
+if ! adb devices | grep -q "device$"; then
     echo -e "${RED}Error: No device connected${NC}"
     echo "Please:"
     echo "1. Enable USB debugging on your phone"
@@ -162,15 +163,17 @@ run_debloat_file() {
         [[ "$line" =~ ^#.*$ ]] && continue
         [[ -z "$line" ]] && continue
 
-        # Extract package name from adb command
-        if [[ "$line" =~ pm\ uninstall.*\ ([a-z0-9.]+)$ ]]; then
+        # Extract package name from adb command (package names may contain
+        # uppercase letters and underscores, e.g. com.sec.android.easyMover)
+        if [[ "$line" =~ pm\ uninstall.*\ ([A-Za-z0-9._]+)$ ]]; then
             package="${BASH_REMATCH[1]}"
             count=$((count + 1))
 
-            # Run the command
-            eval "$line" &> /dev/null
+            # Run the command. `adb shell` exits 0 even when pm reports a
+            # failure, so we check pm's own output for "Success" instead.
+            result=$(eval "$line" 2>&1)
 
-            if [ $? -eq 0 ]; then
+            if echo "$result" | grep -qi "Success"; then
                 success=$((success + 1))
                 echo -e "${GREEN}✓${NC} Removed: $package"
             else
@@ -220,7 +223,7 @@ case $LEVEL in
                 2) run_debloat_file "$REPO_ROOT/02-bloatware-carriers.txt" "Removing carrier bloatware..." ;;
                 3) run_debloat_file "$REPO_ROOT/03-safe-system-apps.txt" "Removing safe system apps..." ;;
                 4) run_debloat_file "$REPO_ROOT/04-optional-removals.txt" "Removing optional apps..." ;;
-                5) run_debloat_file "$REPO_ROOT/canta-lists/remove-bixby.txt" "Removing Bixby..." ;;
+                5) run_debloat_file "$REPO_ROOT/remove-bixby.txt" "Removing Bixby..." ;;
             esac
         done
         ;;

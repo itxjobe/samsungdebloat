@@ -16,6 +16,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.1.1] - 2026-06-01
+
+### Fixed
+- `scripts/auto-debloat.sh` no longer aborts mid-run. It previously used `set -e`, so the first package that was already removed (a normal, expected case) would stop the entire script. Error handling is now per-package.
+- The "no device connected" message now actually prints. The connection check exited before reaching the help text, leaving users with a silent failure.
+- Package removal is now reported accurately. `adb shell` returns success even when `pm` reports a failure, so the script now checks `pm`'s own output and counts removed vs. skipped correctly.
+- The package-name parser now handles names with uppercase letters and underscores. Eight packages were being silently skipped, including Amazon Shopping (`com.amazon.mShop.android.shopping`), Smart Switch (`com.sec.android.easyMover`), and AT&T myWireless (`com.att.myWireless`).
+
+### Added
+- `remove-bixby.txt` - ADB command list for the "Remove Bixby" option in the automated script (the custom menu previously pointed at a file that did not exist).
+
+---
+
 ## [1.1.0] - 2025-10-25
 
 ### Added

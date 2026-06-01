@@ -1,0 +1,27 @@
+# ============================================
+# REMOVE BIXBY - ADB COMMAND LIST
+# ============================================
+# Completely removes the Bixby voice assistant.
+# Use this if you prefer Gemini or Google Assistant.
+#
+# This is the ADB-command version of canta-lists/remove-bixby.json,
+# used by the "Remove Bixby" option in scripts/auto-debloat.sh.
+#
+# NOTE: This does NOT remove Bixby Routines (Modes & Routines),
+# which stays useful even without Bixby voice.
+# ============================================
+
+# Bixby core services
+adb shell pm uninstall --user 0 com.samsung.android.bixby.agent
+adb shell pm uninstall --user 0 com.samsung.android.bixby.service
+adb shell pm uninstall --user 0 com.samsung.android.bixby.wakeup
+
+# Bixby voice
+adb shell pm uninstall --user 0 com.samsung.android.bixby.voiceinput
+
+# Bixby Vision
+adb shell pm uninstall --user 0 com.samsung.android.bixbyvision.framework
+
+# Bixby on-device language packs
+adb shell pm uninstall --user 0 com.samsung.android.bixby.ondevice.enus
+adb shell pm uninstall --user 0 com.samsung.android.bixby.ondevice.frfr
