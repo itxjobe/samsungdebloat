@@ -16,6 +16,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.2.0] - 2026-06-01
+
+### Added
+- Galaxy S26 Ultra (OneUI 8.5 / Android 16) support
+- `07-s26-ultra.txt` - package list verified on a Galaxy S26 Ultra (SM-S948B), grouped by risk (safe, Text-to-Speech voice packs, optional, caution)
+- `canta-lists/s26-ultra.json` - Canta preset for the safe S26 Ultra extras
+- `termux-scripts/s26-ultra-debloat.sh` - Termux script for the safe S26 Ultra extras
+- `tool-configs/adb-appcontrol-s26-ultra.txt` - ADB AppControl import list for the S26 Ultra
+
+### Changed
+- Broadened the project to cover both the S25 series (OneUI 8) and the S26 Ultra (OneUI 8.5)
+- README retitled and updated for S25 / S26 coverage
+- DEVICE-COMPARISON.md now documents the Galaxy S26 series and OneUI 8.5
+
+---
+
 ## [1.1.1] - 2026-06-01
 
 ### Fixed
@@ -122,11 +138,12 @@ git pull origin main
 
 ## Compatibility Matrix
 
-| Version | OneUI | Android | S25 Edge | S25/S25+ | S25 Ultra | Notes |
-|---------|-------|---------|----------|----------|-----------|-------|
-| 1.1.0   | 8.0   | 16      | ✅       | ✅       | ✅        | Full support |
-| 1.1.0   | 8.5   | 16      | ✅       | ✅       | ✅        | Expected compatible |
-| 1.0.0   | 8.0   | 16      | ✅       | ⚠️       | ⚠️        | Basic support |
+| Version | OneUI | Android | S25 Edge | S25/S25+ | S25 Ultra | S26 Ultra | Notes |
+|---------|-------|---------|----------|----------|-----------|-----------|-------|
+| 1.2.0   | 8.5   | 16      | ✅       | ✅       | ✅        | ✅        | S26 Ultra list verified (SM-S948B) |
+| 1.1.0   | 8.0   | 16      | ✅       | ✅       | ✅        | ⚠️        | Full S25 support |
+| 1.1.0   | 8.5   | 16      | ✅       | ✅       | ✅        | ⚠️        | Expected compatible |
+| 1.0.0   | 8.0   | 16      | ✅       | ⚠️       | ⚠️        | ❌        | Basic support |
 
 **Legend:**
 - ✅ Fully tested and supported
