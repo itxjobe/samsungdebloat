@@ -1,0 +1,158 @@
+# ============================================
+# GALAXY S26 ULTRA - ONEUI 8.5 (ANDROID 16)
+# ============================================
+# Verified package list captured from a Galaxy S26 Ultra (SM-S948B)
+# running OneUI 8.5 / Android 16.
+#
+# These packages are additional to the main 01-06 lists. Most of them
+# also exist on the S25 series, so S25 owners can use this list too.
+# The 01-06 lists still apply to the S26 Ultra without changes.
+#
+# Sections are ordered by risk. Read the CAUTION section before running it.
+# Every removal is reversible (see RESTORE-GUIDE.md or a factory reset).
+# ============================================
+
+
+# ============================================
+# SAFE TO REMOVE - SAMSUNG
+# ============================================
+
+# My Galaxy (regional promo app)
+adb shell pm uninstall --user 0 com.mygalaxy
+
+# Samsung Moments (promotional content)
+adb shell pm uninstall --user 0 com.samsung.android.app.moments
+
+# Galaxy Watch manager stub (only needed if you pair a Galaxy Watch)
+adb shell pm uninstall --user 0 com.samsung.android.app.watchmanagerstub
+
+# Beacon Manager (BLE beacon scanning)
+adb shell pm uninstall --user 0 com.samsung.android.beaconmanager
+
+# Input Share (share one keyboard/mouse across Galaxy devices, Multi Control)
+adb shell pm uninstall --user 0 com.samsung.android.inputshare
+
+# Live wallpaper effect service
+adb shell pm uninstall --user 0 com.samsung.android.liveeffectservice
+
+# Smart Suggestions
+adb shell pm uninstall --user 0 com.samsung.android.smartsuggestions
+
+# Sticker Center
+adb shell pm uninstall --user 0 com.samsung.android.stickercenter
+
+# Regulatory safety information
+adb shell pm uninstall --user 0 com.samsung.safetyinformation
+
+# Personalization service (suggested content and themes)
+adb shell pm uninstall --user 0 com.sec.android.app.personalization
+
+
+# ============================================
+# SAFE TO REMOVE - GOOGLE
+# ============================================
+
+# Privacy Sandbox ad services API (removing is privacy positive)
+adb shell pm uninstall --user 0 com.google.android.adservices.api
+
+# Google device restore/transfer tool (only used during setup)
+adb shell pm uninstall --user 0 com.google.android.apps.restore
+
+# Google feedback reporter
+adb shell pm uninstall --user 0 com.google.android.feedback
+
+# Print service recommendations
+adb shell pm uninstall --user 0 com.google.android.printservice.recommendation
+
+# Family Link supervision (skip if you use parental controls)
+adb shell pm uninstall --user 0 com.google.android.gms.supervision
+
+
+# ============================================
+# SAFE TO REMOVE - KEYBOARD / THIRD-PARTY
+# ============================================
+
+# SwiftKey keyboard (Samsung Keyboard is separate and stays)
+adb shell pm uninstall --user 0 com.touchtype.swiftkey
+adb shell pm uninstall --user 0 com.swiftkey.swiftkeyconfigurator
+
+
+# ============================================
+# TEXT-TO-SPEECH VOICE PACKS
+# ============================================
+# Samsung TTS voices. Remove the languages you do not use to save storage.
+# Keep the pack for any language you rely on for Bixby/TTS readouts.
+
+adb shell pm uninstall --user 0 com.samsung.SMT.lang_ar_ae_m00
+adb shell pm uninstall --user 0 com.samsung.SMT.lang_de_de_f00
+adb shell pm uninstall --user 0 com.samsung.SMT.lang_en_gb_f00
+adb shell pm uninstall --user 0 com.samsung.SMT.lang_es_es_f00
+adb shell pm uninstall --user 0 com.samsung.SMT.lang_es_mx_f00
+adb shell pm uninstall --user 0 com.samsung.SMT.lang_es_us_f00
+adb shell pm uninstall --user 0 com.samsung.SMT.lang_fr_fr_f00
+adb shell pm uninstall --user 0 com.samsung.SMT.lang_hi_in_f00
+adb shell pm uninstall --user 0 com.samsung.SMT.lang_id_id_f00
+adb shell pm uninstall --user 0 com.samsung.SMT.lang_it_it_f00
+adb shell pm uninstall --user 0 com.samsung.SMT.lang_pl_pl_f00
+adb shell pm uninstall --user 0 com.samsung.SMT.lang_pt_br_f00
+adb shell pm uninstall --user 0 com.samsung.SMT.lang_ru_ru_f00
+adb shell pm uninstall --user 0 com.samsung.SMT.lang_th_th_f00
+adb shell pm uninstall --user 0 com.samsung.SMT.lang_vi_vn_f00
+
+
+# ============================================
+# OPTIONAL - FEATURE TRADE-OFFS
+# ============================================
+
+# Hiya backend for Smart Call (caller ID and spam detection).
+# Removing this disables Samsung's spam caller lookup.
+adb shell pm uninstall --user 0 com.hiya.star
+
+# Samsung Pet service (function is not well documented; removed cleanly
+# on the reference S26 Ultra). Remove only if you do not use pet features.
+adb shell pm uninstall --user 0 com.samsung.petservice
+
+
+# ============================================
+# CAUTION - SYSTEM SERVICES (READ BEFORE REMOVING)
+# ============================================
+# These were removed on a working S26 Ultra, but each one disables a
+# real service. Remove only if you understand the trade-off.
+
+# Samsung Cloud (cloud backup and sync)
+adb shell pm uninstall --user 0 com.samsung.android.scloud
+
+# Samsung Push Service (push notifications for many Samsung apps)
+adb shell pm uninstall --user 0 com.sec.spp.push
+
+# Samsung network/sensor fused location provider (can affect location accuracy)
+adb shell pm uninstall --user 0 com.sec.location.nsflp2
+
+# Multi-device continuity service
+adb shell pm uninstall --user 0 com.samsung.android.mcfds
+
+# Mobile Device Management client (enterprise enrollment)
+adb shell pm uninstall --user 0 com.samsung.android.mdm
+
+# Knox diagnostics/feedback agent
+adb shell pm uninstall --user 0 com.samsung.android.bbc.bbcagent
+
+# Samsung On-Device Activation (used when the device is activated)
+adb shell pm uninstall --user 0 com.samsung.oda.agent
+adb shell pm uninstall --user 0 com.samsung.oda.service
+
+# Battery State-of-Health reporting service
+adb shell pm uninstall --user 0 com.samsung.sait.sohservice
+
+# Google app verifier component
+adb shell pm uninstall --user 0 com.google.android.verifier
+
+# Samsung setup wizard (only remove after first-time setup is complete)
+adb shell pm uninstall --user 0 com.sec.android.app.SecSetupWizard
+adb shell pm uninstall --user 0 com.sec.android.app.setupwizardlegalprovider
+
+# Undocumented Samsung background services (removed cleanly on the
+# reference S26 Ultra; function not publicly documented)
+adb shell pm uninstall --user 0 com.samsung.android.mocca
+adb shell pm uninstall --user 0 com.samsung.android.moaiapc
+adb shell pm uninstall --user 0 com.samsung.android.mhs.ai

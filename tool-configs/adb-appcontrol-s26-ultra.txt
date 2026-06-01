@@ -1,0 +1,37 @@
+# ADB AppControl Import List - Galaxy S26 Ultra (OneUI 8.5)
+# Verified on a Galaxy S26 Ultra (SM-S948B). Import this into ADB AppControl.
+# Safe additional removals only. Caution-level system services are in
+# 07-s26-ultra.txt and are intentionally left out of this list.
+
+com.mygalaxy
+com.samsung.android.app.moments
+com.samsung.android.app.watchmanagerstub
+com.samsung.android.beaconmanager
+com.samsung.android.inputshare
+com.samsung.android.liveeffectservice
+com.samsung.android.smartsuggestions
+com.samsung.android.stickercenter
+com.samsung.safetyinformation
+com.sec.android.app.personalization
+com.google.android.adservices.api
+com.google.android.apps.restore
+com.google.android.feedback
+com.google.android.printservice.recommendation
+com.google.android.gms.supervision
+com.touchtype.swiftkey
+com.swiftkey.swiftkeyconfigurator
+com.samsung.SMT.lang_ar_ae_m00
+com.samsung.SMT.lang_de_de_f00
+com.samsung.SMT.lang_en_gb_f00
+com.samsung.SMT.lang_es_es_f00
+com.samsung.SMT.lang_es_mx_f00
+com.samsung.SMT.lang_es_us_f00
+com.samsung.SMT.lang_fr_fr_f00
+com.samsung.SMT.lang_hi_in_f00
+com.samsung.SMT.lang_id_id_f00
+com.samsung.SMT.lang_it_it_f00
+com.samsung.SMT.lang_pl_pl_f00
+com.samsung.SMT.lang_pt_br_f00
+com.samsung.SMT.lang_ru_ru_f00
+com.samsung.SMT.lang_th_th_f00
+com.samsung.SMT.lang_vi_vn_f00

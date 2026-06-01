@@ -74,6 +74,21 @@ Removes:
 
 ---
 
+### s26-ultra.json
+**Galaxy S26 Ultra (OneUI 8.5)** - Verified safe extras
+
+Adds safe removals captured from a real Galaxy S26 Ultra (SM-S948B), on top of the conservative/moderate presets:
+- Samsung extras (My Galaxy, Moments, Sticker Center, Live Effects)
+- SwiftKey (Samsung Keyboard stays)
+- Unused Google components
+- Text-to-Speech voice packs (storage)
+
+**Recommended for:** S26 Ultra owners. Most packages also apply to the S25 series.
+
+**Note:** Caution-level system services are intentionally excluded. See `07-s26-ultra.txt` for those.
+
+---
+
 ## Important Notes
 
 ### Before Importing
