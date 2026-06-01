@@ -1,13 +1,13 @@
-# Samsung Galaxy S25 Edge OneUI 8 Debloat Script
+# Samsung Galaxy S25 / S26 OneUI 8 Debloat Script
 
 ![GitHub stars](https://img.shields.io/github/stars/itxjobe/samsungdebloat?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/itxjobe/samsungdebloat?style=social)
 ![License](https://img.shields.io/github/license/itxjobe/samsungdebloat)
 ![Last commit](https://img.shields.io/github/last-commit/itxjobe/samsungdebloat)
 
-Comprehensive ADB debloat script for Samsung Galaxy S25 Edge running OneUI 8 (Android 16). This script allows you to remove bloatware and unnecessary apps to improve performance, battery life, and privacy.
+Comprehensive ADB debloat toolkit for the Samsung Galaxy S25 series (OneUI 8) and the Galaxy S26 Ultra (OneUI 8.5), both on Android 16. It lets you remove bloatware and unnecessary apps to improve performance, battery life, and privacy.
 
-> **TL;DR**: Remove bloatware from Samsung S25 Edge (OneUI 8) without root. Download [Canta presets](canta-lists/) → Import in app → Done in 5 minutes. See [Quick Start](#quick-start-easiest-method).
+> **TL;DR**: Remove bloatware from your Galaxy S25 or S26 (OneUI 8 / 8.5) without root. Download [Canta presets](canta-lists/) → Import in app → Done in 5 minutes. S26 Ultra owners: see [`07-s26-ultra.txt`](07-s26-ultra.txt). See [Quick Start](#quick-start-easiest-method).
 
 ⭐ **Found this helpful? [Star this repo](https://github.com/itxjobe/samsungdebloat) to help others find it!**
 
@@ -30,8 +30,8 @@ Comprehensive ADB debloat script for Samsung Galaxy S25 Edge running OneUI 8 (An
 
 ## Features
 
-- **OneUI 8 Compatible**: Tested and updated for Android 16 / OneUI 8
-- **S25 Edge Optimized**: Specifically tailored for the Galaxy S25 Edge
+- **OneUI 8 and 8.5 Compatible**: Tested for Android 16 / OneUI 8 (S25 series) and OneUI 8.5 (S26 Ultra)
+- **S25 and S26 Coverage**: Tailored for the Galaxy S25 series, with a verified package list for the S26 Ultra
 - **Bixby & Gemini Preserved**: Options to keep AI assistants functional
 - **Categorized Removal**: Organized by safety level and app category
 - **No Root Required**: Uses ADB commands only
@@ -175,6 +175,7 @@ adb shell pm uninstall --user 0 com.facebook.katana
 - `04-optional-removals.txt` - Optional (may break features)
 - `05-ai-assistant-options.txt` - Bixby/Gemini removal (if desired)
 - `06-oneui8-specific.txt` - OneUI 8 new apps and features
+- `07-s26-ultra.txt` - Verified Galaxy S26 Ultra extras (OneUI 8.5)
 - `batch-commands.txt` - Pre-made batch removal commands
 
 ### On-Device Files

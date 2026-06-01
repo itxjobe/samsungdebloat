@@ -1,6 +1,6 @@
 # Device Comparison Guide
 
-Differences between Samsung Galaxy S25 models and debloating considerations.
+Differences between Samsung Galaxy S25 and S26 models and debloating considerations.
 
 ## S25 Series Models
 
@@ -10,6 +10,26 @@ Differences between Samsung Galaxy S25 models and debloating considerations.
 | **S25+** | 6.7" | 4900mAh | No | Triple | Larger screen/battery |
 | **S25 Edge** | 6.9" | 5000mAh | No | Quad | Curved edge display |
 | **S25 Ultra** | 6.8" | 5000mAh | Yes | Quad | S Pen, premium |
+
+---
+
+## Galaxy S26 Series
+
+The Galaxy S26 Ultra (model SM-S948) launched in March 2026 on Snapdragon 8 Elite Gen 5. It ships with **OneUI 8.5 (Android 16)**, the same Android base as the S25 series with a refreshed feature set. It keeps the S Pen, so the S Pen package notes below apply to it as well.
+
+| Model | OS out of box | S Pen | SoC |
+|-------|---------------|-------|-----|
+| **S26 Ultra** | OneUI 8.5 / Android 16 | Yes | Snapdragon 8 Elite Gen 5 |
+
+### Debloating the S26 Ultra
+
+- The main `01-06` lists apply to the S26 Ultra unchanged.
+- `07-s26-ultra.txt` adds packages verified on a real S26 Ultra (SM-S948B), grouped by risk. Most of them also exist on the S25 series.
+- For the on-device flow, use `canta-lists/s26-ultra.json` (Canta) or `termux-scripts/s26-ultra-debloat.sh` (Termux).
+
+### OneUI 8.5 Galaxy AI features
+
+OneUI 8.5 introduces new on-device AI features, including Call Screening, Creative Studio, real-time Audio Eraser, an improved Photo Assist, and Now Brief refinements. These rely on the Galaxy AI components already covered in `06-oneui8-specific.txt`. If you use any of them, keep the related AI packages. Exact package names for the brand-new 8.5 AI apps are still being confirmed on-device and will be added as they are verified.
 
 ---
 
@@ -96,6 +116,7 @@ All debloat scripts in this repository work on:
 - Galaxy S25+
 - Galaxy S25 Edge  
 - Galaxy S25 Ultra
+- Galaxy S26 Ultra
 
 ### Model-Specific Notes
 
@@ -107,6 +128,12 @@ All debloat scripts in this repository work on:
 - Review S Pen packages before removing
 - More Samsung apps pre-installed
 - Check `06-oneui8-specific.txt` for Ultra packages
+
+**If using S26 Ultra:**
+- Runs OneUI 8.5; the main lists still apply
+- Review S Pen packages before removing
+- Use `07-s26-ultra.txt` for the verified S26 Ultra extras
+- Keep Galaxy AI packages if you use the new OneUI 8.5 AI features
 
 **If using S25 Edge:**
 - Review Edge panel packages
@@ -132,6 +159,13 @@ All debloat scripts in this repository work on:
 3. More careful with Samsung apps
 4. Test S Pen features after debloat
 
+### S26 Ultra
+1. Start with conservative, then add `07-s26-ultra.txt`
+2. **Don't remove S Pen packages** if you use it
+3. Review the CAUTION section of `07-s26-ultra.txt` before running it
+4. Keep Galaxy AI packages if you use OneUI 8.5 AI features
+5. Test S Pen and AI features after debloat
+
 ---
 
-**Last Updated:** October 2025
+**Last Updated:** June 2026
