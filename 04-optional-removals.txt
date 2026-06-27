@@ -65,9 +65,10 @@ adb shell pm uninstall --user 0 com.android.printspooler
 # Quick Share (Samsung's file sharing - similar to AirDrop)
 # WARNING: Keep if you share files with other Samsung devices
 adb shell pm uninstall --user 0 com.samsung.android.app.sharelive
+adb shell pm uninstall --user 0 com.samsung.android.mdx.kit
 
 # Link to Windows
-adb shell pm uninstall --user 0 com.samsung.android.mdx.kit
+adb shell pm uninstall --user 0 com.samsung.android.mdx
 
 # Samsung Nearby Service
 adb shell pm uninstall --user 0 com.samsung.android.easysetup
@@ -173,7 +174,7 @@ adb shell pm uninstall --user 0 com.google.audio.hearing.visualization.accessibi
 # adb shell pm uninstall --user 0 com.wssyncmldm
 
 # ============================================
-# TOTAL PACKAGES IN THIS CATEGORY: ~40
+# TOTAL PACKAGES IN THIS CATEGORY: ~41
 # SAFETY LEVEL: LOW-MODERATE
 # RECOMMENDED FOR: Advanced users only
 # POTENTIAL ISSUES:
