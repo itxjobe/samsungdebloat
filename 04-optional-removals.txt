@@ -97,8 +97,11 @@ adb shell pm uninstall --user 0 com.sec.android.daemonapp.weather
 # ============================================
 # May affect Samsung Gallery app features
 
-# Gallery Stories
-adb shell pm uninstall --user 0 com.samsung.android.service.storyservice
+# Gallery Stories (auto-generated stories and highlight reels in Gallery)
+# Package verified on a Galaxy Z Fold 8 (OneUI 9). Older lists used
+# com.samsung.android.service.storyservice, which does not exist on current
+# firmware.
+adb shell pm uninstall --user 0 com.samsung.storyservice
 
 # Image Utility
 adb shell pm uninstall --user 0 com.sec.android.gallery3d

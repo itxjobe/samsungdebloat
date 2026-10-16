@@ -31,6 +31,11 @@
 # ============================================
 # OPTION 2: REMOVE BIXBY, KEEP GEMINI
 # ============================================
+# ONEUI 9 NOTE: on a Galaxy Z Fold 8 (OneUI 9) the only Bixby packages present are
+# com.samsung.android.bixby.agent, .wakeup and the on-device language packs
+# (.ondevice.enus etc.). bixby.service, bixby.voiceinput and
+# bixbyvision.framework no longer exist there; those lines just report
+# "not installed" and are safe to ignore.
 # Run these commands if you want to use Gemini instead of Bixby
 # Gemini will handle voice assistant and AI features
 

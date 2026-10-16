@@ -282,7 +282,9 @@ Don't remove these unless you're absolutely sure:
 **Recommendation:** KEEP - one of Samsung's best features
 
 ### Samsung Good Lock Modules
-**Package:** com.samsung.android.rubin.app
+**Package:** com.samsung.android.goodlock (installed from the Galaxy Store)
+
+Note: `com.samsung.android.rubin.app` is Customization Service, not Good Lock. See `03-safe-system-apps.txt`.
 
 **Why keep it:**
 - Deep customization of OneUI

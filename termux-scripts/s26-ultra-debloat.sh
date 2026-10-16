@@ -13,7 +13,7 @@ echo "- SwiftKey (Samsung Keyboard stays)"
 echo "- Unused Google components"
 echo "- Text-to-Speech voice packs (storage)"
 echo ""
-echo "Caution-level system services are NOT touched here."
+echo "Now Brief and caution-level system services are NOT touched here."
 echo "See 07-s26-ultra.txt for those."
 echo ""
 echo "Press Ctrl+C to cancel, or Enter to continue..."
@@ -41,7 +41,6 @@ adb shell pm uninstall --user 0 com.samsung.android.app.watchmanagerstub
 adb shell pm uninstall --user 0 com.samsung.android.beaconmanager
 adb shell pm uninstall --user 0 com.samsung.android.inputshare
 adb shell pm uninstall --user 0 com.samsung.android.liveeffectservice
-adb shell pm uninstall --user 0 com.samsung.android.smartsuggestions
 adb shell pm uninstall --user 0 com.samsung.android.stickercenter
 adb shell pm uninstall --user 0 com.samsung.safetyinformation
 adb shell pm uninstall --user 0 com.sec.android.app.personalization

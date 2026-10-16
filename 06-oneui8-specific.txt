@@ -126,7 +126,7 @@ adb shell pm uninstall --user 0 com.google.android.health.connect.backuprestore
 #
 # DO NOT REMOVE:
 # ✓ com.samsung.android.aicore (Galaxy AI foundation)
-# ✓ com.samsung.android.intelligence.voice (Live Translate)
+# ✓ com.samsung.android.intellivoiceservice (Samsung Intelligence Voice Services: speech recognition, Live Translate)
 # ✓ com.samsung.android.honeyboard (Samsung Keyboard - DEX compatible)
 # ✓ com.sec.android.app.launcher (OneUI Launcher)
 # ✓ com.android.systemui (System UI)
@@ -167,7 +167,7 @@ adb shell pm uninstall --user 0 com.samsung.android.tvplus
 # LIVE TRANSLATION:
 # Requires:
 # - com.samsung.android.app.interpreter
-# - com.samsung.android.intelligence.voice (DO NOT REMOVE)
+# - com.samsung.android.intellivoiceservice (DO NOT REMOVE)
 # - Language packs for your languages
 # - Samsung Account (for some features)
 

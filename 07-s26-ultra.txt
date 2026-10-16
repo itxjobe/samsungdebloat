@@ -41,16 +41,14 @@ adb shell pm uninstall --user 0 com.samsung.android.inputshare
 # Live wallpaper effect service
 adb shell pm uninstall --user 0 com.samsung.android.liveeffectservice
 
-# Smart Suggestions
-adb shell pm uninstall --user 0 com.samsung.android.smartsuggestions
-
 # Sticker Center
 adb shell pm uninstall --user 0 com.samsung.android.stickercenter
 
 # Regulatory safety information
 adb shell pm uninstall --user 0 com.samsung.safetyinformation
 
-# Personalization service (suggested content and themes)
+# Perso (SIM / network-lock personalization code menu, opened by a
+# dialer secret code). Not related to themes or suggested content.
 adb shell pm uninstall --user 0 com.sec.android.app.personalization
 
 
@@ -118,6 +116,12 @@ adb shell pm uninstall --user 0 com.samsung.SMT.lang_vi_vn_f00
 # ============================================
 # OPTIONAL - FEATURE TRADE-OFFS
 # ============================================
+
+# Now Brief (package name: Smart Suggestions)
+# Moved here from the SAFE section in 1.3.0. This package hosts Now Brief,
+# its widgets, and the system Content Capture and Augmented Autofill
+# services. Removing it disables Now Brief and its suggestion cards.
+adb shell pm uninstall --user 0 com.samsung.android.smartsuggestions
 
 # Hiya backend for Smart Call (caller ID and spam detection).
 # Removing this disables Samsung's spam caller lookup.

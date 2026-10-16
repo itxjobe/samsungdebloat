@@ -9,6 +9,12 @@
 #
 # NOTE: This does NOT remove Bixby Routines (Modes & Routines),
 # which stays useful even without Bixby voice.
+#
+# ONEUI 9 NOTE: on a Galaxy Z Fold 8 (OneUI 9) the only Bixby packages present are
+# com.samsung.android.bixby.agent, .wakeup and the on-device language packs
+# (.ondevice.enus etc.). bixby.service, bixby.voiceinput and
+# bixbyvision.framework no longer exist there; those lines just report
+# "not installed" and are safe to ignore.
 # ============================================
 
 # Bixby core services

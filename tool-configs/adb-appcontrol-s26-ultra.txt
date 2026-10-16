@@ -1,5 +1,7 @@
 # ADB AppControl Import List - Galaxy S26 Ultra (OneUI 8.5)
 # Verified on a Galaxy S26 Ultra (SM-S948B). Import this into ADB AppControl.
+# Now Brief (com.samsung.android.smartsuggestions) was removed from this list
+# in 1.3.0; it is now in the OPTIONAL section of 07-s26-ultra.txt.
 # Safe additional removals only. Caution-level system services are in
 # 07-s26-ultra.txt and are intentionally left out of this list.
 
@@ -9,7 +11,6 @@ com.samsung.android.app.watchmanagerstub
 com.samsung.android.beaconmanager
 com.samsung.android.inputshare
 com.samsung.android.liveeffectservice
-com.samsung.android.smartsuggestions
 com.samsung.android.stickercenter
 com.samsung.safetyinformation
 com.sec.android.app.personalization

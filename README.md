@@ -101,7 +101,7 @@ If using the traditional ADB method from computer:
 ### CRITICAL - DO NOT REMOVE:
 - **Samsung Keyboard** (`com.samsung.android.honeyboard`) - Causes bootloop with DEX
 - **Knox Components** - May lock your device
-- **Samsung Intelligence Voice Services** - Breaks Galaxy AI features
+- **Samsung Intelligence Voice Services** (`com.samsung.android.intellivoiceservice`) - Breaks Galaxy AI features (speech recognition, Live Translate, Interpreter)
 - **SystemUI or Core Services** - Will brick your device
 
 ### Keep for Bixby:

@@ -45,7 +45,11 @@ adb shell pm uninstall --user 0 com.samsung.android.carkey
 adb shell pm uninstall --user 0 com.samsung.android.themestore
 adb shell pm uninstall --user 0 com.samsung.android.themecenter
 
-# Good Lock suite (if not installed)
+# Customization Service (Samsung on-device personalization engine)
+# NOTE: earlier versions of this list mislabeled this as "Good Lock".
+# Good Lock is com.samsung.android.goodlock. Customization Service feeds
+# personalized suggestions to Now Brief, Routines and other Samsung apps.
+# Removing it is common, but those suggestions become generic or stop.
 adb shell pm uninstall --user 0 com.samsung.android.rubin.app
 
 # Edge Panels
@@ -93,7 +97,9 @@ adb shell pm uninstall --user 0 com.samsung.android.app.omcagent
 # Samsung Device Key Management
 adb shell pm uninstall --user 0 com.samsung.android.dkey
 
-# MDE Service (Samsung Knox related)
+# MDE Service (Multi Device Experience)
+# Powers "Call & text on other devices" (answer calls and texts on a Galaxy
+# tablet or PC). Not Knox related. Keep if you use that feature.
 adb shell pm uninstall --user 0 com.samsung.android.mdecservice
 
 # IP Geofence Service

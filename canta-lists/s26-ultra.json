@@ -1,8 +1,8 @@
 {
   "name": "Galaxy S26 Ultra - OneUI 8.5",
-  "description": "Safe additional removals verified on a Galaxy S26 Ultra (SM-S948B) running OneUI 8.5. Covers Samsung extras, unused Google components, SwiftKey, and Text-to-Speech voice packs. Caution-level system services are intentionally excluded - see 07-s26-ultra.txt for those. Most of these also apply to the S25 series.",
+  "description": "Safe additional removals verified on a Galaxy S26 Ultra (SM-S948B) running OneUI 8.5. Covers Samsung extras, unused Google components, SwiftKey, and Text-to-Speech voice packs. Now Brief (smartsuggestions) and caution-level system services are intentionally excluded - see 07-s26-ultra.txt for those. Most of these also apply to the S25 series.",
   "createdDate": 1730000000000,
-  "version": "1.0",
+  "version": "1.1",
   "apps": [
     {"packageName": "com.mygalaxy"},
     {"packageName": "com.samsung.android.app.moments"},
@@ -10,7 +10,6 @@
     {"packageName": "com.samsung.android.beaconmanager"},
     {"packageName": "com.samsung.android.inputshare"},
     {"packageName": "com.samsung.android.liveeffectservice"},
-    {"packageName": "com.samsung.android.smartsuggestions"},
     {"packageName": "com.samsung.android.stickercenter"},
     {"packageName": "com.samsung.safetyinformation"},
     {"packageName": "com.sec.android.app.personalization"},
