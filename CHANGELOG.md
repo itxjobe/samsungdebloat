@@ -13,6 +13,28 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Video tutorials
 - Additional community configurations
 - OneUI 8.1 compatibility testing
+- Removal testing of the `08-z-fold8.txt` SAFE section on a Z Fold 8
+
+---
+
+## [1.3.0] - 2026-10-16
+
+### Added
+- Galaxy Z Fold 8 (OneUI 9 / Android 17) support, built from a Z Fold 8 (SM-F971U1, OneUI 9.0, CSC VZW). Every package was confirmed present and inspected with dumpsys; removals were not test-run
+- `08-z-fold8.txt` - 26 removals grouped by risk (safe, Text-to-Speech packs, optional), plus KEEP notes for OneUI 9 Galaxy AI, foldable / cover screen, safety, and the Android 17 contacts picker
+- `canta-lists/z-fold8.json`, `termux-scripts/z-fold8-debloat.sh` and `tool-configs/adb-appcontrol-z-fold8.txt` - presets for the safe Z Fold 8 extras
+- OneUI 9 sections in README, DEVICE-COMPARISON.md, POST-UPDATE-GUIDE.md and FAQ.md
+
+### Changed
+- **S26 preset no longer removes Now Brief.** `com.samsung.android.smartsuggestions` was labeled "Smart Suggestions" but hosts Now Brief (plus Content Capture and Augmented Autofill). It moved from SAFE to OPTIONAL in `07-s26-ultra.txt` and out of `s26-ultra.json`, `s26-ultra-debloat.sh` and `adb-appcontrol-s26-ultra.txt`. If you ran an older S26 preset and want Now Brief back: `adb shell cmd package install-existing com.samsung.android.smartsuggestions`
+- Gallery Stories (`com.samsung.storyservice`) moved from `01-safe-user-apps.txt` to `04-optional-removals.txt`
+
+### Fixed
+- `04-optional-removals.txt` named a nonexistent Gallery Stories package (`com.samsung.android.service.storyservice`)
+- Samsung Intelligence Voice Services is `com.samsung.android.intellivoiceservice`, not `com.samsung.android.intelligence.voice` (06, README)
+- Mislabeled packages: `rubin.app` is Customization Service, not Good Lock (03, SUGGESTIONS.md); `mdecservice` is Call & text on other devices, not Knox (03); `com.sec.android.app.personalization` is the SIM / network-lock "Perso" menu, not suggested content (07)
+- `tool-configs/README.md` listed files that never shipped; `ON-DEVICE-DEBLOAT.md` referenced a nonexistent `debloat-bloatware.sh`
+- Bixby lists now note that `bixby.service`, `bixby.voiceinput` and `bixbyvision.framework` are not present on OneUI 9
 
 ---
 
