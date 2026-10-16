@@ -118,7 +118,7 @@ Full documentation:
 
 ## By Task
 
-### "I want to debloat my S25 Edge"
+### "I want to debloat my Galaxy"
 1. [QUICKSTART.md](QUICKSTART.md) - If using computer
 2. [ON-DEVICE-DEBLOAT.md](ON-DEVICE-DEBLOAT.md) - If on-device
 3. [scripts/auto-debloat.sh](scripts/auto-debloat.sh) - Automated method

@@ -18,7 +18,7 @@ Complete reference of Samsung and Google packages with descriptions and safety r
 | com.android.systemui | System UI | CRITICAL | KEEP - Required for UI |
 | com.sec.android.app.launcher | OneUI Launcher | CRITICAL | KEEP unless alternative installed |
 | com.samsung.android.knox.* | Knox Security | CRITICAL | KEEP - May lock device |
-| com.samsung.android.intelligence.voice | Live Translation | HIGH | KEEP for Galaxy AI |
+| com.samsung.android.intellivoiceservice | Samsung Intelligence Voice Services (speech recognition, Live Translate) | HIGH | KEEP for Galaxy AI |
 
 ---
 
@@ -277,7 +277,7 @@ Factory reset will restore ALL removed packages.
 
 ### For Live Translation:
 - com.samsung.android.app.interpreter
-- com.samsung.android.intelligence.voice (DO NOT REMOVE)
+- com.samsung.android.intellivoiceservice (DO NOT REMOVE)
 - Language packs
 
 ### For Samsung DEX:
@@ -287,7 +287,7 @@ Factory reset will restore ALL removed packages.
 ### For Galaxy AI features:
 - com.samsung.android.aicore
 - com.google.android.apps.bard (Gemini)
-- com.samsung.android.intelligence.voice
+- com.samsung.android.intellivoiceservice
 
 ---
 

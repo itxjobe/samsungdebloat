@@ -1,10 +1,10 @@
-# Quick Start Guide - S25 Edge Debloat
+# Quick Start Guide - Samsung Galaxy Debloat
 
-Get started debloating your Samsung Galaxy S25 Edge in 5 minutes!
+Get started debloating your Samsung Galaxy (S25, S26, Z Fold 8) in 5 minutes!
 
 ## Prerequisites (One-time setup)
 
-### 1. Enable USB Debugging on S25 Edge
+### 1. Enable USB Debugging on Your Phone
 
 1. Go to **Settings** > **About phone**
 2. Tap **Build number** 7 times (will enable Developer mode)
@@ -36,7 +36,7 @@ sudo apt-get install android-tools-adb
 adb devices
 ```
 
-You should see your S25 Edge listed. If you see "unauthorized", check your phone for authorization prompt.
+You should see your phone listed. If you see "unauthorized", check your phone for authorization prompt.
 
 ---
 
@@ -193,7 +193,7 @@ Just factory reset your phone (Settings > General management > Reset)
 
 ---
 
-## Recommended Setup for S25 Edge
+## Recommended Setup
 
 Based on community feedback, here's the sweet spot:
 
@@ -224,7 +224,7 @@ This gives you the best of both worlds: Samsung's unique features + Google's AI 
 - com.android.systemui
 - com.sec.android.app.launcher (unless you installed another launcher first)
 - Anything with "knox" in the name
-- com.samsung.android.intelligence.voice (breaks Galaxy AI)
+- com.samsung.android.intellivoiceservice (breaks Galaxy AI)
 
 **Read before you remove!** Check the package reference guide if you're unsure.
 

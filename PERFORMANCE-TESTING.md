@@ -1,6 +1,6 @@
 # Performance Testing Guide
 
-How to measure the actual impact of debloating on your Samsung Galaxy S25 Edge.
+How to measure the actual impact of debloating on your Samsung Galaxy.
 
 ## Before You Start
 

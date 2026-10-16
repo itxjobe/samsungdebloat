@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-Common questions about debloating the Samsung Galaxy S25 Edge.
+Common questions about debloating Samsung Galaxy phones (S25, S26 and Z Fold 8; OneUI 8, 8.5 and 9).
 
 ## Table of Contents
 1. [General Questions](#general-questions)
@@ -52,7 +52,7 @@ Knox remains intact. ADB package removal doesn't trip Knox or affect Samsung Pay
 **Yes**, as long as you don't remove Samsung Pay packages. The conservative and moderate scripts preserve Samsung Pay by default.
 
 ### Will this work on carrier-locked phones?
-**Yes.** Debloating works on all S25 Edge variants (unlocked, Verizon, AT&T, T-Mobile, international, etc.).
+**Yes.** Debloating works on all variants (unlocked, Verizon, AT&T, T-Mobile, international, etc.).
 
 ### Can I still get software updates?
 **Yes.** OTA updates work normally. Note: Updates won't restore removed apps, but may add new bloatware.
@@ -214,13 +214,13 @@ Keep at least one.
 ### Will Live Translation work?
 **Yes**, if you don't remove:
 - `com.samsung.android.app.interpreter`
-- `com.samsung.android.intelligence.voice` (CRITICAL - never remove)
+- `com.samsung.android.intellivoiceservice` (CRITICAL - never remove)
 
 ### Will Galaxy AI features work?
 **Yes**, if you keep:
 - `com.google.android.apps.bard` (Gemini)
 - `com.samsung.android.aicore` (Galaxy AI Core)
-- `com.samsung.android.intelligence.voice`
+- `com.samsung.android.intellivoiceservice`
 
 ### Will Bixby Routines (Modes & Routines) work?
 **Yes**, if you keep:
@@ -343,7 +343,7 @@ Community-maintained based on research from:
 
 ### What NEVER to remove:
 - `com.samsung.android.honeyboard` (if using DEX)
-- `com.samsung.android.intelligence.voice`
+- `com.samsung.android.intellivoiceservice`
 - Anything with "knox" in the name
 - `com.android.systemui`
 - `com.sec.android.app.launcher` (without alternative)

@@ -1,4 +1,4 @@
-# Contributing to Samsung S25 Edge Debloat
+# Contributing to Samsung Galaxy Debloat
 
 Thank you for considering contributing to this project! Community contributions help keep this repository up-to-date and useful for everyone.
 
@@ -93,7 +93,7 @@ Samsung Pay crashes on launch
 - Bad: "Add this package"
 
 ### What to Include
-- Device model (S25, S25+, S25 Ultra, S25 Edge)
+- Device model (e.g. S25, S25 Ultra, S26 Ultra, Z Fold 8) and OneUI version
 - OneUI version
 - Specific packages removed
 - Steps to reproduce
@@ -433,7 +433,7 @@ By contributing, you agree that your contributions will be licensed under the sa
 
 ## Thank You!
 
-Every contribution helps make this resource better for the entire S25 Edge community. Whether it's fixing a typo or adding a new configuration, your help is appreciated!
+Every contribution helps make this resource better for the entire Galaxy debloating community. Whether it's fixing a typo or adding a new configuration, your help is appreciated!
 
 ---
 

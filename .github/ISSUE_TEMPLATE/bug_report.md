@@ -7,9 +7,9 @@ assignees: ''
 ---
 
 **Device Information**
-- Device Model: [e.g., Galaxy S25 Edge]
-- OneUI Version: [e.g., 8.0]
-- Android Version: [e.g., 16]
+- Device Model: [e.g., Galaxy S26 Ultra, Z Fold 8]
+- OneUI Version: [e.g., 8.5 or 9.0]
+- Android Version: [e.g., 16 or 17]
 
 **Describe the Bug**
 A clear description of what went wrong.

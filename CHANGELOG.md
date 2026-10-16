@@ -17,6 +17,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.3.2] - 2026-10-16
+
+### Fixed
+- The "never remove" lists in FAQ.md, QUICKSTART.md, RESTORE-GUIDE.md, SAFE-MODE-RECOVERY.md and package-reference.md named `com.samsung.android.intelligence.voice`, which does not exist. They now protect the real package, `com.samsung.android.intellivoiceservice`
+- RESTORE-GUIDE.md said removing Intelligence Voice Services needs a factory reset. It can be restored with `install-existing`; the command is now shown
+
+### Changed
+- QUICKSTART, FAQ, CONTRIBUTING, PERFORMANCE-TESTING, DOCUMENTATION-INDEX and the bug report template no longer present the project as S25 Edge only
+
+---
+
 ## [1.3.1] - 2026-10-16
 
 ### Changed

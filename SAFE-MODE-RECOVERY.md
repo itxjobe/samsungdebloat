@@ -195,7 +195,7 @@ Samsung's remote wipe (if enabled).
 - `com.android.systemui`
 - `com.sec.android.app.launcher` (without alternative)
 - Anything with "knox" in name
-- `com.samsung.android.intelligence.voice`
+- `com.samsung.android.intellivoiceservice`
 
 See FAQ.md for complete list.
 

@@ -180,8 +180,9 @@ adb shell cmd package install-existing com.google.android.googlequicksearchbox
 # Restore Interpreter
 adb shell cmd package install-existing com.samsung.android.app.interpreter
 
-# WARNING: DO NOT uninstall com.samsung.android.intelligence.voice
-# If you did, you need factory reset - critical system component
+# WARNING: DO NOT uninstall com.samsung.android.intellivoiceservice
+# (Samsung Intelligence Voice Services). If you did, restore it:
+adb shell cmd package install-existing com.samsung.android.intellivoiceservice
 ```
 
 ### Scenario 7: "I want Samsung apps back instead of Google"
