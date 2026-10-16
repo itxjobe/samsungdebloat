@@ -1,0 +1,20 @@
+{
+  "name": "Galaxy Z Fold 8 - OneUI 9",
+  "description": "Safe additional removals for a Galaxy Z Fold 8 (SM-F971U1) running OneUI 9 / Android 17. Covers Samsung extras, unused Google and Android components, and Text-to-Speech voice packs. Packages were inspected on-device but not removal-tested. Now Brief, optional features and everything foldable-critical are intentionally excluded - see 08-z-fold8.txt.",
+  "createdDate": 1792108800000,
+  "version": "1.0",
+  "apps": [
+    {"packageName": "com.sec.android.widgetapp.easymodecontactswidget"},
+    {"packageName": "com.samsung.android.service.peoplestripe"},
+    {"packageName": "com.samsung.android.coldwalletservice"},
+    {"packageName": "com.samsung.android.warrantycare"},
+    {"packageName": "com.samsung.gpuwatchapp"},
+    {"packageName": "com.google.android.glasses.core"},
+    {"packageName": "com.google.android.apps.accessibility.voiceaccess"},
+    {"packageName": "com.android.virtualization.terminal"},
+    {"packageName": "com.android.egg"},
+    {"packageName": "com.samsung.SMT.lang_es_mx_f00"},
+    {"packageName": "com.samsung.SMT.lang_es_us_l01"},
+    {"packageName": "com.samsung.SMT.lang_pt_br_l01"}
+  ]
+}

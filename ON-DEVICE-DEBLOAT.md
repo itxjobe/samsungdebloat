@@ -178,9 +178,12 @@ bash conservative-debloat.sh
 # Moderate debloat
 bash moderate-debloat.sh
 
-# Custom - run specific categories
-bash debloat-bloatware.sh
+# Carrier bloatware only
 bash debloat-carriers.sh
+
+# Device extras (run after conservative or moderate)
+bash s26-ultra-debloat.sh    # Galaxy S26 Ultra, OneUI 8.5
+bash z-fold8-debloat.sh      # Galaxy Z Fold 8, OneUI 9
 ```
 
 #### Manual Commands

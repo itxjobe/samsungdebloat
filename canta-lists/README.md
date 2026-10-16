@@ -85,7 +85,21 @@ Adds safe removals captured from a real Galaxy S26 Ultra (SM-S948B), on top of t
 
 **Recommended for:** S26 Ultra owners. Most packages also apply to the S25 series.
 
-**Note:** Caution-level system services are intentionally excluded. See `07-s26-ultra.txt` for those.
+**Note:** Caution-level system services are intentionally excluded. See `07-s26-ultra.txt` for those. Since 1.3.0 this preset no longer removes Now Brief (`com.samsung.android.smartsuggestions`); it is in the OPTIONAL section of `07-s26-ultra.txt`.
+
+---
+
+### z-fold8.json
+**Galaxy Z Fold 8 (OneUI 9)** - Safe extras
+
+Adds safe removals for a Galaxy Z Fold 8 (SM-F971U1, OneUI 9 / Android 17), on top of the conservative/moderate presets:
+- Samsung extras (Easy mode contacts widget, People edge panel, cold wallet, Warranty Care, GPUWatch)
+- Unused Google and Android components (XR glasses stub, Voice Access, Linux terminal, easter egg)
+- Text-to-Speech voice packs (storage)
+
+**Recommended for:** Z Fold 8 owners. Most packages also exist on other OneUI 9 devices.
+
+**Note:** Packages were inspected on-device but not removal-tested. Now Brief, optional features, and cover screen / Flex mode / Galaxy AI packages are intentionally excluded. See `08-z-fold8.txt`.
 
 ---
 

@@ -1,0 +1,18 @@
+# ADB AppControl Import List - Galaxy Z Fold 8 (OneUI 9)
+# Built from a Galaxy Z Fold 8 (SM-F971U1, OneUI 9 / Android 17). Import this
+# into ADB AppControl. Safe additional removals only. Optional features,
+# Now Brief and foldable-critical packages are in 08-z-fold8.txt and are
+# intentionally left out of this list.
+
+com.sec.android.widgetapp.easymodecontactswidget
+com.samsung.android.service.peoplestripe
+com.samsung.android.coldwalletservice
+com.samsung.android.warrantycare
+com.samsung.gpuwatchapp
+com.google.android.glasses.core
+com.google.android.apps.accessibility.voiceaccess
+com.android.virtualization.terminal
+com.android.egg
+com.samsung.SMT.lang_es_mx_f00
+com.samsung.SMT.lang_es_us_l01
+com.samsung.SMT.lang_pt_br_l01

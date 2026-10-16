@@ -1,0 +1,187 @@
+# ============================================
+# GALAXY Z FOLD 8 - ONEUI 9 (ANDROID 17)
+# ============================================
+# Package list captured from a Galaxy Z Fold 8 (SM-F971U1, US unlocked,
+# CSC VZW) running OneUI 9.0 / Android 17, October 2026 security patch.
+#
+# These packages are additional to the main 01-07 lists. The 01-07 lists
+# still apply on OneUI 9; packages they name that no longer exist simply
+# report "not installed". Many entries here also exist on other OneUI 9
+# devices (Galaxy S26 after its OneUI 9 update, Z Flip 8).
+#
+# HOW THIS LIST WAS BUILT: every package below was confirmed present on the
+# device and inspected with dumpsys (components, intent actions, shared UID,
+# privileged flags) to determine what it does. Unlike 07-s26-ultra.txt,
+# these removals were NOT test-run on the reference device. Start with the
+# SAFE section, reboot, and check the features you use.
+#
+# VARIANT NOTE: international (SM-F971B) and carrier units ship different
+# carrier apps and Text-to-Speech packs. Missing packages just report
+# "not installed" and are safe to ignore.
+#
+# Sections are ordered by risk. Read the KEEP section before removing
+# anything from 01-07 on a foldable.
+# Every removal is reversible (see RESTORE-GUIDE.md or a factory reset).
+# ============================================
+
+
+# ============================================
+# SAFE TO REMOVE - SAMSUNG
+# ============================================
+
+# Easy mode contacts widget (home screen widget for Easy mode)
+adb shell pm uninstall --user 0 com.sec.android.widgetapp.easymodecontactswidget
+
+# People edge panel (favorite contacts Edge panel)
+adb shell pm uninstall --user 0 com.samsung.android.service.peoplestripe
+
+# Samsung Blockchain Keystore / cold wallet service
+# Only needed if you use a crypto wallet that integrates with it.
+adb shell pm uninstall --user 0 com.samsung.android.coldwalletservice
+
+# Warranty Care (warranty status, repair and insurance claim pages, and the
+# matching Now Brief cards)
+adb shell pm uninstall --user 0 com.samsung.android.warrantycare
+
+# GPUWatch (developer GPU / frame-rate overlay)
+adb shell pm uninstall --user 0 com.samsung.gpuwatchapp
+
+
+# ============================================
+# SAFE TO REMOVE - GOOGLE / ANDROID
+# ============================================
+
+# Android XR glasses core (stub; ships disabled)
+adb shell pm uninstall --user 0 com.google.android.glasses.core
+
+# Voice Access (hands-free accessibility control). Keep if you use it.
+adb shell pm uninstall --user 0 com.google.android.apps.accessibility.voiceaccess
+
+# Android Linux terminal (Android 17 virtual machine terminal; ships disabled)
+adb shell pm uninstall --user 0 com.android.virtualization.terminal
+
+# Android version easter egg
+adb shell pm uninstall --user 0 com.android.egg
+
+
+# ============================================
+# TEXT-TO-SPEECH VOICE PACKS
+# ============================================
+# Samsung TTS voices on the US SM-F971U1. Keep com.samsung.SMT (the engine)
+# and com.samsung.SMT.lang_en_us_l03 if you use English readouts.
+# Remove the languages you do not use to save storage.
+
+adb shell pm uninstall --user 0 com.samsung.SMT.lang_es_mx_f00
+adb shell pm uninstall --user 0 com.samsung.SMT.lang_es_us_l01
+adb shell pm uninstall --user 0 com.samsung.SMT.lang_pt_br_l01
+
+
+# ============================================
+# OPTIONAL - FEATURE TRADE-OFFS
+# ============================================
+
+# Now Brief (package name: Smart Suggestions)
+# Hosts Now Brief, its widgets, and the system Content Capture and
+# Augmented Autofill services. Removing it disables Now Brief and its
+# suggestion cards, including the expanded OneUI 9 suggestions.
+adb shell pm uninstall --user 0 com.samsung.android.smartsuggestions
+
+# Document Scan (Samsung document scanner and single-page scan editor)
+adb shell pm uninstall --user 0 com.samsung.android.app.vex.scanner
+
+# Samsung Video Editor (video editing opened from Gallery)
+adb shell pm uninstall --user 0 com.sec.android.app.vepreload
+
+# Magnifier (camera magnifier app and widget)
+adb shell pm uninstall --user 0 com.sec.android.app.magnifier
+
+# Secure Wi-Fi (Samsung VPN for public Wi-Fi, Quick Settings tile)
+adb shell pm uninstall --user 0 com.samsung.android.fast
+
+# Dual Messenger (second copy of messaging apps)
+adb shell pm uninstall --user 0 com.samsung.android.da.daagent
+
+# Galaxy Buds unite manager (Buds widget and connection handling).
+# Keep if you use Galaxy Buds.
+adb shell pm uninstall --user 0 com.samsung.accessory.budsunitemgr
+
+# Camera and storage share (use this phone's camera or storage from another
+# Galaxy device or PC)
+adb shell pm uninstall --user 0 com.samsung.android.hwresourceshare
+
+# Auto Hotspot (share your hotspot with devices on your Samsung account)
+adb shell pm uninstall --user 0 com.samsung.android.mcf.autohotspot
+
+# Driving suggestions (detects car Bluetooth and offers driving
+# suggestions and routes)
+adb shell pm uninstall --user 0 com.samsung.android.drivingplus
+
+# Google AI Wallpapers (generative wallpapers from Google)
+adb shell pm uninstall --user 0 com.google.android.apps.aiwallpapers
+
+# Google cross-device app streaming (stream apps to a Chromebook or other
+# companion device)
+adb shell pm uninstall --user 0 com.google.ambient.streaming
+
+# Gallery widget. NOTE: on the Fold this also provides the Gallery widget
+# for the cover screen.
+adb shell pm uninstall --user 0 com.samsung.android.widget.pictureframe
+
+# Gallery tags (hashtag editor in Gallery)
+adb shell pm uninstall --user 0 com.samsung.android.service.tagservice
+
+
+# ============================================
+# KEEP - DO NOT REMOVE ON ONEUI 9 / FOLDABLES
+# ============================================
+# Listed as KEEP notes, not removals.
+#
+# Galaxy AI (OneUI 9):
+# com.samsung.android.aicore               - Samsung AI Core (Galaxy AI engine)
+# com.google.android.aicore                - Google AICore (Gemini Nano)
+# com.samsung.android.intellivoiceservice  - Samsung Intelligence Voice Services
+#                                            (speech recognition, AI translator)
+# com.samsung.android.offline.languagemodel- On-device language model packs
+# com.samsung.android.vision.model         - AI Core vision model assets
+# com.samsung.android.scs                  - AI search, image and suggestion
+#                                            engine used across Samsung apps
+# com.samsung.android.visual.cloudcore     - Content credentials (C2PA) for
+#                                            AI-edited images
+# com.samsung.android.photoremasterservice - Photo remaster (Gallery photo enhancement)
+# com.samsung.android.callassistant        - Call Assistant / Call Screening
+# com.samsung.android.app.interpreter      - Interpreter (live translation)
+#
+# Foldable and cover screen:
+# com.samsung.android.app.aodservice       - Always On Display AND the cover
+#                                            screen widgets (SubLauncher)
+# com.samsung.android.app.dressroom        - Wallpaper and style, including
+#                                            setting the cover screen wallpaper
+# com.samsung.android.wallpaper.live       - Live wallpapers, including the
+#                                            fold-interactive wallpapers
+# com.sec.android.app.launcher             - OneUI Home (taskbar, multi-window)
+# com.android.systemui                     - System UI (Flex mode panel, cover
+#                                            screen UI). There are no separate
+#                                            cover screen or Flex mode packages.
+# com.samsung.android.honeyboard           - Samsung Keyboard (split keyboard on
+#                                            the main screen; DEX bootloop risk)
+#
+# Safety and security:
+# com.samsung.android.satellite.pointing.ui- Satellite SOS (points you at the
+#                                            satellite)
+# com.google.android.apps.stargate         - Satellite messaging sessions
+# com.samsung.android.emergency            - Emergency SOS
+# com.samsung.android.rampart              - Auto Blocker
+# com.samsung.android.securitybrief        - Security brief / phishing app alerts
+# com.samsung.android.privateaccesstokens  - Private Access Tokens (fewer
+#                                            CAPTCHAs, privacy)
+#
+# Android 17:
+# com.android.contactspicker               - System contacts picker. Apps use it
+#                                            to request only the contacts you
+#                                            choose.
+#
+# Gallery internals:
+# com.samsung.app.newtrim                  - Video trimmer and slow-motion
+#                                            export used by Gallery and Camera
+# com.samsung.mediasearch / com.samsung.videoscan - Gallery search indexing
+# ============================================
