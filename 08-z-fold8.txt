@@ -149,7 +149,9 @@ adb shell pm uninstall --user 0 com.samsung.android.service.tagservice
 #                                            AI-edited images
 # com.samsung.android.photoremasterservice - Photo remaster (Gallery photo enhancement)
 # com.samsung.android.callassistant        - Call Assistant / Call Screening
-# com.samsung.android.app.interpreter      - Interpreter (live translation)
+# com.samsung.android.app.interpreter      - Interpreter (live translation; 04 and
+#                                            06 list it as an opt-in removal if
+#                                            you never use it)
 #
 # Foldable and cover screen:
 # com.samsung.android.app.aodservice       - Always On Display AND the cover
