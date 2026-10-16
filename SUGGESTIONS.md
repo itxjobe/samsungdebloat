@@ -610,4 +610,4 @@ Found a great optimization? Have a better app alternative? Share with the commun
 
 **Made with ❤️ for the S25 Edge community**
 
-Last updated: October 2025 for OneUI 8
+Last updated: October 2026 for OneUI 8, 8.5 and 9

@@ -171,4 +171,4 @@ Make sure you have Canta v3.0.0 or later (preset import was added in v3.0.0). Up
 
 ---
 
-**Last Updated:** October 2025 for OneUI 8
+**Last Updated:** October 2026 for OneUI 8, 8.5 and 9

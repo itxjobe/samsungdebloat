@@ -116,4 +116,4 @@ Run appropriate scripts again, or remove individual packages.
 
 ---
 
-**Last Updated:** October 2025
+**Last Updated:** October 2026

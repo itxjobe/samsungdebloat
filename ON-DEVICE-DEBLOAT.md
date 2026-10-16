@@ -383,4 +383,4 @@ This gives you:
 
 ---
 
-**Last Updated:** October 2025 for OneUI 8
+**Last Updated:** October 2026 for OneUI 8, 8.5 and 9
