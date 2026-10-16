@@ -1,16 +1,19 @@
 # Canta Import Presets
 
-Package presets in JSON format for import into Canta app.
+Package presets in JSON format for import into the [Canta](https://github.com/samolego/Canta) app.
+
+Compatible with Canta 3.x and 4.x (checked against both versions' import code). Canta needs [Shizuku](../ON-DEVICE-DEBLOAT.md#which-shizuku-read-this-first) running; on Android 16 / 17 use the thedjchi fork.
 
 ## How to Use
 
-1. Download the `.json` preset file you want to your phone
-2. Open Canta app
-3. Tap the menu (⋮) > Import Preset
-4. Select the downloaded JSON file
-5. Review the packages that will be imported
-6. Select/deselect packages as needed
-7. Confirm removal
+Canta imports presets from the **clipboard or pasted text**. There is no file picker.
+
+1. Open the preset you want on GitHub and tap **Raw**
+2. Select all of the JSON text and copy it
+3. Canta > **Presets** > **Import preset** > **Clipboard** (or paste into the **Text** tab)
+4. Tap **Apply Preset**. Only apps that exist on your phone are selected
+5. Review the selection and deselect anything you want to keep. **Applying a preset bypasses Canta's "unsafe app" guard**, so do not skip this step
+6. Uninstall the selected apps and reboot
 
 ## Available Presets
 
@@ -136,21 +139,29 @@ Or factory reset to restore everything.
 
 You can create your own JSON preset:
 
-1. Create a new `.json` file
-2. Use this template:
+1. Copy this template:
 ```json
 {
   "name": "My Custom Preset",
   "description": "Description of what this removes",
+  "createdDate": 1792108800000,
   "version": "1.0",
-  "packages": [
-    "com.facebook.katana",
-    "com.samsung.android.tvplus",
-    "com.google.android.apps.youtube.music"
+  "apps": [
+    {"packageName": "com.facebook.katana"},
+    {"packageName": "com.samsung.android.tvplus"},
+    {"packageName": "com.google.android.apps.youtube.music"}
   ]
 }
 ```
-3. Save and import to Canta
+2. Edit the name, description and package list
+3. Copy it and import it in Canta (Presets > Import preset)
+
+**Format notes:**
+- The list key is `apps`, not `packages`
+- `name`, `description` and a numeric `createdDate` are required by Canta 3.x
+- Keep each entry as `{"packageName": "..."}`. Canta 4.x also accepts plain strings (`"com.example.app"`), but Canta 3.x rejects them
+
+Easier: uninstall the apps in Canta, then use **Presets > Create preset** to save them as a preset you can share.
 
 Reference the main debloat scripts (`01-safe-user-apps.txt`, etc.) for package names.
 
@@ -162,12 +173,15 @@ Reference the main debloat scripts (`01-safe-user-apps.txt`, etc.) for package n
 Normal - means the package doesn't exist on your device (e.g., wrong carrier)
 
 ### Can't find Import Preset option
-Make sure you have Canta v3.0.0 or later (preset import was added in v3.0.0). Update from Play Store or F-Droid if needed.
+Make sure you have Canta v3.0.0 or later (presets were added in v3.0.0). Import lives on the **Presets** screen. Update from F-Droid, IzzyOnDroid, GitHub or the Play Store if needed.
 
-### Preset won't import
-- Check the JSON file format is valid
-- Try opening the preset file in a text editor to verify it's not corrupted
-- Make sure file has .json extension
+### Preset won't import ("Import failed")
+- Copy the **Raw** view of the file, not the GitHub page around it
+- Make sure you copied the whole JSON, from the first `{` to the last `}`
+- For your own presets, check the format notes under [Creating Custom Presets](#creating-custom-presets)
+
+### Some packages were not selected
+Normal. Canta skips packages that are not installed on your phone, and drops anything that is not a valid package name.
 
 ---
 

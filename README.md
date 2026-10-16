@@ -7,7 +7,7 @@
 
 Comprehensive ADB debloat toolkit for the Samsung Galaxy S25 series (OneUI 8), the Galaxy S26 Ultra (OneUI 8.5, Android 16), and the Galaxy Z Fold 8 (OneUI 9, Android 17). It lets you remove bloatware and unnecessary apps to improve performance, battery life, and privacy.
 
-> **TL;DR**: Remove bloatware from your Galaxy S25, S26 or Z Fold 8 (OneUI 8 / 8.5 / 9) without root. Download [Canta presets](canta-lists/) → Import in app → Done in 5 minutes. S26 Ultra owners: see [`07-s26-ultra.txt`](07-s26-ultra.txt). Z Fold 8 / OneUI 9 owners: see [`08-z-fold8.txt`](08-z-fold8.txt). See [Quick Start](#quick-start-easiest-method).
+> **TL;DR**: Remove bloatware from your Galaxy S25, S26 or Z Fold 8 (OneUI 8 / 8.5 / 9) without root. Copy a [Canta preset](canta-lists/) → Import from clipboard in Canta → Done in 5 minutes. S26 Ultra owners: see [`07-s26-ultra.txt`](07-s26-ultra.txt). Z Fold 8 / OneUI 9 owners: see [`08-z-fold8.txt`](08-z-fold8.txt). See [Quick Start](#quick-start-easiest-method).
 
 ⭐ **Found this helpful? [Star this repo](https://github.com/itxjobe/samsungdebloat) to help others find it!**
 
@@ -39,27 +39,28 @@ Comprehensive ADB debloat toolkit for the Samsung Galaxy S25 series (OneUI 8), t
 
 ## Quick Start (Easiest Method)
 
-**The fastest way to debloat your Galaxy S25, S26 or Z Fold 8 - no computer needed after initial setup!**
+**The fastest way to debloat your Galaxy S25, S26 or Z Fold 8 - no computer needed!**
 
-1. **One-time setup** (5 minutes):
-   - Enable USB Debugging on phone (Settings > About phone > tap Build number 7x)
-   - Enable Wireless Debugging (Settings > Developer options)
-   - Connect phone to computer and run: `adb pair` (see [ON-DEVICE-DEBLOAT.md](ON-DEVICE-DEBLOAT.md))
+1. **Install apps on phone**:
+   - **Shizuku** - Provides ADB permissions. On Android 16 / 17 (OneUI 8, 8.5, 9) use the maintained [thedjchi fork](https://github.com/thedjchi/Shizuku/releases/latest) (v13.7.0 adds Android 17 support). The original [RikkaApps Shizuku](https://shizuku.rikka.app/) has not been updated since May 2025
+   - [Canta](https://github.com/samolego/Canta) - Debloat GUI app (F-Droid, IzzyOnDroid, GitHub or Play Store)
 
-2. **Install apps on phone**:
-   - [Shizuku](https://shizuku.rikka.app/) - Provides ADB permissions
-   - [Canta](https://github.com/samolego/Canta) - Debloat GUI app
+2. **Start Shizuku on the phone** (Wi-Fi required):
+   - Enable Developer options (Settings > About phone > Software information > tap Build number 7x)
+   - Developer options > enable **Wireless debugging**
+   - Shizuku > **Start via Wireless debugging** > Pairing, then pair with the code from Wireless debugging > Pair device with pairing code
+   - Tap **Start** in Shizuku
 
-3. **Download preset**:
-   - Download [`conservative.json`](canta-lists/conservative.json) to your phone
+3. **Copy a preset**:
+   - Open [`conservative.json`](canta-lists/conservative.json) on your phone, tap **Raw**, and copy all of the text
    - Or browse all [Canta presets](canta-lists/)
 
 4. **Import and debloat**:
-   - Open Canta app
-   - Menu (⋮) > Import Preset
-   - Select `conservative.json`
-   - Review packages > Uninstall
+   - Canta > **Presets** > **Import preset** > **Clipboard**
+   - Tap **Apply Preset**, review the selection, then uninstall
    - Reboot phone
+
+Canta has no file import, so presets are copied and pasted. No phone setup at all? [Canta Web](https://samolego.github.io/Canta/app/) runs in a Chromium browser over USB.
 
 **Done!** Your phone is debloated. See [ON-DEVICE-DEBLOAT.md](ON-DEVICE-DEBLOAT.md) for detailed instructions.
 
@@ -68,12 +69,13 @@ Comprehensive ADB debloat toolkit for the Samsung Galaxy S25 series (OneUI 8), t
 Choose the method that works best for you:
 
 ### On-Device (No Computer Needed)
-- **Shizuku + Canta** - Easy GUI app (one-time computer setup)
+- **Shizuku + Canta** - Easy GUI app (Shizuku starts on the phone via Wireless Debugging)
 - **Shizuku + App Manager** - More advanced on-device option
 - **Termux** - Run scripts directly on your phone
 - See `ON-DEVICE-DEBLOAT.md` for complete guide
 
 ### From Computer (Traditional ADB)
+- Canta Web (Chromium browser over USB, nothing to install)
 - Individual commands
 - Batch commands
 - ADB AppControl GUI tool
@@ -133,13 +135,13 @@ OneUI 9 has no separate cover screen or Flex mode packages. See the KEEP section
 **See `ON-DEVICE-DEBLOAT.md` for complete instructions**
 
 #### Quick Start - Shizuku + Canta:
-1. Setup Shizuku (one-time with computer)
+1. Install Shizuku (thedjchi fork on Android 16 / 17) and start it via Wireless debugging
 2. Install Canta app
-3. Import package lists from `canta-lists/` folder
-4. Select and remove bloatware with GUI
+3. Copy a preset from `canta-lists/` and import it from the clipboard (Presets > Import preset)
+4. Apply the preset, review, and remove bloatware with the GUI
 5. Reboot
 
-**Advantages:** Visual interface, no constant computer connection, easier to use
+**Advantages:** Visual interface, no computer needed, easier to use
 
 ---
 
@@ -299,7 +301,7 @@ This project utilizes and references several excellent open-source tools:
 
 ### Third-Party Tools
 - **[Canta](https://github.com/samolego/Canta)** by [samolego](https://github.com/samolego) - Android app uninstaller without root
-- **[Shizuku](https://shizuku.rikka.app/)** by [RikkaApps](https://github.com/RikkaApps) - Provides ADB-like permissions on-device
+- **[Shizuku](https://shizuku.rikka.app/)** by [RikkaApps](https://github.com/RikkaApps) - Provides ADB-like permissions on-device, and the [Android 16 / 17 fork](https://github.com/thedjchi/Shizuku) by [thedjchi](https://github.com/thedjchi)
 - **[App Manager](https://github.com/MuntashirAkon/AppManager)** by [Muntashir Akon](https://github.com/MuntashirAkon) - Advanced app management tool
 - **[Universal Android Debloater](https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation)** by [Universal Debloater Alliance](https://github.com/Universal-Debloater-Alliance) - Package debloat lists and recommendations
 - **[Termux](https://termux.dev/)** - Terminal emulator for Android

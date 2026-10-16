@@ -82,10 +82,16 @@ Android uses multi-user system. `--user 0` is the primary user. App is removed f
 **No.** You need to enable Developer Options and USB Debugging first, which requires completing initial setup.
 
 ### What's Shizuku and why do I need it for on-device methods?
-Shizuku provides ADB-like permissions to other apps without constant computer connection. One-time setup, then fully on-device.
+Shizuku gives apps like Canta ADB-level permissions. On Android 11+ it starts on the phone itself through Wireless Debugging, so no computer is needed.
+
+### Which Shizuku should I install?
+On Android 16 or 17 (OneUI 8, 8.5, 9), use the [thedjchi fork](https://github.com/thedjchi/Shizuku/releases/latest). The original RikkaApps Shizuku has not been updated since v13.6.0 (May 2025); the fork's v13.7.0 (July 2026) added Android 17 support. Canta also recommends the fork. Uninstall the original first, since the two are signed differently. See [ON-DEVICE-DEBLOAT.md](ON-DEVICE-DEBLOAT.md#which-shizuku-read-this-first).
 
 ### Why does Shizuku stop after reboot?
-It's an Android security feature. Shizuku needs to be restarted after each reboot (quick process, see `ON-DEVICE-DEBLOAT.md`).
+Wireless Debugging permissions do not survive a reboot. The original Shizuku has to be started again each time. The thedjchi fork can start on boot automatically (enable it in its settings).
+
+### Can I use Canta without Shizuku?
+Yes, from a computer. [Canta Web](https://samolego.github.io/Canta/app/) (Canta 4.0+) runs in a Chromium-based browser and talks to the phone over a USB cable with USB debugging enabled.
 
 ---
 
@@ -108,13 +114,14 @@ It's an Android security feature. Shizuku needs to be restarted after each reboo
 3. Check if app is actually removed: Settings > Apps
 
 ### Shizuku won't start
-1. Restart wireless debugging (Settings > Developer options)
-2. Reconnect from computer
-3. Clear Shizuku app data and setup again
-4. Check Shizuku documentation
+1. On Android 16 / 17, make sure you have the [thedjchi fork](https://github.com/thedjchi/Shizuku/releases/latest), not the original v13.6.0
+2. Connect to Wi-Fi, then turn Wireless debugging off and on (Settings > Developer options)
+3. Pair again: Shizuku > Start via Wireless debugging > Pairing
+4. Clear Shizuku app data and set up again
+5. Check the fork's [wiki](https://github.com/thedjchi/Shizuku/wiki)
 
 ### Canta says "No permission"
-1. Verify Shizuku is running (green checkmark in Shizuku app)
+1. Verify Shizuku is running ("Shizuku is running" in the Shizuku app)
 2. Grant Shizuku permission in Canta settings
 3. Restart both apps
 

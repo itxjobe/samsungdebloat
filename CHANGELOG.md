@@ -17,6 +17,25 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.3.1] - 2026-10-16
+
+### Changed
+- **Shizuku: use the thedjchi fork on Android 16 / 17.** The original RikkaApps Shizuku has not been updated since v13.6.0 (May 2025). The [thedjchi fork](https://github.com/thedjchi/Shizuku) v13.7.0 (July 2026) adds Android 17 support, which OneUI 9 needs, and Canta itself points Android 16+ users to it. Setup docs now explain which to install and that the original must be uninstalled first
+- Shizuku setup now starts on the phone via Wireless Debugging (Android 11+) instead of requiring a computer
+- Canta import steps match how Canta actually works (3.x and 4.x): copy the preset, then Presets > Import preset > Clipboard or Text, then Apply Preset. Canta has no file import
+- Documented Canta 4.0's web version (WebUSB, Chromium browser) and the fork's start-on-boot option
+- Warn that applying a Canta preset bypasses Canta's "unsafe app" guard
+
+### Fixed
+- The custom preset template in `canta-lists/README.md` used a `packages` key and no `createdDate`, which Canta rejects. It now uses the `apps` / `packageName` format accepted by both Canta 3.x and 4.x
+- Removed the old `start.sh` Shizuku start command, which no longer works on Shizuku v13; the docs now point to the command shown in the app
+- Canta restore steps now use the Uninstalled apps tab and ReInstall
+
+### Verified
+- All six Canta presets parse under both the Canta 3.2.2 and 4.0.0 import code (field types, entry format, and Canta 4's package-name validator). The `{"packageName": ...}` format is kept because Canta 3.x does not accept plain strings
+
+---
+
 ## [1.3.0] - 2026-10-16
 
 ### Added
