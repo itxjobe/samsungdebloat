@@ -87,6 +87,8 @@ Complete guide to all documentation in this repository.
 | [04-optional-removals.txt](04-optional-removals.txt) | Advanced | Higher risk removals |
 | [05-ai-assistant-options.txt](05-ai-assistant-options.txt) | Optional | Bixby/Gemini choices |
 | [06-oneui8-specific.txt](06-oneui8-specific.txt) | Info | OneUI 8 new features |
+| [07-s26-ultra.txt](07-s26-ultra.txt) | Device | Galaxy S26 Ultra extras (OneUI 8.5) |
+| [08-z-fold8.txt](08-z-fold8.txt) | Device | Galaxy Z Fold 8 extras and OneUI 9 keep notes |
 | [batch-commands.txt](batch-commands.txt) | Quick | Pre-made batch commands |
 
 ## By User Level

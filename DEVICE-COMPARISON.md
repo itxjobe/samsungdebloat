@@ -1,6 +1,6 @@
 # Device Comparison Guide
 
-Differences between Samsung Galaxy S25 and S26 models and debloating considerations.
+Differences between Samsung Galaxy S25, S26 and Z Fold 8 models and debloating considerations.
 
 ## S25 Series Models
 
@@ -43,6 +43,44 @@ com.sec.android.gallery3d              Gallery (Generative edit / Audio Eraser)
 ```
 
 These are documented as keep notes in `06-oneui8-specific.txt`.
+
+---
+
+## Galaxy Z Fold 8 (OneUI 9)
+
+The Galaxy Z Fold 8 launched in July 2026 with **OneUI 9 (Android 17)**, alongside the Fold 8 Ultra and Flip 8. The package notes below come from a US unlocked Z Fold 8 (SM-F971U1, OneUI 9.0, CSC VZW).
+
+| Model | OS out of box | Form factor |
+|-------|---------------|-------------|
+| **Z Fold 8** (SM-F971) | OneUI 9 / Android 17 | Book-style foldable with cover screen |
+
+### Debloating the Z Fold 8
+
+- The main `01-07` lists still apply. Packages that no longer exist on OneUI 9 just report "not installed".
+- `08-z-fold8.txt` adds Fold 8 / OneUI 9 packages grouped by risk, with KEEP notes for foldable and Galaxy AI packages. These were inspected on-device but not removal-tested.
+- For the on-device flow, use `canta-lists/z-fold8.json` (Canta) or `termux-scripts/z-fold8-debloat.sh` (Termux).
+
+### Foldable packages to keep
+
+OneUI 9 has no standalone cover screen or Flex mode packages. Those features live in System UI and OneUI Home, plus:
+
+```
+com.samsung.android.app.aodservice   Always On Display and cover screen widgets
+com.samsung.android.app.dressroom    Wallpaper and style (sets the cover screen wallpaper)
+com.samsung.android.wallpaper.live   Live wallpapers, including fold-interactive ones
+com.samsung.android.widget.pictureframe  Gallery widget (also on the cover screen; optional)
+```
+
+### OneUI 9 Galaxy AI packages
+
+```
+com.samsung.android.intellivoiceservice   Samsung Intelligence Voice Services (speech, AI translator)
+com.samsung.android.offline.languagemodel On-device language model packs
+com.samsung.android.vision.model          AI Core vision model assets
+com.samsung.android.scs                   AI search, image and suggestion engine
+com.samsung.android.visual.cloudcore      Content credentials (C2PA) for AI-edited images
+com.samsung.android.smartsuggestions      Now Brief (optional, see 08-z-fold8.txt)
+```
 
 ---
 
@@ -130,6 +168,7 @@ All debloat scripts in this repository work on:
 - Galaxy S25 Edge  
 - Galaxy S25 Ultra
 - Galaxy S26 Ultra
+- Galaxy Z Fold 8 (OneUI 9)
 
 ### Model-Specific Notes
 
@@ -147,6 +186,11 @@ All debloat scripts in this repository work on:
 - Review S Pen packages before removing
 - Use `07-s26-ultra.txt` for the verified S26 Ultra extras
 - Keep Galaxy AI packages if you use the new OneUI 8.5 AI features
+
+**If using Z Fold 8 (or another OneUI 9 foldable):**
+- Use `08-z-fold8.txt` for the Fold 8 extras
+- Read its KEEP section before removing anything wallpaper, AOD or widget related
+- Test the cover screen and Flex mode after debloat
 
 **If using S25 Edge:**
 - Review Edge panel packages
@@ -179,6 +223,12 @@ All debloat scripts in this repository work on:
 4. Keep Galaxy AI packages if you use OneUI 8.5 AI features
 5. Test S Pen and AI features after debloat
 
+### Z Fold 8
+1. Start with conservative, then add the SAFE section of `08-z-fold8.txt`
+2. **Keep AOD, wallpaper and launcher packages** (they drive the cover screen)
+3. Keep the OneUI 9 Galaxy AI packages if you use AI features
+4. Test the cover screen, Flex mode, multi-window and Now Brief after debloat
+
 ---
 
-**Last Updated:** June 2026
+**Last Updated:** October 2026

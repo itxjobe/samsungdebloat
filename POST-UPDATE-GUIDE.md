@@ -2,6 +2,17 @@
 
 What to do after OneUI software updates to maintain your debloated setup.
 
+## Updating to OneUI 9 (from OneUI 8 or 8.5)
+
+OneUI 9 moves to Android 17 and changes some packages. After the update:
+
+1. **Save a fresh package list** and compare it with your pre-update list (commands below).
+2. **Re-check Now Brief.** It lives in `com.samsung.android.smartsuggestions`. Older versions of the S26 preset removed it; since 1.3.0 it is optional. Restore it with `adb shell cmd package install-existing com.samsung.android.smartsuggestions` if you want it back.
+3. **Keep the new Galaxy AI packages**: `intellivoiceservice`, `offline.languagemodel`, `vision.model`, `scs`, `visual.cloudcore`. See the KEEP section of `08-z-fold8.txt`.
+4. **Expect "not installed" messages** for packages that no longer exist, such as `bixby.service`, `bixby.voiceinput` and `bixbyvision.framework`. They are harmless.
+5. **Foldables**: keep `aodservice` and `dressroom`, which drive the cover screen widgets and wallpaper.
+
+
 ## After Major Updates (OneUI 8.0 → 8.1, etc.)
 
 ### Step 1: Check for New Bloatware
@@ -86,7 +97,7 @@ After any update, test:
 adb shell pm list packages > pre-update-packages.txt
 
 # Note what you removed (if you didn't track it)
-# Compare with a stock S25 Edge list
+# Compare with a stock list for your device (see 07-s26-ultra.txt or 08-z-fold8.txt)
 ```
 
 ### After Update
