@@ -7,7 +7,13 @@
 # These packages are additional to the main 01-07 lists. The 01-07 lists
 # still apply on OneUI 9; packages they name that no longer exist simply
 # report "not installed". Many entries here also exist on other OneUI 9
-# devices (Galaxy S26 after its OneUI 9 update, Z Flip 8).
+# devices (Galaxy S26 after its OneUI 9 update, Z Flip 8, Galaxy S24 Ultra).
+#
+# ANDROID 17 NOTE: on OneUI 9 the shell cannot uninstall a system app for a
+# single user. `pm uninstall --user 0` fails with
+# "Failure [only root can delete system app for a particular user]" (verified
+# on a Galaxy S24 Ultra running OneUI 9). Use `pm disable-user --user 0`
+# instead and restore with `pm enable <package>`. See 09-s24-ultra.txt.
 #
 # HOW THIS LIST WAS BUILT: every package below was confirmed present on the
 # device and inspected with dumpsys (components, intent actions, shared UID,

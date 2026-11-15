@@ -84,6 +84,46 @@ com.samsung.android.smartsuggestions      Now Brief (optional, see 08-z-fold8.tx
 
 ---
 
+## Galaxy S24 Ultra (OneUI 9)
+
+The Galaxy S24 Ultra launched in January 2024 on OneUI 6.1 and received **OneUI 9 (Android 17)** in late 2026. The notes below come from an international S24 Ultra (SM-S928B, OneUI 9.0, CSC CHO, build S928BXXS6EZJ1, October 2026 patch).
+
+| Model | OS in this list | Form factor |
+|-------|-----------------|-------------|
+| **S24 Ultra** (SM-S928B/U/U1/W) | OneUI 9 / Android 17 | Slab phone with S Pen, eSIM and UWB |
+
+### Debloating the S24 Ultra
+
+- The main `01-07` lists still apply.
+- `08-z-fold8.txt` covers the shared OneUI 9 platform extras (Now Brief, Linux terminal, XR glasses stub, and the rest). Every package it names was re-checked on the S24 Ultra: only `com.samsung.android.coldwalletservice` and `com.samsung.SMT.lang_pt_br_l01` are absent.
+- `09-s24-ultra.txt` adds what `08` does not cover on this device, plus the S Pen, eSIM, UWB and DeX keep notes. These were inspected on-device but not removal-tested.
+- For the on-device flow, use `canta-lists/s24-ultra.json` (Canta) or `termux-scripts/s24-ultra-debloat.sh` (Termux).
+
+### S24 Ultra packages to keep
+
+```
+com.samsung.android.app.smartcapture        Screenshot UI and Screen write (S Pen)
+com.samsung.android.sdk.ocr                 OCR provider (Gallery, Notes, Camera text)
+com.samsung.android.service.airviewdictionary  "Translate" (One UI translate and S Pen hover)
+com.samsung.euicc
+com.samsung.android.ese
+com.samsung.android.app.esimkeystring        eSIM stack (dual-SIM eSIM phone)
+com.samsung.android.app.telephonyui.esimclient
+com.google.android.euicc
+com.sec.android.app.googlelpaoverlay
+com.samsung.android.uwb.resources            UWB radio (SmartThings Find)
+com.android.uwb.resources
+com.samsung.android.dck.timesync             Digital Car Key time sync (not DeX)
+```
+
+S Pen packages were renamed on OneUI 9: `com.samsung.android.sdk.pen` and `penremote` no longer exist. The stack is now `service.aircommand`, `aircommandmanager`, `sdk.handwriting` and `app.readingglass` (Magnify).
+
+### OneUI 9 packages not present on the S24 Ultra
+
+There is no satellite radio on this device, so `com.samsung.android.satellite.pointing.ui` and `com.google.android.apps.stargate` are missing. There is also no separate DeX for PC package (`com.sec.android.app.dexonpc`); DeX runs on System UI and OneUI Home. `com.samsung.android.mdx` is Link to Windows, not DeX.
+
+---
+
 ## Bloatware Differences
 
 ### S25 / S25+
@@ -108,21 +148,31 @@ com.samsung.android.smartsuggestions      Now Brief (optional, see 08-z-fold8.tx
 
 ### S Pen Packages (Ultra Only)
 
+**OneUI 9 names.** On OneUI 9 the old `com.samsung.android.sdk.pen` and
+`com.samsung.android.sdk.penremote` packages are gone. The S Pen stack that
+actually ships on the S24 Ultra is:
+
+```
+com.samsung.android.app.smartcapture        Screenshot UI and Screen write
+com.samsung.android.sdk.handwriting         Handwriting recognition (Keyboard, Notes)
+com.samsung.android.service.aircommand      Air command menu
+com.samsung.android.aircommandmanager       Air command manager
+com.samsung.android.service.airviewdictionary  Translate (S Pen hover)
+com.samsung.android.app.readingglass        Magnify
+```
+
 **Safe to remove if:**
 - You don't use S Pen features
 - You use third-party note apps
 
-**Packages:**
-```
-com.samsung.android.sdk.pen
-com.samsung.android.sdk.penremote
-com.samsung.android.penup
-```
-
 **Keep if:**
 - You use S Pen regularly
-- You use Air Actions
+- You use Air Actions or Screen write
 - You use Samsung Notes with S Pen
+
+**Note:** `01-safe-user-apps.txt` removes `com.samsung.android.app.notes`
+(Samsung Notes) as a user app. If you use the S Pen, skip that line.
+`com.sec.penup` (PENUP) is already covered in `04-optional-removals.txt`.
 
 ### Edge Display Packages (Edge Model)
 
@@ -168,6 +218,7 @@ All debloat scripts in this repository work on:
 - Galaxy S25 Edge  
 - Galaxy S25 Ultra
 - Galaxy S26 Ultra
+- Galaxy S24 Ultra (OneUI 9)
 - Galaxy Z Fold 8 (OneUI 9)
 
 ### Model-Specific Notes
@@ -186,6 +237,13 @@ All debloat scripts in this repository work on:
 - Review S Pen packages before removing
 - Use `07-s26-ultra.txt` for the verified S26 Ultra extras
 - Keep Galaxy AI packages if you use the new OneUI 8.5 AI features
+
+**If using S24 Ultra (OneUI 9):**
+- Use `08-z-fold8.txt` for the shared OneUI 9 platform extras
+- Use `09-s24-ultra.txt` for the S24 Ultra extras and its KEEP section
+- Read the S PEN section before removing anything; the S Pen package names changed on OneUI 9
+- Skip the Samsung Notes removal in `01-safe-user-apps.txt` if you use the S Pen
+- Keep the eSIM and UWB packages, and test calls, eSIM and SmartThings Find after debloat
 
 **If using Z Fold 8 (or another OneUI 9 foldable):**
 - Use `08-z-fold8.txt` for the Fold 8 extras
@@ -228,6 +286,13 @@ All debloat scripts in this repository work on:
 2. **Keep AOD, wallpaper and launcher packages** (they drive the cover screen)
 3. Keep the OneUI 9 Galaxy AI packages if you use AI features
 4. Test the cover screen, Flex mode, multi-window and Now Brief after debloat
+
+### S24 Ultra (OneUI 9)
+1. Start with conservative, then add the SAFE section of `09-s24-ultra.txt`
+2. **Don't remove S Pen packages** if you use the S Pen, and skip the Samsung Notes line in `01`
+3. Keep eSIM, UWB, Galaxy AI, Quick Share and the Device care packages unless you accept the trade-off
+4. Review the CAUTION section of `09-s24-ultra.txt` before removing diagnostic agents
+5. Test calls, eSIM, camera, S Pen, SmartThings Find and Wi-Fi after debloat
 
 ---
 

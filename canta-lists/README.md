@@ -106,6 +106,20 @@ Adds safe removals for a Galaxy Z Fold 8 (SM-F971U1, OneUI 9 / Android 17), on t
 
 ---
 
+### s24-ultra.json
+**Galaxy S24 Ultra (OneUI 9)** - Safe extras
+
+Adds safe removals for a Galaxy S24 Ultra (SM-S928B, OneUI 9 / Android 17), on top of the conservative/moderate presets:
+- Samsung extras (Wi-Fi Tips, shortcut backup, network diagnostics)
+- Legacy SIM Toolkit apps
+- Unused Text-to-Speech voice packs (storage), keeping the English and Spanish (US / MX) packs
+
+**Recommended for:** S24 Ultra owners. Most packages also exist on other OneUI 9 devices.
+
+**Note:** Packages were inspected on-device but not removal-tested. S Pen, eSIM, UWB, Galaxy AI, Quick Share, and every OPTIONAL or CAUTION entry are intentionally excluded. See `09-s24-ultra.txt`.
+
+---
+
 ## Important Notes
 
 ### Before Importing
