@@ -1,0 +1,27 @@
+{
+  "name": "Galaxy S24 Ultra - OneUI 9",
+  "description": "Safe additional removals for a Galaxy S24 Ultra (SM-S928B) running OneUI 9 / Android 17. Covers Samsung telemetry and tips extras, legacy SIM Toolkit apps, and unused Text-to-Speech voice packs. Packages were inspected on-device but not removal-tested. S Pen packages, eSIM, UWB, Galaxy AI, Quick Share and every OPTIONAL or CAUTION entry are intentionally excluded - see 09-s24-ultra.txt.",
+  "createdDate": 1794614400000,
+  "version": "1.0",
+  "apps": [
+    {"packageName": "com.samsung.android.net.wifi.wifiguider"},
+    {"packageName": "com.samsung.android.shortcutbackupservice"},
+    {"packageName": "com.samsung.android.networkdiagnostic"},
+    {"packageName": "com.android.stk"},
+    {"packageName": "com.android.stk2"},
+    {"packageName": "com.android.simappdialog"},
+    {"packageName": "com.samsung.SMT.lang_ar_ae_m00"},
+    {"packageName": "com.samsung.SMT.lang_de_de_f00"},
+    {"packageName": "com.samsung.SMT.lang_en_gb_f00"},
+    {"packageName": "com.samsung.SMT.lang_es_es_f00"},
+    {"packageName": "com.samsung.SMT.lang_fr_fr_f00"},
+    {"packageName": "com.samsung.SMT.lang_hi_in_f00"},
+    {"packageName": "com.samsung.SMT.lang_id_id_f00"},
+    {"packageName": "com.samsung.SMT.lang_it_it_f00"},
+    {"packageName": "com.samsung.SMT.lang_pl_pl_f00"},
+    {"packageName": "com.samsung.SMT.lang_pt_br_f00"},
+    {"packageName": "com.samsung.SMT.lang_ru_ru_f00"},
+    {"packageName": "com.samsung.SMT.lang_th_th_f00"},
+    {"packageName": "com.samsung.SMT.lang_vi_vn_f00"}
+  ]
+}

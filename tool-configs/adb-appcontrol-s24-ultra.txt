@@ -1,0 +1,25 @@
+# ADB AppControl Import List - Galaxy S24 Ultra (OneUI 9)
+# Built from a Galaxy S24 Ultra (SM-S928B, OneUI 9 / Android 17). Import this
+# into ADB AppControl. Safe additional removals only. Optional features,
+# S Pen packages, diagnostic agents and the KEEP list are in 09-s24-ultra.txt
+# and are intentionally left out of this list.
+
+com.samsung.android.net.wifi.wifiguider
+com.samsung.android.shortcutbackupservice
+com.samsung.android.networkdiagnostic
+com.android.stk
+com.android.stk2
+com.android.simappdialog
+com.samsung.SMT.lang_ar_ae_m00
+com.samsung.SMT.lang_de_de_f00
+com.samsung.SMT.lang_en_gb_f00
+com.samsung.SMT.lang_es_es_f00
+com.samsung.SMT.lang_fr_fr_f00
+com.samsung.SMT.lang_hi_in_f00
+com.samsung.SMT.lang_id_id_f00
+com.samsung.SMT.lang_it_it_f00
+com.samsung.SMT.lang_pl_pl_f00
+com.samsung.SMT.lang_pt_br_f00
+com.samsung.SMT.lang_ru_ru_f00
+com.samsung.SMT.lang_th_th_f00
+com.samsung.SMT.lang_vi_vn_f00
