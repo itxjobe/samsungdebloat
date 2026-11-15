@@ -1,6 +1,6 @@
 {
   "name": "Galaxy S24 Ultra - OneUI 9",
-  "description": "Safe additional removals for a Galaxy S24 Ultra (SM-S928B) running OneUI 9 / Android 17. Covers Samsung telemetry and tips extras, legacy SIM Toolkit apps, and unused Text-to-Speech voice packs. Packages were inspected on-device but not removal-tested. S Pen packages, eSIM, UWB, Galaxy AI, Quick Share and every OPTIONAL or CAUTION entry are intentionally excluded - see 09-s24-ultra.txt.",
+  "description": "Safe additional removals for a Galaxy S24 Ultra (SM-S928B) running OneUI 9 / Android 17. Covers Samsung telemetry and tips extras, legacy SIM Toolkit apps, and unused Text-to-Speech voice packs. Packages were inspected on-device but not removal-tested. On OneUI 9 / Android 17 the shell cannot uninstall system apps, so use freeze/disable mode if your tool supports it. S Pen packages, eSIM, UWB, Galaxy AI, Quick Share and every OPTIONAL or CAUTION entry are intentionally excluded - see 09-s24-ultra.txt.",
   "createdDate": 1794614400000,
   "version": "1.0",
   "apps": [

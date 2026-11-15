@@ -9,7 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
-- `09-s24-ultra.txt` - Galaxy S24 Ultra extras for OneUI 9 / Android 17 (SM-S928B, CSC CHO, October 2026 patch), grouped by risk: safe Samsung and Google/Android removals, Text-to-Speech packs, optional feature trade-offs, an S Pen section, caution-level diagnostic agents, and KEEP notes for the S Pen, eSIM, UWB, DeX, Galaxy AI and Quick Share
+- `09-s24-ultra.txt` - Galaxy S24 Ultra extras for OneUI 9 / Android 17 (uses `pm disable-user --user 0`, because OneUI 9 blocks `pm uninstall --user 0` for system apps) (SM-S928B, CSC CHO, October 2026 patch), grouped by risk: safe Samsung and Google/Android removals, Text-to-Speech packs, optional feature trade-offs, an S Pen section, caution-level diagnostic agents, and KEEP notes for the S Pen, eSIM, UWB, DeX, Galaxy AI and Quick Share
 - `canta-lists/s24-ultra.json`, `termux-scripts/s24-ultra-debloat.sh` and `tool-configs/adb-appcontrol-s24-ultra.txt` - presets for the safe S24 Ultra extras
 - S24 Ultra coverage in README, DOCUMENTATION-INDEX, DEVICE-COMPARISON, ON-DEVICE-DEBLOAT, canta-lists/README and FAQ
 

@@ -18,6 +18,14 @@
 # These removals were NOT test-run on the reference device. Start with the
 # SAFE section, reboot, and check the features you use.
 #
+# ANDROID 17 / ONEUI 9: on this build the shell cannot uninstall a system
+# app for a single user. `pm uninstall --user 0` fails with
+# "Failure [only root can delete system app for a particular user]"
+# (verified on the reference device: 25 of 25 packages refused). Every
+# command below therefore uses `pm disable-user --user 0`, which stops the
+# app for user 0 and is reversible with `pm enable <package>`. Storage is
+# not freed: the packages stay on the system partition.
+#
 # VARIANT NOTE: this is an international SM-S928B on a Latin America CSC.
 # TTS packs and carrier apps differ by region, and the US SM-S928U/U1 ships
 # extra carrier apps that are not listed here. Missing packages just report
@@ -28,7 +36,8 @@
 # full eSIM stack and UWB, which the Fold 8 list does not document. Read the
 # S PEN and KEEP sections before removing anything.
 #
-# Every removal is reversible (see RESTORE-GUIDE.md or a factory reset).
+# Every change is reversible with `pm enable <package>` (RESTORE-GUIDE.md
+# covers the uninstall path on older builds).
 # ============================================
 
 
@@ -37,13 +46,13 @@
 # ============================================
 
 # Wi-Fi Tips (suggests open and high-quality public networks)
-adb shell pm uninstall --user 0 com.samsung.android.net.wifi.wifiguider
+adb shell pm disable-user --user 0 com.samsung.android.net.wifi.wifiguider
 
 # Shortcut backup and restore (backs up home screen shortcuts to Samsung Cloud)
-adb shell pm uninstall --user 0 com.samsung.android.shortcutbackupservice
+adb shell pm disable-user --user 0 com.samsung.android.shortcutbackupservice
 
 # Network diagnostics reporter
-adb shell pm uninstall --user 0 com.samsung.android.networkdiagnostic
+adb shell pm disable-user --user 0 com.samsung.android.networkdiagnostic
 
 
 # ============================================
@@ -52,20 +61,20 @@ adb shell pm uninstall --user 0 com.samsung.android.networkdiagnostic
 
 # SIM Toolkit (legacy carrier SIM menu apps). Chilean carriers do not use
 # them. Keep if your carrier ships a SIM menu you actually open.
-adb shell pm uninstall --user 0 com.android.stk
+adb shell pm disable-user --user 0 com.android.stk
 
 # SIM Toolkit for the second SIM slot
-adb shell pm uninstall --user 0 com.android.stk2
+adb shell pm disable-user --user 0 com.android.stk2
 
 # SIM app dialog (the prompt STK uses to ask before opening a SIM app)
-adb shell pm uninstall --user 0 com.android.simappdialog
+adb shell pm disable-user --user 0 com.android.simappdialog
 
 
 # ============================================
 # TEXT-TO-SPEECH VOICE PACKS
 # ============================================
-# Samsung TTS voices on the SM-S928B / CHO. Remove the languages you do not
-# use to save storage. This list keeps the English packs and the Spanish
+# Samsung TTS voices on the SM-S928B / CHO. Disable the languages you do
+# not use. This list keeps the English packs and the Spanish
 # (US / MX) packs that a Latin America device uses, and removes the rest.
 # Keep com.samsung.SMT (the engine) and com.samsung.SMT.lang_en_us_l03 if
 # you use English readouts. To see the packs on your own device:
@@ -73,19 +82,19 @@ adb shell pm uninstall --user 0 com.android.simappdialog
 # These are the same packs that 07-s26-ultra.txt removes for the SM-S948B.
 # They are repeated here so this list stands alone for S24 Ultra owners.
 
-adb shell pm uninstall --user 0 com.samsung.SMT.lang_ar_ae_m00
-adb shell pm uninstall --user 0 com.samsung.SMT.lang_de_de_f00
-adb shell pm uninstall --user 0 com.samsung.SMT.lang_en_gb_f00
-adb shell pm uninstall --user 0 com.samsung.SMT.lang_es_es_f00
-adb shell pm uninstall --user 0 com.samsung.SMT.lang_fr_fr_f00
-adb shell pm uninstall --user 0 com.samsung.SMT.lang_hi_in_f00
-adb shell pm uninstall --user 0 com.samsung.SMT.lang_id_id_f00
-adb shell pm uninstall --user 0 com.samsung.SMT.lang_it_it_f00
-adb shell pm uninstall --user 0 com.samsung.SMT.lang_pl_pl_f00
-adb shell pm uninstall --user 0 com.samsung.SMT.lang_pt_br_f00
-adb shell pm uninstall --user 0 com.samsung.SMT.lang_ru_ru_f00
-adb shell pm uninstall --user 0 com.samsung.SMT.lang_th_th_f00
-adb shell pm uninstall --user 0 com.samsung.SMT.lang_vi_vn_f00
+adb shell pm disable-user --user 0 com.samsung.SMT.lang_ar_ae_m00
+adb shell pm disable-user --user 0 com.samsung.SMT.lang_de_de_f00
+adb shell pm disable-user --user 0 com.samsung.SMT.lang_en_gb_f00
+adb shell pm disable-user --user 0 com.samsung.SMT.lang_es_es_f00
+adb shell pm disable-user --user 0 com.samsung.SMT.lang_fr_fr_f00
+adb shell pm disable-user --user 0 com.samsung.SMT.lang_hi_in_f00
+adb shell pm disable-user --user 0 com.samsung.SMT.lang_id_id_f00
+adb shell pm disable-user --user 0 com.samsung.SMT.lang_it_it_f00
+adb shell pm disable-user --user 0 com.samsung.SMT.lang_pl_pl_f00
+adb shell pm disable-user --user 0 com.samsung.SMT.lang_pt_br_f00
+adb shell pm disable-user --user 0 com.samsung.SMT.lang_ru_ru_f00
+adb shell pm disable-user --user 0 com.samsung.SMT.lang_th_th_f00
+adb shell pm disable-user --user 0 com.samsung.SMT.lang_vi_vn_f00
 
 
 # ============================================
@@ -93,65 +102,65 @@ adb shell pm uninstall --user 0 com.samsung.SMT.lang_vi_vn_f00
 # ============================================
 
 # Single Take (camera mode that captures several photos and videos at once)
-adb shell pm uninstall --user 0 com.samsung.android.singletake.service
+adb shell pm disable-user --user 0 com.samsung.android.singletake.service
 
 # Motion photo (captures a short video with each still)
-adb shell pm uninstall --user 0 com.samsung.android.motionphoto.app
+adb shell pm disable-user --user 0 com.samsung.android.motionphoto.app
 
 # Camera and Gallery filter packs
-adb shell pm uninstall --user 0 com.samsung.android.provider.filterprovider
+adb shell pm disable-user --user 0 com.samsung.android.provider.filterprovider
 
 # Video call effects (background blur and colour correction in third-party
 # video call apps)
-adb shell pm uninstall --user 0 com.samsung.android.vtcamerasettings
+adb shell pm disable-user --user 0 com.samsung.android.vtcamerasettings
 
 # Gallery Cloud Sync (OneDrive sync of photos and albums). Keep if you back
 # up your Gallery to OneDrive.
-adb shell pm uninstall --user 0 com.samsung.android.agent.storage
+adb shell pm disable-user --user 0 com.samsung.android.agent.storage
 
 # Smart View (screen mirroring to a TV or monitor)
-adb shell pm uninstall --user 0 com.samsung.android.smartmirroring
+adb shell pm disable-user --user 0 com.samsung.android.smartmirroring
 
 # Audio mirroring (casts audio to a TV or speaker)
-adb shell pm uninstall --user 0 com.samsung.android.audiomirroring
+adb shell pm disable-user --user 0 com.samsung.android.audiomirroring
 
 # Nearby media sharing (DLNA streaming from Gallery and Video to a TV)
-adb shell pm uninstall --user 0 com.samsung.android.allshare.service.mediashare
+adb shell pm disable-user --user 0 com.samsung.android.allshare.service.mediashare
 
 # SmartThings Companion (device pairing helpers for SmartThings)
-adb shell pm uninstall --user 0 com.samsung.android.service.stplatform
+adb shell pm disable-user --user 0 com.samsung.android.service.stplatform
 
 # App protection (McAfee-powered scan of installed apps). This is the
 # Settings > Security and privacy > App protection feature, not Play Protect.
-adb shell pm uninstall --user 0 com.samsung.android.sm.devicesecurity
+adb shell pm disable-user --user 0 com.samsung.android.sm.devicesecurity
 
 # Digital Wellbeing (screen time, app timers, focus mode)
-adb shell pm uninstall --user 0 com.samsung.android.forest
+adb shell pm disable-user --user 0 com.samsung.android.forest
 
 # Samsung Video Player (the stock player; Gallery has its own playback)
-adb shell pm uninstall --user 0 com.samsung.android.video
+adb shell pm disable-user --user 0 com.samsung.android.video
 
 # One-handed mode
-adb shell pm uninstall --user 0 com.sec.android.easyonehand
+adb shell pm disable-user --user 0 com.sec.android.easyonehand
 
 # Adapt Sound (hearing profile for headphones)
-adb shell pm uninstall --user 0 com.sec.hearingadjust
+adb shell pm disable-user --user 0 com.sec.hearingadjust
 
 # Sound quality and effects (Dolby Atmos and the equalizer)
-adb shell pm uninstall --user 0 com.sec.android.app.soundalive
+adb shell pm disable-user --user 0 com.sec.android.app.soundalive
 
 # Link to Windows Service (Phone Link and app streaming on a Windows PC)
-adb shell pm uninstall --user 0 com.samsung.android.mdx
+adb shell pm disable-user --user 0 com.samsung.android.mdx
 
 # Storage share (use this phone's storage from another Galaxy device or PC)
-adb shell pm uninstall --user 0 com.samsung.android.hwresourceshare.storage
+adb shell pm disable-user --user 0 com.samsung.android.hwresourceshare.storage
 
 # Galaxy Resource Updater (updates Samsung app resource and asset packs).
 # Apps keep working with their bundled resources.
-adb shell pm uninstall --user 0 com.samsung.android.gru
+adb shell pm disable-user --user 0 com.samsung.android.gru
 
 # Google Wi-Fi Provisioner (carrier Wi-Fi auto-connect and Passpoint setup)
-adb shell pm uninstall --user 0 com.google.android.apps.carrier.carrierwifi
+adb shell pm disable-user --user 0 com.google.android.apps.carrier.carrierwifi
 
 
 # ============================================
@@ -161,17 +170,17 @@ adb shell pm uninstall --user 0 com.google.android.apps.carrier.carrierwifi
 # but it disables the matching S Pen functionality.
 
 # Air command (the floating S Pen menu, Smart select, Screen write shortcuts)
-adb shell pm uninstall --user 0 com.samsung.android.service.aircommand
+adb shell pm disable-user --user 0 com.samsung.android.service.aircommand
 
 # Air command manager (the system-side manager for the Air command menu)
-adb shell pm uninstall --user 0 com.samsung.android.aircommandmanager
+adb shell pm disable-user --user 0 com.samsung.android.aircommandmanager
 
 # Magnify (the S Pen magnifier and its accessibility entry point)
-adb shell pm uninstall --user 0 com.samsung.android.app.readingglass
+adb shell pm disable-user --user 0 com.samsung.android.app.readingglass
 
 # Handwriting service (S Pen handwriting recognition, also used by the
 # handwriting mode of Samsung Keyboard and by Samsung Notes)
-adb shell pm uninstall --user 0 com.samsung.android.sdk.handwriting
+adb shell pm disable-user --user 0 com.samsung.android.sdk.handwriting
 
 
 # ============================================
@@ -182,15 +191,15 @@ adb shell pm uninstall --user 0 com.samsung.android.sdk.handwriting
 # only if you accept that Samsung Members and support cannot pull logs.
 
 # Samsung diagnostic log agent (used by Samsung Members and service support)
-adb shell pm uninstall --user 0 com.sec.android.diagmonagent
+adb shell pm disable-user --user 0 com.sec.android.diagmonagent
 
 # Device Quality Agent (Samsung quality and error telemetry)
-adb shell pm uninstall --user 0 com.samsung.android.dqagent
+adb shell pm disable-user --user 0 com.samsung.android.dqagent
 
 # Device care (Settings > Battery and device care, storage and memory
 # management, optimisation). Removing it also removes the battery usage UI
 # entry point.
-adb shell pm uninstall --user 0 com.samsung.android.lool
+adb shell pm disable-user --user 0 com.samsung.android.lool
 
 
 # ============================================
