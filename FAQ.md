@@ -277,13 +277,13 @@ Removing Samsung Keyboard while using DEX can cause bootloop.
 Most packages are the same, but OneUI 8 has some new apps. Scripts are optimized for OneUI 8 but mostly compatible with OneUI 7.
 
 ### Does this work on OneUI 9?
-**Yes.** The lists were checked against a Galaxy Z Fold 8 running OneUI 9 / Android 17. Most packages are unchanged; a few older ones no longer exist and just report "not installed". See `08-z-fold8.txt` for new OneUI 9 packages and the KEEP list, and [POST-UPDATE-GUIDE.md](POST-UPDATE-GUIDE.md) if you are updating.
+**Yes.** The lists were checked against a Galaxy Z Fold 8 and a Galaxy S24 Ultra running OneUI 9 / Android 17. Most packages are unchanged; a few older ones no longer exist and just report "not installed". See `08-z-fold8.txt` for the shared OneUI 9 packages and KEEP list, `09-s24-ultra.txt` for the S24 Ultra extras, and [POST-UPDATE-GUIDE.md](POST-UPDATE-GUIDE.md) if you are updating.
 
 ### Will this work on future OneUI versions?
 **Probably.** Samsung's bloatware packages stay fairly consistent. New versions may add new bloatware to address.
 
 ### Does this work on S24/S23/older phones?
-**Mostly.** Package names are similar across Galaxy devices. Some packages may be model-specific. Test carefully on older devices.
+**Mostly.** Package names are similar across Galaxy devices. The S24 Ultra on OneUI 9 is fully covered by `09-s24-ultra.txt`; the S24 and S24+ are not verified, so treat those lists as a starting point and test carefully. Some packages may be model-specific. Test carefully on older devices.
 
 ### What about foldables (Z Fold/Flip)?
 **Yes.** Use `08-z-fold8.txt` (Z Fold 8, OneUI 9). On OneUI 9 the cover screen and Flex mode are part of System UI and OneUI Home, but the cover screen widgets come from `com.samsung.android.app.aodservice` and the cover wallpaper from `com.samsung.android.app.dressroom`, so keep both.

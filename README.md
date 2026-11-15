@@ -1,13 +1,13 @@
-# Samsung Galaxy S25 / S26 / Z Fold 8 Debloat Script (OneUI 8, 8.5 and 9)
+# Samsung Galaxy S25 / S26 / S24 Ultra / Z Fold 8 Debloat Script (OneUI 8, 8.5 and 9)
 
 ![GitHub stars](https://img.shields.io/github/stars/itxjobe/samsungdebloat?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/itxjobe/samsungdebloat?style=social)
 ![License](https://img.shields.io/github/license/itxjobe/samsungdebloat)
 ![Last commit](https://img.shields.io/github/last-commit/itxjobe/samsungdebloat)
 
-Comprehensive ADB debloat toolkit for the Samsung Galaxy S25 series (OneUI 8), the Galaxy S26 Ultra (OneUI 8.5, Android 16), and the Galaxy Z Fold 8 (OneUI 9, Android 17). It lets you remove bloatware and unnecessary apps to improve performance, battery life, and privacy.
+Comprehensive ADB debloat toolkit for the Samsung Galaxy S25 series (OneUI 8), the Galaxy S26 Ultra (OneUI 8.5, Android 16), the Galaxy Z Fold 8 (OneUI 9, Android 17), and the Galaxy S24 Ultra (OneUI 9, Android 17). It lets you remove bloatware and unnecessary apps to improve performance, battery life, and privacy.
 
-> **TL;DR**: Remove bloatware from your Galaxy S25, S26 or Z Fold 8 (OneUI 8 / 8.5 / 9) without root. Copy a [Canta preset](canta-lists/) → Import from clipboard in Canta → Done in 5 minutes. S26 Ultra owners: see [`07-s26-ultra.txt`](07-s26-ultra.txt). Z Fold 8 / OneUI 9 owners: see [`08-z-fold8.txt`](08-z-fold8.txt). See [Quick Start](#quick-start-easiest-method).
+> **TL;DR**: Remove bloatware from your Galaxy S25, S26, S24 Ultra or Z Fold 8 (OneUI 8 / 8.5 / 9) without root. Copy a [Canta preset](canta-lists/) → Import from clipboard in Canta → Done in 5 minutes. S26 Ultra owners: see [`07-s26-ultra.txt`](07-s26-ultra.txt). Z Fold 8 / OneUI 9 owners: see [`08-z-fold8.txt`](08-z-fold8.txt). S24 Ultra owners: see [`09-s24-ultra.txt`](09-s24-ultra.txt). See [Quick Start](#quick-start-easiest-method).
 
 ⭐ **Found this helpful? [Star this repo](https://github.com/itxjobe/samsungdebloat) to help others find it!**
 
@@ -30,8 +30,8 @@ Comprehensive ADB debloat toolkit for the Samsung Galaxy S25 series (OneUI 8), t
 
 ## Features
 
-- **OneUI 8, 8.5 and 9 Compatible**: Tested on OneUI 8 (S25 series) and OneUI 8.5 (S26 Ultra), both Android 16, and inspected on OneUI 9 / Android 17 (Z Fold 8)
-- **S25, S26 and Z Fold 8 Coverage**: Tailored for the Galaxy S25 series, with device package lists for the S26 Ultra and the Z Fold 8
+- **OneUI 8, 8.5 and 9 Compatible**: Tested on OneUI 8 (S25 series) and OneUI 8.5 (S26 Ultra), both Android 16, and inspected on OneUI 9 / Android 17 (Z Fold 8 and S24 Ultra)
+- **S25, S26, S24 Ultra and Z Fold 8 Coverage**: Tailored for the Galaxy S25 series, with device package lists for the S26 Ultra, the S24 Ultra and the Z Fold 8
 - **Bixby & Gemini Preserved**: Options to keep AI assistants functional
 - **Categorized Removal**: Organized by safety level and app category
 - **No Root Required**: Uses ADB commands only
@@ -39,7 +39,7 @@ Comprehensive ADB debloat toolkit for the Samsung Galaxy S25 series (OneUI 8), t
 
 ## Quick Start (Easiest Method)
 
-**The fastest way to debloat your Galaxy S25, S26 or Z Fold 8 - no computer needed!**
+**The fastest way to debloat your Galaxy S25, S26, S24 Ultra or Z Fold 8 - no computer needed!**
 
 1. **Install apps on phone**:
    - **Shizuku** - Provides ADB permissions. On Android 16 / 17 (OneUI 8, 8.5, 9) use the maintained [thedjchi fork](https://github.com/thedjchi/Shizuku/releases/latest) (v13.7.0 adds Android 17 support). The original [RikkaApps Shizuku](https://shizuku.rikka.app/) has not been updated since May 2025
@@ -118,8 +118,10 @@ If using the traditional ADB method from computer:
 - `com.google.android.aicore` (Google AICore - on-device Gemini Nano models)
 
 ### Keep for DEX:
-- `com.samsung.android.mdx` (Samsung DEX)
-- `com.samsung.android.honeyboard` (Samsung Keyboard)
+- `com.samsung.android.honeyboard` (Samsung Keyboard - DeX bootloop risk)
+- `com.sec.android.app.launcher` and `com.android.systemui` (on OneUI 9, DeX is served by OneUI Home and System UI; there is no separate DeX package)
+
+> Note: `com.samsung.android.mdx` is **Link to Windows** (Phone Link), not DeX. Its components are all `windowslink.*`. Keep it only if you use Phone Link; there is no separate DeX for PC package on the S24 Ultra OneUI 9 build.
 
 ### Keep on Foldables (Z Fold / Flip, OneUI 9):
 - `com.samsung.android.app.aodservice` (Always On Display and the cover screen widgets)
@@ -187,6 +189,7 @@ adb shell pm uninstall --user 0 com.facebook.katana
 - `06-oneui8-specific.txt` - OneUI 8 new apps and features
 - `07-s26-ultra.txt` - Verified Galaxy S26 Ultra extras (OneUI 8.5)
 - `08-z-fold8.txt` - Galaxy Z Fold 8 extras and OneUI 9 keep notes
+- `09-s24-ultra.txt` - Galaxy S24 Ultra extras and OneUI 9 keep notes
 - `batch-commands.txt` - Pre-made batch removal commands
 
 ### On-Device Files
@@ -243,22 +246,23 @@ See `06-oneui8-specific.txt` for details.
 
 ## OneUI 9 Specific Changes
 
-OneUI 9 (Android 17) launched on the Galaxy Z Fold 8, Fold 8 Ultra and Flip 8. What changed for debloating, from a Z Fold 8 (SM-F971U1):
+OneUI 9 (Android 17) launched on the Galaxy Z Fold 8, Fold 8 Ultra and Flip 8, and reached the Galaxy S24 Ultra afterwards. What changed for debloating, from a Z Fold 8 (SM-F971U1) and an S24 Ultra (SM-S928B):
 
 - **New Galaxy AI packages to keep**: on-device language models (`offline.languagemodel`), AI Core vision models (`vision.model`), content credentials for AI edits (`visual.cloudcore`), and Samsung Intelligence Voice Services (`intellivoiceservice`)
 - **Now Brief** lives in `com.samsung.android.smartsuggestions`. It is now listed as optional everywhere, including the S26 preset
 - **Not present on the Z Fold 8 (OneUI 9)**: `bixby.service`, `bixby.voiceinput`, `bixbyvision.framework`, AR Zone and AR Drawing. The older lists still name them for OneUI 8 devices; on OneUI 9 they report "not installed"
 - **Android 17** adds a system contacts picker (`com.android.contactspicker`). Keep it
+- **S24 Ultra on OneUI 9** keeps the old S Pen stack under new names: `com.samsung.android.service.aircommand`, `com.samsung.android.aircommandmanager`, `com.samsung.android.sdk.handwriting` and `com.samsung.android.app.readingglass` (Magnify). `com.samsung.android.sdk.pen` and `penremote` are gone
 
-See `08-z-fold8.txt` for details and [POST-UPDATE-GUIDE.md](POST-UPDATE-GUIDE.md) if you are updating from OneUI 8 or 8.5.
+See `08-z-fold8.txt` and `09-s24-ultra.txt` for details and [POST-UPDATE-GUIDE.md](POST-UPDATE-GUIDE.md) if you are updating from OneUI 8 or 8.5.
 
 ## Compatibility
 
 - **Tested On**: Samsung Galaxy S25 Edge and Galaxy S26 Ultra
-- **Inspected On**: Galaxy Z Fold 8 (OneUI 9; packages verified present, removals not test-run)
+- **Inspected On**: Galaxy Z Fold 8 and Galaxy S24 Ultra (OneUI 9; packages verified present, removals not test-run)
 - **OneUI Version**: 8.0 / 8.5 / 9.0
 - **Android Version**: 16 / 17
-- **Should work on**: S25, S25+, S25 Ultra (OneUI 8), S26 Ultra (OneUI 8.5, and OneUI 9 after its update), Z Fold 8 / Fold 8 Ultra / Flip 8 (OneUI 9)
+- **Should work on**: S25, S25+, S25 Ultra (OneUI 8), S26 Ultra (OneUI 8.5, and OneUI 9 after its update), S24 Ultra (OneUI 9), Z Fold 8 / Fold 8 Ultra / Flip 8 (OneUI 9)
 
 ## Post-Debloat Checklist
 
@@ -293,7 +297,7 @@ This script was compiled from:
 - Tom4tot's Galaxy S24 Debloat Script
 - Community feedback on Reddit (r/GalaxyS25, r/Android)
 - Official Samsung package documentation
-- Personal testing on S25 Edge (OneUI 8) and S26 Ultra (OneUI 8.5), and on-device inspection of a Z Fold 8 (OneUI 9)
+- Personal testing on S25 Edge (OneUI 8) and S26 Ultra (OneUI 8.5), and on-device inspection of a Z Fold 8 and an S24 Ultra (OneUI 9)
 
 ## Credits & Acknowledgments
 
@@ -364,4 +368,4 @@ MIT License - Free to use and modify
 
 **Last Updated**: October 2026
 **OneUI Version**: 8.0 / 8.5 / 9.0
-**Device**: Samsung Galaxy S25 Edge, S26 Ultra and Z Fold 8
+**Device**: Samsung Galaxy S25 Edge, S26 Ultra, S24 Ultra and Z Fold 8

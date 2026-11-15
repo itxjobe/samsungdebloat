@@ -89,6 +89,7 @@ Complete guide to all documentation in this repository.
 | [06-oneui8-specific.txt](06-oneui8-specific.txt) | Info | OneUI 8 new features |
 | [07-s26-ultra.txt](07-s26-ultra.txt) | Device | Galaxy S26 Ultra extras (OneUI 8.5) |
 | [08-z-fold8.txt](08-z-fold8.txt) | Device | Galaxy Z Fold 8 extras and OneUI 9 keep notes |
+| [09-s24-ultra.txt](09-s24-ultra.txt) | Device | Galaxy S24 Ultra extras and OneUI 9 keep notes |
 | [batch-commands.txt](batch-commands.txt) | Quick | Pre-made batch commands |
 
 ## By User Level

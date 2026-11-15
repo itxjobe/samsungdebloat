@@ -65,7 +65,7 @@ Canta imports presets from the **clipboard or pasted text**. There is no file pi
 1. On your phone, open the preset on GitHub and tap **Raw**:
    - [`conservative.json`](canta-lists/conservative.json) - Safest, recommended for beginners
    - [`moderate.json`](canta-lists/moderate.json) - Balanced approach
-   - [`s26-ultra.json`](canta-lists/s26-ultra.json) / [`z-fold8.json`](canta-lists/z-fold8.json) - Device extras
+   - [`s26-ultra.json`](canta-lists/s26-ultra.json) / [`z-fold8.json`](canta-lists/z-fold8.json) / [`s24-ultra.json`](canta-lists/s24-ultra.json) - Device extras
    - [`remove-bixby.json`](canta-lists/remove-bixby.json) or [`remove-gemini.json`](canta-lists/remove-gemini.json) - Optional AI assistant removal
 2. Select all of the JSON text and copy it
 3. Canta > **Presets** > **Import preset** > **Clipboard** (or paste it into the **Text** tab)

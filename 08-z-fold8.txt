@@ -7,7 +7,7 @@
 # These packages are additional to the main 01-07 lists. The 01-07 lists
 # still apply on OneUI 9; packages they name that no longer exist simply
 # report "not installed". Many entries here also exist on other OneUI 9
-# devices (Galaxy S26 after its OneUI 9 update, Z Flip 8).
+# devices (Galaxy S26 after its OneUI 9 update, Z Flip 8, Galaxy S24 Ultra).
 #
 # HOW THIS LIST WAS BUILT: every package below was confirmed present on the
 # device and inspected with dumpsys (components, intent actions, shared UID,
