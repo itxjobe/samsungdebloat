@@ -15,8 +15,11 @@
 # HOW THIS LIST WAS BUILT: every package below was confirmed present on the
 # device and inspected with dumpsys and with its APK manifest (label,
 # launcher activity, shared UID, privileged flags) to determine what it does.
-# These removals were NOT test-run on the reference device. Start with the
-# SAFE section, reboot, and check the features you use.
+# The SAFE section below was run on the reference device (25 packages: 6
+# Samsung extras, 6 Google/Android stubs and 13 TTS packs). All 25 were
+# disabled, the phone stayed healthy and a `pm enable` restore script was
+# generated from the result. The OPTIONAL section was NOT test-run. Start
+# with SAFE, reboot, and check the features you use.
 #
 # ANDROID 17 / ONEUI 9: on this build the shell cannot uninstall a system
 # app for a single user. `pm uninstall --user 0` fails with
